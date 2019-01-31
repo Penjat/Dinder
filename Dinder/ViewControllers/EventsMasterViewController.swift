@@ -37,5 +37,11 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
   func numberOfSections(in tableView: UITableView) -> Int {
     return 3
   }
-
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    if indexPath.row == 0{
+      return 400
+    }
+    return 250
+    
+  }
 }
