@@ -16,5 +16,10 @@ struct UserRating{
     let comment: String
     let reviewer: User
 
-    
+    init(userRatingCategory: UserRatingCategory, positiveReview: Bool, comment: String, reviewer: User) {
+        self.userRatingCategory = userRatingCategory
+        self.positiveReview = positiveReview
+        self.comment = comment
+        self.reviewer = reviewer
+    }
 }
