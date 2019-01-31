@@ -20,7 +20,7 @@ class BrowseViewController: UIViewController {
       super.viewDidLoad()
       navigationController?.navigationBar.layer.zPosition = 10;
       print("loaded browse view controller")
-      createNewEvent()
+      //createNewEvent()
       
      
     }
@@ -86,6 +86,33 @@ class BrowseViewController: UIViewController {
     print("pressed my profile button")
     //TODO might need to change sender
     performSegue(withIdentifier: "toMyProfile", sender: nil)
+  }
+  @IBAction func eventsMasterButtonPressed(_ sender: Any) {
+    print("pressed Events Master button")
+    performSegue(withIdentifier: "toEventsMaster", sender: nil)
+  }
+  @IBAction func pressedCreateEvent(_ sender: Any) {
+    print("pressed create event")
+    let alertController = UIAlertController( title: "Edit Device Name",
+                                             message: "Enter a new nickname for your device:",
+                                             preferredStyle: .alert)
+    alertController.addTextField(configurationHandler: {
+      (textField: UITextField) in
+      textField.placeholder = "name"
+    })
+    let cancelAction = UIAlertAction(title:"Cancel", style: .cancel, handler: {
+      action in
+      print("Cancel pressed")
+    })
+    let saveAction = UIAlertAction(title:"Save", style: .default, handler: {
+      action in
+      let value = alertController.textFields!.first!.text
+      print("Save pressed. Value: \(String(describing: value))")
+      
+    })
+    alertController.addAction(cancelAction)
+    alertController.addAction(saveAction)
+    
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
