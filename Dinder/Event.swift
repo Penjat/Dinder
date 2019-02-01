@@ -23,7 +23,7 @@ struct Event{
     let owner: User
     var chosenPartner: User?
     let images: [Image]
-    let imageKeywords: [String]
+    //let imageKeywords: [String]
     
     let location: CLLocation
     
