@@ -7,18 +7,19 @@
 //
 
 import Foundation
+import UIKit
 
 struct Image{
     
     let name: String
     let keyword: String
     let urlString: String
+    let uiImage: UIImage? = nil
     
     init(name: String, keyword: String, urlString: String) {
         self.name = name
         self.keyword = keyword
         self.urlString = urlString
-        
     }
     
 }
