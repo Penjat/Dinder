@@ -8,15 +8,41 @@
 
 import UIKit
 
-class EventView: UIView {
+class EventView: UIView ,UITableViewDelegate,UITableViewDataSource{
+  let eventTableView = UITableView()
+  
+  
+  
 
   override init(frame: CGRect) {
+    
     super.init(frame:frame)
-    let eventTableView = UITableView()
+    
+    eventTableView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
+    self.addSubview(eventTableView)
+    eventTableView.register(EventMainCell.self, forCellReuseIdentifier: "eventMainCell")
+    eventTableView.delegate = self
+    eventTableView.dataSource = self
   }
   
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
+  }
+  
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    if indexPath.row == 0{
+      return 400
+    }
+    return 250
+    
+  }
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 12
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = eventTableView.dequeueReusableCell(withIdentifier: "eventMainCell", for: indexPath)
+    return cell
   }
   
 }
