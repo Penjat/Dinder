@@ -8,17 +8,24 @@
 
 import UIKit
 
-class InterestedUsersContainerCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource {
+class InterestedUsersContainerCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
   
   
   //this cell appears in conjunction with a MyPendingEventCell
   //contains a collection view that holds all interested users
   @IBOutlet weak var interestedUserCollectionView: UICollectionView!
-  
+  let layout = UICollectionViewFlowLayout()
     override func awakeFromNib() {
-        super.awakeFromNib()
-        interestedUserCollectionView.dataSource = self
-        interestedUserCollectionView.delegate = self
+      super.awakeFromNib()
+      interestedUserCollectionView.dataSource = self
+      interestedUserCollectionView.delegate = self
+      interestedUserCollectionView.collectionViewLayout = layout
+      
+      
+      layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+      layout.minimumLineSpacing = 32
+      layout.minimumInteritemSpacing = 32
+      layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,6 +42,9 @@ class InterestedUsersContainerCell: UITableViewCell,UICollectionViewDelegate,UIC
     let cell = interestedUserCollectionView.dequeueReusableCell(withReuseIdentifier: "interestedUserCell", for: indexPath)
     
     return cell
+  }
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    return CGSize(width: 200, height: 200)
   }
 
 }
