@@ -14,4 +14,5 @@ enum Payer{
     case PosterPays
     case Dutch
     case ApplicantPays
+    case ApplicantGetPaid
 }

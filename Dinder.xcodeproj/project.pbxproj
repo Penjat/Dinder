@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B1E32AB220345AC00B5D58A /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E32AA220345AC00B5D58A /* EventView.swift */; };
 		0B1E32AD2203AE4800B5D58A /* EventsMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E32AC2203AE4800B5D58A /* EventsMasterViewController.swift */; };
-		0B1E32AF2203BCB600B5D58A /* MyPendingEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E32AE2203BCB600B5D58A /* MyPendingEventCell.swift */; };
+		0B1E32AF2203BCB600B5D58A /* MyActiveEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E32AE2203BCB600B5D58A /* MyActiveEventCell.swift */; };
 		0B1E32B12203BCE300B5D58A /* InterestedUsersContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E32B02203BCE300B5D58A /* InterestedUsersContainerCell.swift */; };
 		0B1E32B42203C94900B5D58A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E32B32203C94900B5D58A /* ProfileViewController.swift */; };
 		0B1E32B62203E90F00B5D58A /* EventMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E32B52203E90F00B5D58A /* EventMainCell.swift */; };
@@ -20,6 +20,10 @@
 		0B341CF5220284540094EDD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B341CF3220284540094EDD1 /* LaunchScreen.storyboard */; };
 		0B341CFE2202B95B0094EDD1 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0B341D002202B9690094EDD1 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B341CFF2202B9690094EDD1 /* BrowseViewController.swift */; };
+		219FAC3CCC8223745E26A6D9 /* Pods_Dinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ECC337790D150159B44A22C /* Pods_Dinder.framework */; };
+		9F13CA152204030F009F98B4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13CA142204030F009F98B4 /* DataManager.swift */; };
+		9F13CA1722040A41009F98B4 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13CA1622040A41009F98B4 /* UIImageViewExtension.swift */; };
+		9F13CA1B2204C8BB009F98B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F13CA1A2204C894009F98B4 /* GoogleService-Info.plist */; };
 		9F3C1EDB2203CFE400013DE7 /* FakeEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3C1EDA2203CFE400013DE7 /* FakeEvents.swift */; };
 		9F4FDE1C2203A90D002E23AB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FDE1B2203A90D002E23AB /* User.swift */; };
 		9F4FDE1E2203AAA2002E23AB /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FDE1D2203AAA2002E23AB /* Gender.swift */; };
@@ -35,7 +39,7 @@
 /* Begin PBXFileReference section */
 		0B1E32AA220345AC00B5D58A /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		0B1E32AC2203AE4800B5D58A /* EventsMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsMasterViewController.swift; sourceTree = "<group>"; };
-		0B1E32AE2203BCB600B5D58A /* MyPendingEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPendingEventCell.swift; sourceTree = "<group>"; };
+		0B1E32AE2203BCB600B5D58A /* MyActiveEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActiveEventCell.swift; sourceTree = "<group>"; };
 		0B1E32B02203BCE300B5D58A /* InterestedUsersContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedUsersContainerCell.swift; sourceTree = "<group>"; };
 		0B1E32B32203C94900B5D58A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0B1E32B52203E90F00B5D58A /* EventMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMainCell.swift; sourceTree = "<group>"; };
@@ -47,6 +51,12 @@
 		0B341CF4220284540094EDD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B341CF6220284540094EDD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B341CFF2202B9690094EDD1 /* BrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
+		1E99680A355E73C8E7BAC120 /* Pods-Dinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dinder/Pods-Dinder.debug.xcconfig"; sourceTree = "<group>"; };
+		22B255EF743AE116899C252B /* Pods-Dinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dinder/Pods-Dinder.release.xcconfig"; sourceTree = "<group>"; };
+		7ECC337790D150159B44A22C /* Pods_Dinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F13CA142204030F009F98B4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		9F13CA1622040A41009F98B4 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		9F13CA1A2204C894009F98B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "/Users/jasonharrison/Documents/lighthouse-labs-midterm-project/Dinder/GoogleService-Info.plist"; sourceTree = "<absolute>"; };
 		9F3C1EDA2203CFE400013DE7 /* FakeEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEvents.swift; sourceTree = "<group>"; };
 		9F4FDE1B2203A90D002E23AB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9F4FDE1D2203AAA2002E23AB /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
@@ -64,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				219FAC3CCC8223745E26A6D9 /* Pods_Dinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +86,8 @@
 			children = (
 				0B341CE9220284530094EDD1 /* Dinder */,
 				0B341CE8220284530094EDD1 /* Products */,
+				5DE852F1D327F7AF37F695D0 /* Pods */,
+				91943C38E4D05B9BDF3D4EC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,10 +104,13 @@
 			children = (
 				0B341CEA220284530094EDD1 /* AppDelegate.swift */,
 				0B341CEE220284530094EDD1 /* Main.storyboard */,
+				9F13CA1A2204C894009F98B4 /* GoogleService-Info.plist */,
 				0B341CF1220284540094EDD1 /* Assets.xcassets */,
 				0B341CF3220284540094EDD1 /* LaunchScreen.storyboard */,
 				9FC3B67A2203BAC300CD4D20 /* FakeUsers.swift */,
 				9F3C1EDA2203CFE400013DE7 /* FakeEvents.swift */,
+				9F13CA1622040A41009F98B4 /* UIImageViewExtension.swift */,
+				9F13CA142204030F009F98B4 /* DataManager.swift */,
 				0B341CF6220284540094EDD1 /* Info.plist */,
 				9F4FDE1B2203A90D002E23AB /* User.swift */,
 				9F4FDE232203AE36002E23AB /* Event.swift */,
@@ -118,10 +134,27 @@
 				0B1E32AA220345AC00B5D58A /* EventView.swift */,
 				0B1E32B52203E90F00B5D58A /* EventMainCell.swift */,
 				0B1E32B72203F2DC00B5D58A /* EventInfoCell.swift */,
-				0B1E32AE2203BCB600B5D58A /* MyPendingEventCell.swift */,
+				0B1E32AE2203BCB600B5D58A /* MyActiveEventCell.swift */,
 				0B1E32B02203BCE300B5D58A /* InterestedUsersContainerCell.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5DE852F1D327F7AF37F695D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E99680A355E73C8E7BAC120 /* Pods-Dinder.debug.xcconfig */,
+				22B255EF743AE116899C252B /* Pods-Dinder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		91943C38E4D05B9BDF3D4EC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7ECC337790D150159B44A22C /* Pods_Dinder.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,9 +164,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B341CF9220284540094EDD1 /* Build configuration list for PBXNativeTarget "Dinder" */;
 			buildPhases = (
+				0CF3EF5E8F02A18548586042 /* [CP] Check Pods Manifest.lock */,
 				0B341CE3220284530094EDD1 /* Sources */,
 				0B341CE4220284530094EDD1 /* Frameworks */,
 				0B341CE5220284530094EDD1 /* Resources */,
+				5A85DCF4DFB7182CCD063758 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B341CF5220284540094EDD1 /* LaunchScreen.storyboard in Resources */,
+				9F13CA1B2204C8BB009F98B4 /* GoogleService-Info.plist in Resources */,
 				0B341CF2220284540094EDD1 /* Assets.xcassets in Resources */,
 				0B341CF0220284530094EDD1 /* Main.storyboard in Resources */,
 			);
@@ -190,21 +226,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CF3EF5E8F02A18548586042 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A85DCF4DFB7182CCD063758 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Dinder/Pods-Dinder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dinder/Pods-Dinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0B341CE3220284530094EDD1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B1E32AF2203BCB600B5D58A /* MyPendingEventCell.swift in Sources */,
+				0B1E32AF2203BCB600B5D58A /* MyActiveEventCell.swift in Sources */,
 				0B341D002202B9690094EDD1 /* BrowseViewController.swift in Sources */,
 				0B1E32B82203F2DC00B5D58A /* EventInfoCell.swift in Sources */,
 				0B341CFE2202B95B0094EDD1 /* (null) in Sources */,
 				0B1E32B62203E90F00B5D58A /* EventMainCell.swift in Sources */,
 				0B1E32B12203BCE300B5D58A /* InterestedUsersContainerCell.swift in Sources */,
+				9F13CA1722040A41009F98B4 /* UIImageViewExtension.swift in Sources */,
 				0B341CEB220284530094EDD1 /* AppDelegate.swift in Sources */,
 				0B1E32AB220345AC00B5D58A /* EventView.swift in Sources */,
 				0B1E32AD2203AE4800B5D58A /* EventsMasterViewController.swift in Sources */,
 				0B1E32B42203C94900B5D58A /* ProfileViewController.swift in Sources */,
+				9F13CA152204030F009F98B4 /* DataManager.swift in Sources */,
 				9F4FDE2A2203B02D002E23AB /* Image.swift in Sources */,
 				9F4FDE242203AE36002E23AB /* Event.swift in Sources */,
 				9F4FDE1E2203AAA2002E23AB /* Gender.swift in Sources */,
@@ -358,6 +445,7 @@
 		};
 		0B341CFA220284540094EDD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E99680A355E73C8E7BAC120 /* Pods-Dinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -367,7 +455,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.spencersymington.Dinder;
+				PRODUCT_BUNDLE_IDENTIFIER = io.dinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -376,6 +464,7 @@
 		};
 		0B341CFB220284540094EDD1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22B255EF743AE116899C252B /* Pods-Dinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -385,7 +474,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.spencersymington.Dinder;
+				PRODUCT_BUNDLE_IDENTIFIER = io.dinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

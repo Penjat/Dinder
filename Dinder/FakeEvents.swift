@@ -9,16 +9,66 @@
 import Foundation
 import CoreLocation
 
-struct FakeEvents{
-    var events: [Event] = [Event]()
+enum RelationshipType: String{
+    case Anything
+    case Friendship
+    case PossiblyRomantic
+    case Romantic
+}
+
+
+
+class FakeEvents: NSObject, CLLocationManagerDelegate{
     
-    init() {
+    
+    
+    //var description: String
+    
+    var events: [Event]
+    
+    var locationManager: CLLocationManager = CLLocationManager()
+    
+    
+ 
+    
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let lat = locations.last?.coordinate.latitude, let long = locations.last?.coordinate.longitude {
+            print("\(lat),\(long)")
+        } else {
+            print("No coordinates")
+        }
+    }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+    
+    override init() {
+        
+        
+        
+
+        
+        
+        
+        
+       // print("init fake events")
+        events = [Event]()
+        
+//        events.append(getBarMarijuanaWrestlingByJason())
+//        events.append(getMetallicaGrouseGrindBySpencer())
+//        events.append(getNailsDoneByCassandra())
+//        events.append(getBowlingBySpencer())
+        // make golf, dungeons and dragons, gym examples, change my breaks for $
+        
+        super.init()
+        self.locationManager.delegate = self
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.requestLocation()
+        self.locationManager.startUpdatingLocation()
         events.append(getSkiingSpaKegByJason())
         events.append(getSeawallWalkByJason())
-        events.append(getBarMarijuanaWrestlingByJason())
-        events.append(getMetallicaGrouseGrindBySpencer())
-        events.append(getNailsDoneByCassandra())
-        events.append(getBowlingBySpencer())
     }
     
     func getSkiingSpaKegByJason() -> Event{
@@ -57,18 +107,31 @@ struct FakeEvents{
         let end = calendar.date(from: dateComponents)
         
         
-        let locManager = CLLocationManager()
-        locManager.requestWhenInUseAuthorization()
+        print(start!)
+        print(end!)
         
-        var currentLocation: CLLocation!
         
-        if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
-            CLLocationManager.authorizationStatus() ==  .authorizedAlways){
-            
-            currentLocation = locManager.location
-            
-        }
+//        let locManager = CLLocationManager()
+//        locManager.requestWhenInUseAuthorization()
+//
+//        let currentLocation: CLLocation = locManager.location!
+//
+//        print(currentLocation)
+//
+//
+//        if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+//            CLLocationManager.authorizationStatus() ==  .authorizedAlways){
+//
+//            if let cLocation = locManager.location{
+//                print("yes \(cLocation)")
+//            }else{
+//                print("nope")
+//            }
+//
+//        }
+        //let currentLocation = CLLocation.init(latitude: 100, longitude: 22)
         
+        let currentLocation = self.locationManager.location
         
         let currentDateTime = Date()
         
@@ -92,7 +155,22 @@ struct FakeEvents{
         //        label2.text = "\(currentLocation.coordinate.latitude)"
         //
         //
-        let event: Event = Event(eventId: 0, title: "snow, spa, and meat!", eventRelationshipType: RelationshipType.PossiblyRomantic, lookingFor: Gender.Female, estimatedCombinedTotalCostCAD: 200, estimatedCostForGuestCAD: 0, whoPays: Payer.PosterPays, interestedUsers: usersInterested, owner: jason, chosenPartner: cassandra, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "let's go to skiing at blackcomb, then the spa, and then the keg!!!")
+        let event: Event = Event(eventId: 0,
+                                 title: "snow, spa, and meat!",
+                                 eventRelationshipType:  RelationshipType.PossiblyRomantic,
+                                 lookingFor: Gender.Female,
+                                 estimatedCombinedTotalCostCAD: 200,
+                                 estimatedCostForGuestCAD: 0,
+                                 whoPays: Payer.PosterPays,
+                                 interestedUsers: usersInterested,
+                                 owner: jason,
+                                 chosenPartner: cassandra,
+                                 images: images,
+                                 location: currentLocation,
+                                 startDateTime: start!,
+                                 endDateTime: end!,
+                                 postedDateTime: currentDateTime,
+                                 description: "let's go to skiing at blackcomb, then the spa, and then the keg!!!")
         
         
         
@@ -103,7 +181,7 @@ struct FakeEvents{
         
     }
     
-    func getSeawallWalkByJason() -> Event{
+    func getSeawallWalkByJason() -> Event {
         
         let fakeUsers: FakeUsers = FakeUsers()
         let anjali: User = fakeUsers.getAnjali()
@@ -137,17 +215,8 @@ struct FakeEvents{
         let end = calendar.date(from: dateComponents)
         
         
-        let locManager = CLLocationManager()
-        locManager.requestWhenInUseAuthorization()
-        
-        var currentLocation: CLLocation!
-        
-        if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
-            CLLocationManager.authorizationStatus() ==  .authorizedAlways){
-            
-            currentLocation = locManager.location
-            
-        }
+       // let currentLocation = self.locationManager.location
+
         
         
         let currentDateTime = Date()
@@ -165,9 +234,9 @@ struct FakeEvents{
         images.append(image2)
         
    
-        let event: Event = Event(eventId: 1, title: "long walks by the ocean", eventRelationshipType: RelationshipType.Anything, lookingFor: Gender.NotApplicable, estimatedCombinedTotalCostCAD: 0, estimatedCostForGuestCAD: 0, whoPays: Payer.Free, interestedUsers: usersInterested, owner: jason, chosenPartner: nil, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "just want to go for a nice walk in this beautiful weather! talk, laugh, whatever!!")
-        
-        
+        let event: Event = Event(eventId: 1, title: "long walks by the ocean", eventRelationshipType: RelationshipType.Anything, lookingFor: Gender.NotApplicable, estimatedCombinedTotalCostCAD: 0, estimatedCostForGuestCAD: 0, whoPays: Payer.Free, interestedUsers: usersInterested, owner: jason, chosenPartner: nil, images: images, location: nil, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "just want to go for a nice walk in this beautiful weather! talk, laugh, whatever!!")
+//
+//
         
         
         

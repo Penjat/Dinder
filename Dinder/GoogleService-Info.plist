@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>606159492970-9cm6gpg7it7e4vkmq8c0peil35f7b1s2.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.606159492970-9cm6gpg7it7e4vkmq8c0peil35f7b1s2</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAhRIDwgsfh8I6vBZzqxrfDqOhS0_M7sAs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>606159492970</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>io.dinder</string>
+	<key>PROJECT_ID</key>
+	<string>dinder-57941</string>
+	<key>STORAGE_BUCKET</key>
+	<string>dinder-57941.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:606159492970:ios:2195bd730d32d118</string>
+	<key>DATABASE_URL</key>
+	<string>https://dinder-57941.firebaseio.com</string>
+</dict>
+</plist>

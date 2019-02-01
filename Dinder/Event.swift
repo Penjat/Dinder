@@ -13,19 +13,19 @@ struct Event{
     
     let eventId: Int
     let title: String
-    let eventRelationshipType: RelationshipType
-    let lookingFor: Gender
+    let eventRelationshipType: RelationshipType?
+    let lookingFor: Gender?
     
     let estimatedCombinedTotalCostCAD: Int
     let estimatedCostForGuestCAD: Int
-    let whoPays: Payer
+    let whoPays: Payer?
     var interestedUsers: [User]?
     let owner: User
     var chosenPartner: User?
     let images: [Image]
     //let imageKeywords: [String]
     
-    let location: CLLocation
+    let location: CLLocation?
     
     let startDateTime: Date
     let endDateTime: Date
@@ -35,10 +35,10 @@ struct Event{
     var description: String
 
     
-    init(eventId: Int, title: String, eventRelationshipType: RelationshipType, lookingFor: Gender,
-         estimatedCombinedTotalCostCAD: Int, estimatedCostForGuestCAD: Int, whoPays: Payer,
+    init(eventId: Int, title: String, eventRelationshipType: RelationshipType?, lookingFor: Gender?,
+         estimatedCombinedTotalCostCAD: Int, estimatedCostForGuestCAD: Int, whoPays: Payer?,
          interestedUsers: [User], owner: User, chosenPartner: User?, images: [Image],
-         location: CLLocation, startDateTime: Date, endDateTime: Date, postedDateTime: Date, description: String) {
+         location: CLLocation?, startDateTime: Date, endDateTime: Date, postedDateTime: Date, description: String) {
         self.eventId = eventId
         self.title = title
         self.eventRelationshipType = eventRelationshipType
@@ -50,6 +50,7 @@ struct Event{
         self.owner = owner
         
         self.chosenPartner = chosenPartner
+        //print("\(String(describing: chosenPartner))")
         
         self.images = images
         self.location = location
@@ -57,6 +58,8 @@ struct Event{
         self.endDateTime = endDateTime
         self.postedDateTime = postedDateTime
         self.description = description
+        
+        
     }
 }
 

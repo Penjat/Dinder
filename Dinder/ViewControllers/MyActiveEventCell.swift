@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyPendingEventCell: UITableViewCell {
+class MyActiveEventCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

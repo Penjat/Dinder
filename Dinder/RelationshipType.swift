@@ -8,9 +8,9 @@
 
 import Foundation
 
-enum RelationshipType{
-    case Anything
-    case Friendship
-    case PossiblyRomantic
-
-}
+//enum RelationshipType: String{
+//    case Anything
+//    case Friendship
+//    case PossiblyRomantic
+//    case Romantic
+//}
