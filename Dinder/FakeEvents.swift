@@ -17,6 +17,8 @@ struct FakeEvents{
         events.append(getSeawallWalkByJason())
         events.append(getBarMarijuanaWrestlingByJason())
         events.append(getMetallicaGrouseGrindBySpencer())
+        events.append(getNailsDoneByCassandra())
+        events.append(getBowlingBySpencer())
     }
     
     func getSkiingSpaKegByJason() -> Event{
@@ -256,20 +258,21 @@ struct FakeEvents{
     func getMetallicaGrouseGrindBySpencer() -> Event{
         
         let fakeUsers: FakeUsers = FakeUsers()
-        // let anjali: User = fakeUsers.getAnjali()
+        //let anjali: User = fakeUsers.getAnjali()
+        let spencer: User = fakeUsers.getSpencer()
         //let cassandra: User = fakeUsers.getCassandra()
-        let jason: User = fakeUsers.getJason()
+        //let jason: User = fakeUsers.getJason()
         
         let usersInterested: [User] = [User]()
-        
+        //usersInterested.append(anjali)
         
         var calendar = Calendar.current
         var dateComponents = DateComponents()
         dateComponents.year = 2019
         dateComponents.month = 3
-        dateComponents.day = 1
-        dateComponents.hour = 19
-        dateComponents.minute = 00
+        dateComponents.day = 12
+        dateComponents.hour = 16
+        dateComponents.minute = 20
         dateComponents.timeZone = TimeZone(abbreviation: "PST") // Japan Standard Time
         let start = calendar.date(from: dateComponents)
         
@@ -278,8 +281,8 @@ struct FakeEvents{
         dateComponents = DateComponents()
         dateComponents.year = 2019
         dateComponents.month = 3
-        dateComponents.day = 2
-        dateComponents.hour = 00
+        dateComponents.day = 12
+        dateComponents.hour = 23
         dateComponents.minute = 30
         dateComponents.timeZone = TimeZone(abbreviation: "PST") // Japan Standard Time
         let end = calendar.date(from: dateComponents)
@@ -302,31 +305,156 @@ struct FakeEvents{
         
         
         var images: [Image] = [Image]()
-        let image1: Image = Image(name: "drink", keyword: "drinks", urlString: "https://www.flickr.com/photos/iskigabor/5680916410/in/photolist-9E1bwE-97RtLf-5fpBo8-ac7J1Z-d1c4Ly-rqv3MB-bpqbSn-fdH6oM-95x5gg-brBZjP-9uU9tD-pkTPWz-4XmHtc-3JKePr-58Tp4g-qwy5kR-gu1Qkp-SiQT-4Nw48y-7uBQXR-679YrB-dUzyrS-cic245-dUzygE-8mRPN8-9aRVMm-8JhSxX-6vL6ND-4FmQe5-6wvFGA-6y62sC-be66QX-bnFtBV-4Fjxd1-pAZe1p-7WqyNa-akFvvP-fMww66-fqz3gX-71FeWJ-9SjEkK-UedhF-E7vGCY-bB5Ark-pC3ErL-4Bq5aP-r5MyPt-7uAePD-87rrMv-f6zk65")
+        let image1: Image = Image(name: "grouse", keyword: "grouse mountain", urlString: "https://www.flickr.com/photos/zeeyolqpictures/12239163493/in/photolist-jDwUUe-4wdjE8-awfwGV-dmwNFb-nAeGnd-bFEbse-fDUCiQ-oBZ5Wf-gChLRE-bFEaMe-9C8zq3-7hZUtP-qS6h8v-aH8vga-oci1CP-e7ZNWq-8Frh4k-c34sd3-7Ddwi5-9sNqR8-cjxHsS-7XPbaF-5ggJGo-hB9KV6-v6hYDN-fbbXhu-diZVkB-9U5yYp-e5SARz-vFNUW6-avWfpa-a4Bpij-dUz2JT-87QC6E-eXaimd-964D56-tC1NC7-jKSA4V-b4u3ZT-e4JKyV-5tLxV2-2dTNZjJ-ayix6t-onGf5M-YNEAp5-oaeu8j-qBxPnU-DSJ32k-rUf3nA-v7T2uh")
         
-        let image2: Image = Image(name: "420", keyword: "dope", urlString: "https://www.flickr.com/photos/27675668@N03/8235557913/in/photolist-dxKorP-3VtXd-5So6M3-SARR-7dBNXV-eBfDdf-6brXLC-9xpnib-5aUKYZ-eSyJzb-HtUMi2-995cGb-6Ceahm-31Pw-7JCKGz-6wLo2X-7b4Puj-3bftXr-nPKXg-4v9zbC-dv1EgJ-9gSMSy-aVZFbP-48J3pY-nGkesk-2dapmpj-e1eGkZ-6Aeb23-RkGdEW-LTxfje-cE1ozh-fUhFxH-MQZmSz-45G82o-cvQNr7-6myypu-7heodd-4u8xvA-26MNmBk-MQZtRe-93VFPu-2cV2DMf-7ztBTi-2dPvMvF-awUh2Q-7MbqQs-9AVxrC-WjX4iP-9Vr3bt-8D2LiR")
+        let image2: Image = Image(name: "metallica", keyword: "heavy metal", urlString: "https://www.flickr.com/photos/maquero/3204963645/in/photolist-5Tdh2T-oeCzDR-e93qKb-dG3rDQ-7sS6yD-2aZW9wD-7sS2i6-TdSL46-ocynVZ-5Tdh6g-HWNhAX-DPxqk1-23Rw1EW-qT7n5E-ocMzs1-7sVZUJ-qdJt21-e93qzQ-nYZAYY-65NrWS-pCjm-5ThBvw-8fvbwn-a1k7X9-a1k9Xy-GEGmjU-H1QpKR-7fFZvH-nYZK7c-pCji-64fkXz-nYZBfj-6quQ4P-79bx5v-7kmSB9-Hb85jj-21Pwv3J-dYUiGM-ZAY3Ua-DPxpw7-ogcAhF-ZAY1Rc-9dxCMj-52GivZ-8JQod5-7AGgZD-22PvNoy-e93q8b-vRKRHi-5VHN9j")
         
-        
-        let image3: Image = Image(name: "wwe", keyword: "wrestler", urlString: "https://www.flickr.com/photos/22265173@N02/2590934277/in/photolist-4WXduD-27ezMjr-5A7xja-26MJNs1-59wq9X-Ltyt87-8QXq1u-28BospF-28x2fa7-4qhtGs-7Y25FH-5vMgY8-6Puks5-4eow5h-4qhtVW-4sdji2-51G9X9-59wqak-4qdqhi-51G9a7-51BUpk-51BXK4-51BVA4-7Y5kpW-c6VPsu-51Gaau-51Gcp9-59ACUE-51Gc1W-51G7R3-51BUjD-51GbMd-6buazF-51G9x5-51G7mW-51G7hQ-51BXfr-bAcejP-sy5b5j-6aoG2p-6HX9MN-aVfeAp-8i9rHr-s2r4bA-5v1Dvv-byuuXh-9db8aK-c6VQxm-c6VPwh-c6VR3s")
+       
         
         
         
         
         images.append(image1)
         images.append(image2)
-        images.append(image3)
         
         
-        let event: Event = Event(eventId: 2, title: "let's get wild!", eventRelationshipType: RelationshipType.Friendship, lookingFor: Gender.Male, estimatedCombinedTotalCostCAD: 250, estimatedCostForGuestCAD: 125, whoPays: Payer.Dutch, interestedUsers: usersInterested, owner: jason, chosenPartner: nil, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "party time central. let's party hard together")
-        
-        
-        
+        let event: Event = Event(eventId: 3, title: "hike and rock", eventRelationshipType: RelationshipType.PossiblyRomantic, lookingFor: Gender.Male, estimatedCombinedTotalCostCAD: 400, estimatedCostForGuestCAD: 0, whoPays: Payer.PosterPays, interestedUsers: usersInterested, owner: spencer, chosenPartner: nil, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "spend the day in the sunshine, then the night rocking out")
         
         
         return event
-        
-        
     }
+    
+    
+    
+    
+    func getNailsDoneByCassandra() -> Event{
+        
+        let fakeUsers: FakeUsers = FakeUsers()
+        //let anjali: User = fakeUsers.getAnjali()
+        let spencer: User = fakeUsers.getSpencer()
+        let cassandra: User = fakeUsers.getCassandra()
+        let jason: User = fakeUsers.getJason()
+        
+        var usersInterested: [User] = [User]()
+        usersInterested.append(jason)
+        usersInterested.append(spencer)
+        
+        
+        var calendar = Calendar.current
+        var dateComponents = DateComponents()
+        dateComponents.year = 2019
+        dateComponents.month = 2
+        dateComponents.day = 14
+        dateComponents.hour = 17
+        dateComponents.minute = 00
+        dateComponents.timeZone = TimeZone(abbreviation: "PST") // Japan Standard Time
+        let start = calendar.date(from: dateComponents)
+        
+        
+        calendar = Calendar.current
+        dateComponents = DateComponents()
+        dateComponents.year = 2019
+        dateComponents.month = 2
+        dateComponents.day = 14
+        dateComponents.hour = 18
+        dateComponents.minute = 00
+        dateComponents.timeZone = TimeZone(abbreviation: "PST") // Japan Standard Time
+        let end = calendar.date(from: dateComponents)
+        
+        
+        let locManager = CLLocationManager()
+        locManager.requestWhenInUseAuthorization()
+        
+        var currentLocation: CLLocation!
+        
+        if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() ==  .authorizedAlways){
+            
+            currentLocation = locManager.location
+            
+        }
+        
+        
+        let currentDateTime = Date()
+        
+        
+        var images: [Image] = [Image]()
+        let image1: Image = Image(name: "grouse", keyword: "grouse mountain", urlString: "https://www.flickr.com/photos/96694840@N08/8878806621/in/photolist-ewAcSM-ewDobf-54rJDY-ewDohm-mbu3x2-rHfozD-egWAcv-3TTG2R-8rT8o9-7HAsms-of9D6G-3iisq-6BaQzX-5Dfu8W-dJcJL-7HAsiG-5DfuEC-3ja69U-23qqJd-5Dbcvn-4YaHEk-9GG6r-3j4vbP-3mCb-38DjA-eeGFGs-e7KrMk-e3A3d1-b2fnqx-dWVXgE-ap8nn5-8T1aUA-bwLt3K-4dtsh-5Bm4ob-dWQgHx-4hxJq4-G1f4C-4dtsx-bbj5AK-4eSXy-6PnKA7-8YHiTG-8TSoX5-4AgpWm-NV7PFN-vEjsVE-5GKduh-GFY1w-H3S38")
+      
+        
+        images.append(image1)
+        
+        
+        let event: Event = Event(eventId: 4, title: "valentines nails!", eventRelationshipType: RelationshipType.PossiblyRomantic, lookingFor: Gender.Female, estimatedCombinedTotalCostCAD: 120, estimatedCostForGuestCAD: 10, whoPays: Payer.PosterPays, interestedUsers: usersInterested, owner: cassandra, chosenPartner: spencer, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "nothing to do on valentine's day? let's talk and relax together. i have a gift certificate; you just pay the tip :)")
+        
+        
+        return event
+    }
+    
+    
+    
+    func getBowlingBySpencer() -> Event{
+        
+        let fakeUsers: FakeUsers = FakeUsers()
+        //let anjali: User = fakeUsers.getAnjali()
+        let spencer: User = fakeUsers.getSpencer()
+        //let cassandra: User = fakeUsers.getCassandra()
+       //
+        let usersInterested: [User] = [User]()
+       
+        
+        var calendar = Calendar.current
+        var dateComponents = DateComponents()
+        dateComponents.year = 2019
+        dateComponents.month = 2
+        dateComponents.day = 5
+        dateComponents.hour = 18
+        dateComponents.minute = 45
+        dateComponents.timeZone = TimeZone(abbreviation: "PST") // Japan Standard Time
+        let start = calendar.date(from: dateComponents)
+        
+        
+        calendar = Calendar.current
+        dateComponents = DateComponents()
+        dateComponents.year = 2019
+        dateComponents.month = 2
+        dateComponents.day = 5
+        dateComponents.hour = 20
+        dateComponents.minute = 15
+        dateComponents.timeZone = TimeZone(abbreviation: "PST") // Japan Standard Time
+        let end = calendar.date(from: dateComponents)
+        
+        
+        let locManager = CLLocationManager()
+        locManager.requestWhenInUseAuthorization()
+        
+        var currentLocation: CLLocation!
+        
+        if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() ==  .authorizedAlways){
+            
+            currentLocation = locManager.location
+            
+        }
+        
+        
+        let currentDateTime = Date()
+        
+        
+        var images: [Image] = [Image]()
+        let image1: Image = Image(name: "bowling", keyword: "ten pin", urlString: "https://www.flickr.com/photos/sidtysmith/23720892673/in/photolist-C98LYa-2DVun8-4PdbwL-bqL89U-a6x4QU-9equx3-86Hc67-6pWBNZ-57fpjW-7Adp9t-696NGb-95uhrA-drpxEx-qmxgF9-8MKAoi-9yAgy5-8o44ir-5wmskS-9ZLubA-aguyFz-7A4utt-9SGnHp-bJ78Qp-95uhW9-3hN6qZ-9hhcf7-cqCsP-9ZHBFH-9g1g9P-95ugq1-54bw8u-9g4nvd-8MBCFK-u4FWE-86DZYF-4phhd8-ama2nq-am7cJD-51M6te-95ufEf-4PRmLN-5RNkmD-7Q8Wvv-7u4Dcc-88UrpD-be3rka-4jKV3z-9SGqAt-wh1eU-4XYm3G")
+        
+        
+        images.append(image1)
+        
+        
+        let event: Event = Event(eventId: 4, title: "bowl", eventRelationshipType: RelationshipType.Friendship, lookingFor: Gender.NotApplicable, estimatedCombinedTotalCostCAD: 40, estimatedCostForGuestCAD: 20, whoPays: Payer.Dutch, interestedUsers: usersInterested, owner: spencer, chosenPartner: nil, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "let's bowl")
+        
+        
+        return event
+    }
+    
+    
     
     func getEvent(eventId: Int) -> Event{
         for event in events {
