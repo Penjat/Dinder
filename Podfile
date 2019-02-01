@@ -7,4 +7,5 @@ target 'Dinder' do
 
   # Pods for Dinder
 pod 'Firebase/Core'
+pod 'Firebase/Auth'
 end
