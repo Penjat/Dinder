@@ -10,15 +10,18 @@ import Foundation
 import CoreLocation
 
 struct FakeEvents{
-    var events: [Event] = [Event]()
+    var events: [Event]
     
     init() {
+        print("init fake events")
+        events = [Event]()
         events.append(getSkiingSpaKegByJason())
         events.append(getSeawallWalkByJason())
         events.append(getBarMarijuanaWrestlingByJason())
         events.append(getMetallicaGrouseGrindBySpencer())
         events.append(getNailsDoneByCassandra())
         events.append(getBowlingBySpencer())
+        // make golf, dungeons and dragons, gym examples, change my breaks for $
     }
     
     func getSkiingSpaKegByJason() -> Event{
@@ -57,15 +60,26 @@ struct FakeEvents{
         let end = calendar.date(from: dateComponents)
         
         
+        print(start!)
+        print(end!)
+        
+        
         let locManager = CLLocationManager()
         locManager.requestWhenInUseAuthorization()
         
-        var currentLocation: CLLocation!
+        var currentLocation: CLLocation = locManager.location!
+        
+        print(currentLocation)
+        
         
         if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
             CLLocationManager.authorizationStatus() ==  .authorizedAlways){
             
-            currentLocation = locManager.location
+            if let cLocation = locManager.location{
+                print("yes")
+            }else{
+                print("nope")
+            }
             
         }
         

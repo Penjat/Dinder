@@ -14,11 +14,11 @@ class EventMainCell: UITableViewCell {
         super.awakeFromNib()
       
     }
-  func setUp(){
+    func setUp(url:String){
     print("setting up")
     let mainImage = UIImageView()
     mainImage.frame = frame
-    mainImage.image = UIImage(named: "hys")
+    mainImage.downloaded(from: "http://www.apple.com/euro/ios/ios8/a/generic/images/og.png")
     
     self.addSubview(mainImage)
   }

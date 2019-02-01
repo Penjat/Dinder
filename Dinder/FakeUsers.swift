@@ -63,9 +63,9 @@ struct FakeUsers{
         
         
         var dateComponents = DateComponents()
-        dateComponents.year = 1984
-        dateComponents.month = 8
-        dateComponents.day = 14
+        dateComponents.year = 1972
+        dateComponents.month = 10
+        dateComponents.day = 6
         dateComponents.timeZone = TimeZone(abbreviation: "PST") // Japan Standard Time
         
         let bDate = calendar.date(from: dateComponents)
