@@ -21,6 +21,8 @@ class EventView: UIView ,UITableViewDelegate,UITableViewDataSource{
     eventTableView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
     self.addSubview(eventTableView)
     eventTableView.register(EventMainCell.self, forCellReuseIdentifier: "eventMainCell")
+    eventTableView.register(EventInfoCell.self, forCellReuseIdentifier: "eventInfoCell")
+    
     eventTableView.delegate = self
     eventTableView.dataSource = self
   }
@@ -41,7 +43,16 @@ class EventView: UIView ,UITableViewDelegate,UITableViewDataSource{
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = eventTableView.dequeueReusableCell(withIdentifier: "eventMainCell", for: indexPath)
+    if indexPath.row == 0{
+      let cell :EventMainCell = eventTableView.dequeueReusableCell(withIdentifier: "eventMainCell", for: indexPath) as! EventMainCell
+      cell.setUp()
+      return cell
+    }
+    let cell :EventInfoCell = eventTableView.dequeueReusableCell(withIdentifier: "eventInfoCell", for: indexPath) as! EventInfoCell
+    cell.backgroundColor = UIColor.gray
+    cell.prepareForReuse()
+    cell.setUp()
+    
     return cell
   }
   

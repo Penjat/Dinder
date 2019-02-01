@@ -12,8 +12,16 @@ class EventMainCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+      
     }
+  func setUp(){
+    print("setting up")
+    let mainImage = UIImageView()
+    mainImage.frame = frame
+    mainImage.image = UIImage(named: "hys")
+    
+    self.addSubview(mainImage)
+  }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

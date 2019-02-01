@@ -65,7 +65,7 @@ class BrowseViewController: UIViewController {
     UIView.animate(withDuration: 1, animations: {
       
       //slide over and remove the view on completion
-      self.eventToRemove?.frame = CGRect(x: self.view.frame.maxX, y: self.view.frame.minY, width: self.view.frame.width, height: self.view.frame.height)
+      self.eventToRemove?.frame = CGRect(x: self.view.frame.maxX, y: self.view.safeAreaLayoutGuide.layoutFrame.minY, width: self.view.frame.width, height: self.view.frame.height)
     }, completion: {(true) in
       self.eventToRemove?.removeFromSuperview()})
     
