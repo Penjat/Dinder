@@ -137,6 +137,17 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GoF-00-xTO" id="iIu-YD-17V">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hys" translatesAutoresizingMaskIntoConstraints="NO" id="Afc-MU-kl7">
+                                                    <rect key="frame" x="15" y="11" width="345" height="178"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Afc-MU-kl7" firstAttribute="leading" secondItem="iIu-YD-17V" secondAttribute="leadingMargin" id="CEc-MB-ibC"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Afc-MU-kl7" secondAttribute="bottom" id="HXQ-Ek-Sac"/>
+                                                <constraint firstItem="Afc-MU-kl7" firstAttribute="top" secondItem="iIu-YD-17V" secondAttribute="topMargin" id="ph0-vb-BS4"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Afc-MU-kl7" secondAttribute="trailing" id="qdQ-H7-Q9H"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.91896892969999999" blue="0.61512825429999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </tableViewCell>
@@ -295,6 +306,7 @@
     <resources>
         <image name="circle-user-7" width="30" height="30"/>
         <image name="finger-point-top-7" width="30" height="30"/>
+        <image name="hys" width="1000" height="750"/>
         <image name="plus-sign" width="29" height="30"/>
         <image name="text-list" width="30" height="30"/>
     </resources>
