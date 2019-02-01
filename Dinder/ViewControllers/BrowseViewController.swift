@@ -20,14 +20,15 @@ class BrowseViewController: UIViewController {
       super.viewDidLoad()
       navigationController?.navigationBar.layer.zPosition = 10;
       print("loaded browse view controller")
-      //createNewEvent()
+      createNewEvent()
       
      
     }
   func createNewEvent(){
     //TODO get event data
+    let guide = view.safeAreaLayoutGuide
     
-    currentEvent = EventView(frame: self.view.frame)
+    currentEvent = EventView(frame: guide.layoutFrame)
     if let event = self.currentEvent{
       self.view.addSubview(event)
       currentEvent?.backgroundColor = colorArray[eventNumber%colorArray.count]
@@ -47,7 +48,7 @@ class BrowseViewController: UIViewController {
     UIView.animate(withDuration: 1, animations: {
       
       //slide over and remove the view on completion
-      self.eventToRemove?.frame = CGRect(x: -self.view.frame.maxX, y: self.view.frame.minY, width: self.view.frame.width, height: self.view.frame.height)
+      self.eventToRemove?.frame = CGRect(x: -self.view.frame.maxX, y: self.view.safeAreaLayoutGuide.layoutFrame.minY, width: self.view.frame.width, height: self.view.frame.height)
     }, completion: {(true) in
       self.eventToRemove?.removeFromSuperview()})
   }
@@ -64,7 +65,7 @@ class BrowseViewController: UIViewController {
     UIView.animate(withDuration: 1, animations: {
       
       //slide over and remove the view on completion
-      self.eventToRemove?.frame = CGRect(x: self.view.frame.maxX, y: self.view.frame.minY, width: self.view.frame.width, height: self.view.frame.height)
+      self.eventToRemove?.frame = CGRect(x: self.view.frame.maxX, y: self.view.safeAreaLayoutGuide.layoutFrame.minY, width: self.view.frame.width, height: self.view.frame.height)
     }, completion: {(true) in
       self.eventToRemove?.removeFromSuperview()})
     
