@@ -37,7 +37,7 @@ struct Event{
     
     init(eventId: Int, title: String, eventRelationshipType: RelationshipType, lookingFor: Gender,
          estimatedCombinedTotalCostCAD: Int, estimatedCostForGuestCAD: Int, whoPays: Payer,
-         interestedUsers: [User], owner: User, chosenPartner: User, images: [Image],
+         interestedUsers: [User], owner: User, chosenPartner: User?, images: [Image],
          location: CLLocation, startDateTime: Date, endDateTime: Date, postedDateTime: Date, description: String) {
         self.eventId = eventId
         self.title = title
