@@ -9,12 +9,6 @@
 import Foundation
 import CoreLocation
 
-enum RelationshipType: String{
-    case Anything
-    case Friendship
-    case PossiblyRomantic
-    case Romantic
-}
 
 
 
@@ -69,6 +63,11 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         self.locationManager.startUpdatingLocation()
         events.append(getSkiingSpaKegByJason())
         events.append(getSeawallWalkByJason())
+        events.append(getBarMarijuanaWrestlingByJason())
+        events.append(getMetallicaGrouseGrindBySpencer())
+        events.append(getNailsDoneByCassandra())
+        events.append(getBowlingBySpencer())
+        
     }
     
     func getSkiingSpaKegByJason() -> Event{
@@ -111,25 +110,7 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         print(end!)
         
         
-//        let locManager = CLLocationManager()
-//        locManager.requestWhenInUseAuthorization()
-//
-//        let currentLocation: CLLocation = locManager.location!
-//
-//        print(currentLocation)
-//
-//
-//        if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
-//            CLLocationManager.authorizationStatus() ==  .authorizedAlways){
-//
-//            if let cLocation = locManager.location{
-//                print("yes \(cLocation)")
-//            }else{
-//                print("nope")
-//            }
-//
-//        }
-        //let currentLocation = CLLocation.init(latitude: 100, longitude: 22)
+
         
         let currentLocation = self.locationManager.location
         
@@ -150,11 +131,7 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         images.append(image3)
         
         
-        //
-        //        label1.text = "\(currentLocation.coordinate.longitude)"
-        //        label2.text = "\(currentLocation.coordinate.latitude)"
-        //
-        //
+      
         let event: Event = Event(eventId: 0,
                                  title: "snow, spa, and meat!",
                                  eventRelationshipType:  RelationshipType.PossiblyRomantic,
@@ -171,10 +148,6 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
                                  endDateTime: end!,
                                  postedDateTime: currentDateTime,
                                  description: "let's go to skiing at blackcomb, then the spa, and then the keg!!!")
-        
-        
-        
-        
         
         return event
         
@@ -279,17 +252,8 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         let end = calendar.date(from: dateComponents)
         
         
-        let locManager = CLLocationManager()
-        locManager.requestWhenInUseAuthorization()
-        
-        var currentLocation: CLLocation!
-        
-        if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
-            CLLocationManager.authorizationStatus() ==  .authorizedAlways){
-            
-            currentLocation = locManager.location
-            
-        }
+        let currentLocation = self.locationManager.location
+
         
         
         let currentDateTime = Date()
@@ -357,17 +321,8 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         let end = calendar.date(from: dateComponents)
         
         
-        let locManager = CLLocationManager()
-        locManager.requestWhenInUseAuthorization()
-        
-        var currentLocation: CLLocation!
-        
-        if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
-            CLLocationManager.authorizationStatus() ==  .authorizedAlways){
-            
-            currentLocation = locManager.location
-            
-        }
+        let currentLocation = self.locationManager.location
+
         
         
         let currentDateTime = Date()
@@ -431,17 +386,8 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         let end = calendar.date(from: dateComponents)
         
         
-        let locManager = CLLocationManager()
-        locManager.requestWhenInUseAuthorization()
-        
-        var currentLocation: CLLocation!
-        
-        if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
-            CLLocationManager.authorizationStatus() ==  .authorizedAlways){
-            
-            currentLocation = locManager.location
-            
-        }
+        let currentLocation = self.locationManager.location
+
         
         
         let currentDateTime = Date()
@@ -494,17 +440,8 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         let end = calendar.date(from: dateComponents)
         
         
-        let locManager = CLLocationManager()
-        locManager.requestWhenInUseAuthorization()
-        
-        var currentLocation: CLLocation!
-        
-        if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
-            CLLocationManager.authorizationStatus() ==  .authorizedAlways){
-            
-            currentLocation = locManager.location
-            
-        }
+        let currentLocation = self.locationManager.location
+
         
         
         let currentDateTime = Date()
