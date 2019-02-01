@@ -45,6 +45,8 @@ class BrowseViewController: UIViewController {
             event.setUp(eventModel: eventModel)
             currentEvent?.backgroundColor = colorArray[eventNumber%colorArray.count]
             eventNumber += 1
+          print(#function, "The event hoster is \(eventModel.owner.firstName)")
+          print(#function, "The event name is \(eventModel.description)")
         }
         
     }

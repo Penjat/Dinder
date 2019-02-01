@@ -11,7 +11,7 @@ import UIKit
 class EventView: UIView ,UITableViewDelegate,UITableViewDataSource{
     let eventTableView = UITableView()
     var mainImage :UIImage?
-    
+  var thisEventModel :Event?
     
     
     override init(frame: CGRect) {
@@ -44,20 +44,24 @@ class EventView: UIView ,UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0{
-            let cell :EventMainCell = eventTableView.dequeueReusableCell(withIdentifier: "eventMainCell", for: indexPath) as! EventMainCell
-//            cell.setUp(url: "https://www.flickr.com/photos/73154039@N00/15294645804/in/photolist-pix4kJ-21UvBjN-pnW1xb-2e7uhK4-P15wpv-4RhekR-pDN3d1-87MkD6-87MkMF-o1jnZ3-axhoRX-q42DXL-87Qxwf-9xyJzY-rjKvUs-k4uTVk-atioCb-7PKSnG-9hp2Ph-VreWGL-bHaNHH-FGbJrE-Qgq7Bx-iocUoU-cjG7Nb-qQP6pW-gZBEWQ-2iUmXW-5SQiP-W1NZC2-ddWrSg-6QJrA-9hWupn-nLGj2G-7ZyTbg-4xGAVM-eWLPdC-moXnH1-5Wxswg-cTmYAd-moX6Hf-9hSBCT-5AMJo4-9y67ft-aCHG1K-9fU5qD-9rJ4Vw-kadje9-hJghmy-oYJwCT")
-            return cell
+            let mainCell :EventMainCell = eventTableView.dequeueReusableCell(withIdentifier: "eventMainCell", for: indexPath) as! EventMainCell
+                mainCell.setUp(event: thisEventModel)
+            return mainCell
         }
         let cell :EventInfoCell = eventTableView.dequeueReusableCell(withIdentifier: "eventInfoCell", for: indexPath) as! EventInfoCell
         cell.backgroundColor = UIColor.gray
         cell.prepareForReuse()
-        cell.setUp()
+      if let thisEventModel = thisEventModel{
+        cell.setUp(cellText: thisEventModel.description)
+      }
+      
         
         return cell
     }
     func setUp(eventModel:Event){
 //        mainImage = UIImage()
 //        imageView
+      thisEventModel = eventModel
     }
     
 }
