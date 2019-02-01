@@ -13,7 +13,7 @@ class DataManager{
 
     var events: [Event] = FakeEvents().events
     var users: [User] = FakeUsers().users
-    var currentEventNum = 1
+    var currentEventNum = 0
     
     
     
