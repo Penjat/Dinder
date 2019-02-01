@@ -11,6 +11,14 @@ import Foundation
 struct Image{
     
     let name: String
+    let keyword: String
     let urlString: String
+    
+    init(name: String, keyword: String, urlString: String) {
+        self.name = name
+        self.keyword = keyword
+        self.urlString = urlString
+        
+    }
     
 }

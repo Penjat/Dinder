@@ -15,13 +15,14 @@ struct User{
     let firstName: String
     let birthDate: Date
     let gender: Gender
-    let emailAddress: String
-    let mobilePhoneNumber: String?
+    var emailAddress: String
+    var mobilePhoneNumber: String?
+    var images: [Image]
     
     var ratings: [UserRating]
     
     
-    init(userId: Int, firstName: String, birthDate: Date, gender: Gender, emailAddress: String, mobilePhoneNumber: String, ratings: [UserRating]) {
+    init(userId: Int, firstName: String, birthDate: Date, gender: Gender, emailAddress: String, mobilePhoneNumber: String, ratings: [UserRating], images: [Image]) {
         self.userId = userId
         self.firstName = firstName
         self.birthDate = birthDate
@@ -29,5 +30,6 @@ struct User{
         self.emailAddress = emailAddress
         self.mobilePhoneNumber = mobilePhoneNumber
         self.ratings = ratings
+        self.images = images
     }
 }
