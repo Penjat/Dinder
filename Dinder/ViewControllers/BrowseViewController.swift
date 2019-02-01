@@ -10,23 +10,24 @@ import UIKit
 
 class BrowseViewController: UIViewController {
   
-  var currentEvent :UIView? //TODO make a custom class
-  var eventToRemove :UIView?
+  var currentEvent :EventView? //TODO make a custom class
+  var eventToRemove :EventView?
   
   var eventNumber = 0;
   var colorArray = [UIColor.cyan,UIColor.blue,UIColor.orange,UIColor.purple,UIColor.red,UIColor.yellow]
   
     override func viewDidLoad() {
       super.viewDidLoad()
+      navigationController?.navigationBar.layer.zPosition = 10;
       print("loaded browse view controller")
-      createNewEvent()
+      //createNewEvent()
       
      
     }
   func createNewEvent(){
     //TODO get event data
     
-    currentEvent = UIView(frame: self.view.frame)
+    currentEvent = EventView(frame: self.view.frame)
     if let event = self.currentEvent{
       self.view.addSubview(event)
       currentEvent?.backgroundColor = colorArray[eventNumber%colorArray.count]
@@ -81,7 +82,43 @@ class BrowseViewController: UIViewController {
       eventAddedMessage.alpha = 0.0
     })
   }
+  @IBAction func profileButtonPressed(_ sender: Any) {
+    print("pressed my profile button")
+    //TODO might need to change sender
+    performSegue(withIdentifier: "toMyProfile", sender: nil)
+  }
+  @IBAction func eventsMasterButtonPressed(_ sender: Any) {
+    print("pressed Events Master button")
+    performSegue(withIdentifier: "toEventsMaster", sender: nil)
+  }
+  @IBAction func pressedCreateEvent(_ sender: Any) {
+    print("pressed create event")
+    let alertController = UIAlertController( title: "Edit Device Name",
+                                             message: "Enter a new nickname for your device:",
+                                             preferredStyle: .alert)
+    alertController.addTextField(configurationHandler: {
+      (textField: UITextField) in
+      textField.placeholder = "name"
+    })
+    let cancelAction = UIAlertAction(title:"Cancel", style: .cancel, handler: {
+      action in
+      print("Cancel pressed")
+    })
+    let saveAction = UIAlertAction(title:"Save", style: .default, handler: {
+      action in
+      let value = alertController.textFields!.first!.text
+      print("Save pressed. Value: \(String(describing: value))")
+      
+    })
+    alertController.addAction(cancelAction)
+    alertController.addAction(saveAction)
+    
+  }
   
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //send any info we need here
+    print("preparing for segue")
+  }
 
   
 
