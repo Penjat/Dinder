@@ -14,4 +14,5 @@ enum UserRatingCategory{
     case Polite
     case Clean
     case PositiveExperience
+    case ShowedUp
 }

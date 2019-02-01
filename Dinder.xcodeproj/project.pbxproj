@@ -28,7 +28,11 @@
 		9F4FDE262203AE5A002E23AB /* RelationshipType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FDE252203AE5A002E23AB /* RelationshipType.swift */; };
 		9F4FDE282203AF25002E23AB /* Payer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FDE272203AF25002E23AB /* Payer.swift */; };
 		9F4FDE2A2203B02D002E23AB /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FDE292203B02D002E23AB /* Image.swift */; };
+<<<<<<< HEAD
+		9FC3B67B2203BAC300CD4D20 /* UserFaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B67A2203BAC300CD4D20 /* UserFaker.swift */; };
+=======
 >>>>>>> caaec711a96375104b314d0f3c3aba59d1f9e304
+>>>>>>> 8d6e123f3b05cd1864ec7d66a303e204c303f17d
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +59,11 @@
 		9F4FDE252203AE5A002E23AB /* RelationshipType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipType.swift; sourceTree = "<group>"; };
 		9F4FDE272203AF25002E23AB /* Payer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payer.swift; sourceTree = "<group>"; };
 		9F4FDE292203B02D002E23AB /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		9FC3B67A2203BAC300CD4D20 /* UserFaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFaker.swift; sourceTree = "<group>"; };
+=======
 >>>>>>> caaec711a96375104b314d0f3c3aba59d1f9e304
+>>>>>>> 8d6e123f3b05cd1864ec7d66a303e204c303f17d
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,10 @@
 			children = (
 				0B341CEA220284530094EDD1 /* AppDelegate.swift */,
 				0B341CEE220284530094EDD1 /* Main.storyboard */,
+				0B341CF1220284540094EDD1 /* Assets.xcassets */,
+				0B341CF3220284540094EDD1 /* LaunchScreen.storyboard */,
+				9FC3B67A2203BAC300CD4D20 /* UserFaker.swift */,
+				0B341CF6220284540094EDD1 /* Info.plist */,
 				9F4FDE1B2203A90D002E23AB /* User.swift */,
 				9F4FDE232203AE36002E23AB /* Event.swift */,
 				9F4FDE292203B02D002E23AB /* Image.swift */,
@@ -98,9 +110,6 @@
 				9F4FDE1F2203AC3A002E23AB /* UserRatingCategory.swift */,
 				9F4FDE212203ACE8002E23AB /* UserRating.swift */,
 				9F4FDE1D2203AAA2002E23AB /* Gender.swift */,
-				0B341CF1220284540094EDD1 /* Assets.xcassets */,
-				0B341CF3220284540094EDD1 /* LaunchScreen.storyboard */,
-				0B341CF6220284540094EDD1 /* Info.plist */,
 				0B341CFC2202B88A0094EDD1 /* ViewControllers */,
 			);
 			path = Dinder;
@@ -207,6 +216,7 @@
 				9F4FDE282203AF25002E23AB /* Payer.swift in Sources */,
 				9F4FDE1C2203A90D002E23AB /* User.swift in Sources */,
 				9F4FDE222203ACE8002E23AB /* UserRating.swift in Sources */,
+				9FC3B67B2203BAC300CD4D20 /* UserFaker.swift in Sources */,
 				0B341CEB220284530094EDD1 /* AppDelegate.swift in Sources */,
 				9F4FDE202203AC3A002E23AB /* UserRatingCategory.swift in Sources */,
 				9F4FDE262203AE5A002E23AB /* RelationshipType.swift in Sources */,
