@@ -154,26 +154,8 @@ class BrowseViewController: UIViewController {
     }
     @IBAction func pressedCreateEvent(_ sender: Any) {
         print("pressed create event")
-        let alertController = UIAlertController( title: "Edit Device Name",
-                                                 message: "Enter a new nickname for your device:",
-                                                 preferredStyle: .alert)
-        alertController.addTextField(configurationHandler: {
-            (textField: UITextField) in
-            textField.placeholder = "name"
-        })
-        let cancelAction = UIAlertAction(title:"Cancel", style: .cancel, handler: {
-            action in
-            print("Cancel pressed")
-        })
-        let saveAction = UIAlertAction(title:"Save", style: .default, handler: {
-            action in
-            let value = alertController.textFields!.first!.text
-            print("Save pressed. Value: \(String(describing: value))")
-            
-        })
-        alertController.addAction(cancelAction)
-        alertController.addAction(saveAction)
-        
+      
+        performSegue(withIdentifier: "toCreateEvent", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -184,6 +166,13 @@ class BrowseViewController: UIViewController {
           myProfile.userToDisplay = mainUser
           myProfile.isMyProfile = true
         }
+      }else if segue.identifier == "toEventsMaster"{
+        
+        if let eventsMaster = segue.destination as? EventsMasterViewController{
+          eventsMaster.mainUser = mainUser
+            
+        }
+        
       }
     }
     
