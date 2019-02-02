@@ -289,16 +289,25 @@
                                                         <rect key="frame" x="297" y="16" width="30" height="48"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <state key="normal" title="💘"/>
+                                                        <connections>
+                                                            <action selector="toggleWhy:" destination="3xD-lG-LEC" eventType="touchUpInside" id="7Hd-tX-udj"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3W2-mf-1av">
                                                         <rect key="frame" x="214" y="16" width="51" height="48"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <state key="normal" title="?❤️?"/>
+                                                        <connections>
+                                                            <action selector="toggleWhy:" destination="3xD-lG-LEC" eventType="touchUpInside" id="5Ml-7u-TXp"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSm-oE-gi4">
                                                         <rect key="frame" x="152" y="16" width="30" height="40"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <state key="normal" title="🤝"/>
+                                                        <connections>
+                                                            <action selector="toggleWhy:" destination="3xD-lG-LEC" eventType="touchUpInside" id="0Tg-NA-mn2"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvm-8W-wHW">
                                                         <rect key="frame" x="90" y="16" width="30" height="48"/>
@@ -306,6 +315,9 @@
                                                         <state key="normal" title="🎉">
                                                             <color key="titleColor" red="0.089982550761421365" green="0.089982550761421365" blue="0.089982550761421365" alpha="0.35699379280821919" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="toggleWhy:" destination="3xD-lG-LEC" eventType="touchUpInside" id="imo-vz-Zc2"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXV-Ml-JWy">
                                                         <rect key="frame" x="16" y="44" width="43" height="20.5"/>
@@ -359,18 +371,30 @@
                                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75g-KH-BWM">
                                                         <rect key="frame" x="292" y="54" width="35" height="30"/>
                                                         <state key="normal" title="Free!"/>
+                                                        <connections>
+                                                            <action selector="toggleWhoPays:" destination="3xD-lG-LEC" eventType="touchUpInside" id="oLI-wi-set"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2T0-B2-C6P">
                                                         <rect key="frame" x="230" y="54" width="54" height="30"/>
                                                         <state key="normal" title="you pay"/>
+                                                        <connections>
+                                                            <action selector="toggleWhoPays:" destination="3xD-lG-LEC" eventType="touchUpInside" id="GvE-en-ma9"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXR-r3-d4F">
                                                         <rect key="frame" x="182" y="54" width="40" height="30"/>
                                                         <state key="normal" title="dutch"/>
+                                                        <connections>
+                                                            <action selector="toggleWhoPays:" destination="3xD-lG-LEC" eventType="touchUpInside" id="Z2C-0f-KjZ"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFN-Bq-5ai">
                                                         <rect key="frame" x="141" y="54" width="33" height="30"/>
                                                         <state key="normal" title="I pay"/>
+                                                        <connections>
+                                                            <action selector="toggleWhoPays:" destination="3xD-lG-LEC" eventType="touchUpInside" id="avu-h8-Yo2"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -439,6 +463,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MHY-cU-hnT"/>
                     </view>
+                    <connections>
+                        <outlet property="anythingButton" destination="qvm-8W-wHW" id="ijJ-iu-y7v"/>
+                        <outlet property="datePicker" destination="Mzm-fs-I0n" id="fFW-wD-rMd"/>
+                        <outlet property="descriptionField" destination="ldV-US-rh4" id="3Fb-MI-PbK"/>
+                        <outlet property="dutchButton" destination="XXR-r3-d4F" id="kmL-AS-7dk"/>
+                        <outlet property="estimatedCostLabel" destination="SWc-zL-Bzg" id="N3c-lC-mVI"/>
+                        <outlet property="freeButton" destination="75g-KH-BWM" id="ccx-nX-5Xq"/>
+                        <outlet property="friendshipButton" destination="kSm-oE-gi4" id="1dS-5W-O21"/>
+                        <outlet property="lookingForLabel" destination="EBN-ek-pH8" id="kWI-Xo-l48"/>
+                        <outlet property="posibleRomanceButton" destination="3W2-mf-1av" id="RR7-HZ-6BB"/>
+                        <outlet property="posterPaysButton" destination="iFN-Bq-5ai" id="CrO-he-PcN"/>
+                        <outlet property="romanceButton" destination="gZz-PU-Tat" id="S7F-Ed-0h2"/>
+                        <outlet property="titleField" destination="1WH-xT-5Ym" id="t6W-OI-s1k"/>
+                        <outlet property="whereField" destination="moS-CN-e83" id="2Sx-a1-wyK"/>
+                        <outlet property="youPayButton" destination="2T0-B2-C6P" id="Vbk-Hx-I9f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DsY-xm-MQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
