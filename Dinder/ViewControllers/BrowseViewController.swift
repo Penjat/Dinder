@@ -51,7 +51,8 @@ class BrowseViewController: UIViewController {
       event1Description.text = eventModel.description
         event1PosterName.text = eventModel.owner.firstName
       event1EstimatedCost.text = "Estimated Cost: \(eventModel.estimatedCostForGuestCAD)"
-        
+      
+      event1Date.text = self.createReadable(date: eventModel.startDateTime)
     }
     
     
