@@ -10,6 +10,19 @@ import UIKit
 
 extension Image{
   
+  func getImage(imageView:UIImageView){
+    
+    
+    if let image = uiImage{
+      //if the image is already downloaded, then simply set the imageView.image
+      imageView.image = image
+      
+    }else{
+      //if the image has not been downloaded, download it and update the image view when it is done
+      downloadSelf(imageView: imageView)
+    }
+    
+  }
   func downloadSelf(imageView:UIImageView?){
     //tells the image to use its url to download itself
     //if an image view is passed in it will update the imageView when the download is complete

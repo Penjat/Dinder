@@ -62,8 +62,8 @@ class BrowseViewController: UIViewController {
       print("the image url is: \(eventModel.images[1].urlString)")
 //      downloadImage(urlString: "https://news.nationalgeographic.com/content/dam/news/2018/05/17/you-can-train-your-cat/02-cat-training-NationalGeographic_1484324.ngsversion.1526587209178.adapt.1900.1.jpg",imageView:self.event1MainImage)
       
-      //TODO call a different function to see if it has downloaded already
-      eventModel.images[0].downloadSelf(imageView: event1MainImage)
+      
+      eventModel.images[0].getImage(imageView: event1MainImage)
     }
     
     
