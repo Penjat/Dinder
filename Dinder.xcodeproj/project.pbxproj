@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B1A8117220604E700ECB91A /* Image+DownlodingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A8116220604E700ECB91A /* Image+DownlodingFunctions.swift */; };
 		0B1E32AD2203AE4800B5D58A /* EventsMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E32AC2203AE4800B5D58A /* EventsMasterViewController.swift */; };
 		0B1E32AF2203BCB600B5D58A /* MyActiveEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E32AE2203BCB600B5D58A /* MyActiveEventCell.swift */; };
 		0B1E32B12203BCE300B5D58A /* InterestedUsersContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E32B02203BCE300B5D58A /* InterestedUsersContainerCell.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B1A8116220604E700ECB91A /* Image+DownlodingFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+DownlodingFunctions.swift"; sourceTree = "<group>"; };
 		0B1E32AC2203AE4800B5D58A /* EventsMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsMasterViewController.swift; sourceTree = "<group>"; };
 		0B1E32AE2203BCB600B5D58A /* MyActiveEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActiveEventCell.swift; sourceTree = "<group>"; };
 		0B1E32B02203BCE300B5D58A /* InterestedUsersContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedUsersContainerCell.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				9F4FDE292203B02D002E23AB /* Image.swift */,
 				9F4FDE272203AF25002E23AB /* Payer.swift */,
 				9F4FDE252203AE5A002E23AB /* RelationshipType.swift */,
+				0B1A8116220604E700ECB91A /* Image+DownlodingFunctions.swift */,
 				9F4FDE1F2203AC3A002E23AB /* UserRatingCategory.swift */,
 				9F4FDE212203ACE8002E23AB /* UserRating.swift */,
 				9F4FDE1D2203AAA2002E23AB /* Gender.swift */,
@@ -279,6 +282,7 @@
 			files = (
 				0B1EF901220541A20057BCD1 /* BrowseViewController+StringFormatting.swift in Sources */,
 				0B1E32AF2203BCB600B5D58A /* MyActiveEventCell.swift in Sources */,
+				0B1A8117220604E700ECB91A /* Image+DownlodingFunctions.swift in Sources */,
 				0B341D002202B9690094EDD1 /* BrowseViewController.swift in Sources */,
 				0B1E32B12203BCE300B5D58A /* InterestedUsersContainerCell.swift in Sources */,
 				9F13CA1722040A41009F98B4 /* UIImageViewExtension.swift in Sources */,
