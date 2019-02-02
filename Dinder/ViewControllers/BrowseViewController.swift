@@ -9,10 +9,27 @@
 import UIKit
 
 class BrowseViewController: UIViewController {
-    
-    var currentEvent :EventView? //TODO make a custom class
-    var eventToRemove :EventView?
-    
+  
+  @IBOutlet weak var event1Title: UILabel!
+  @IBOutlet weak var event1Date: UILabel!
+  @IBOutlet weak var event1LookingFor: UILabel!
+  @IBOutlet weak var event1EstimatedCost: UILabel!
+  
+  @IBOutlet weak var event1Description: UILabel!
+  @IBOutlet weak var event1WhoPays: UILabel!
+  
+  @IBOutlet weak var event1MainImage: UIImageView!
+  @IBOutlet weak var event1PosterImage: UIImageView!
+  @IBOutlet weak var event1PosterName: UILabel!
+  
+  
+  //    var currentEvent :EventView? //TODO make a custom class
+//    var eventToRemove :EventView?
+  
+
+  
+  
+  
     var eventNumber = 0;
     var colorArray = [UIColor.cyan,UIColor.blue,UIColor.orange,UIColor.purple,UIColor.red,UIColor.yellow]
     
@@ -28,74 +45,89 @@ class BrowseViewController: UIViewController {
         
         navigationController?.navigationBar.layer.zPosition = 10;
         print("loaded browse view controller")
-        createNewEvent()
-        
+        //createNewEvent()
+        let eventModel: Event = dataManager!.getNextEvent(filters: [:])
+        event1Title.text = eventModel.title
+      event1Description.text = eventModel.description
+        event1PosterName.text = eventModel.owner.firstName
+      event1EstimatedCost.text = "Estimated Cost: \(eventModel.estimatedCostForGuestCAD)"
         
     }
-    func createNewEvent(){
+    
+    
+//    UIView.animate(withDuration: 5) {
+//      self.trailingConstraint.constant = -self.view.frame.width
+//      self.leadingConstraint.constant = -self.view.frame.width
+//      self.view.layoutIfNeeded()
+  
+//    }
+
+  
+  
+  func createNewEvent(){
         print("creeating new event")
         let eventModel: Event = dataManager!.getNextEvent(filters: [:])
         
         //TODO get event data
-        let guide = view.safeAreaLayoutGuide
-        
-        currentEvent = EventView(frame: guide.layoutFrame)
-        if let event = self.currentEvent{
-            self.view.addSubview(event)
-            event.setUp(eventModel: eventModel)
-            currentEvent?.backgroundColor = colorArray[eventNumber%colorArray.count]
-            eventNumber += 1
-          print(#function, "The event hoster is \(eventModel.owner.firstName)")
-          print(#function, "The event name is \(eventModel.description)")
-        }
+//        let guide = view.safeAreaLayoutGuide
+//
+//        currentEvent = EventView(frame: guide.layoutFrame)
+//        if let event = self.currentEvent{
+//            self.view.addSubview(event)
+//            event.setUp(eventModel: eventModel)
+//            currentEvent?.backgroundColor = colorArray[eventNumber%colorArray.count]
+//            eventNumber += 1
+//          print(#function, "The event hoster is \(eventModel.owner.firstName)")
+//          print(#function, "The event name is \(eventModel.description)")
+//        }
         
     }
     @IBAction func swippedLeft(_ sender: Any) {
         print("swipped left")
         
-        //swap the current event out for a new one
-        eventToRemove = currentEvent
-        createNewEvent()
-        
-        //make sure the current event stays on top
-        eventToRemove?.layer.zPosition = 5
-        UIView.animate(withDuration: 1, animations: {
-            
-            //slide over and remove the view on completion
-            self.eventToRemove?.frame = CGRect(x: -self.view.frame.maxX, y: self.view.safeAreaLayoutGuide.layoutFrame.minY, width: self.view.frame.width, height: self.view.frame.height)
-        }, completion: {(true) in
-            self.eventToRemove?.removeFromSuperview()})
+//        //swap the current event out for a new one
+//        eventToRemove = currentEvent
+//        createNewEvent()
+//
+//        //make sure the current event stays on top
+//        eventToRemove?.layer.zPosition = 5
+//        UIView.animate(withDuration: 1, animations: {
+//
+//            //slide over and remove the view on completion
+//            self.eventToRemove?.frame = CGRect(x: -self.view.frame.maxX, y: self.view.safeAreaLayoutGuide.layoutFrame.minY, width: self.view.frame.width, height: self.view.frame.height)
+//        }, completion: {(true) in
+//            self.eventToRemove?.removeFromSuperview()})
     }
     
     @IBAction func swippedRight(_ sender: Any) {
         print("swipped right")
         
-        //swap the current event out for a new one
-        eventToRemove = currentEvent
-        createNewEvent()
-        
-        //make sure the current event stays on top
-        eventToRemove?.layer.zPosition = 5
-        UIView.animate(withDuration: 1, animations: {
-            
-            //slide over and remove the view on completion
-            self.eventToRemove?.frame = CGRect(x: self.view.frame.maxX, y: self.view.safeAreaLayoutGuide.layoutFrame.minY, width: self.view.frame.width, height: self.view.frame.height)
-        }, completion: {(true) in
-            self.eventToRemove?.removeFromSuperview()})
-        
-        
-        let eventAddedMessage = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-        eventAddedMessage.text = "event added"
-        eventAddedMessage.font = eventAddedMessage.font.withSize(30)
-        eventAddedMessage.textColor = UIColor.white
-        eventAddedMessage.textAlignment = NSTextAlignment.center
-        eventAddedMessage.layer.zPosition = 6
-        eventAddedMessage.center = view.center
-        view.addSubview(eventAddedMessage)
-        UILabel.animate(withDuration: 2, animations: {
-            eventAddedMessage.frame = CGRect(x: self.view.center.x, y: self.view.center.y - 100, width: 200, height: 200)
-            eventAddedMessage.alpha = 0.0
-        })
+//        //swap the current event out for a new one
+//        eventToRemove = currentEvent
+//        createNewEvent()
+//        
+//        //make sure the current event stays on top
+//        eventToRemove?.layer.zPosition = 5
+//        UIView.animate(withDuration: 1, animations: {
+//            
+//            //slide over and remove the view on completion
+//            self.eventToRemove?.frame = CGRect(x: self.view.frame.maxX, y: self.view.safeAreaLayoutGuide.layoutFrame.minY, width: self.view.frame.width, height: self.view.frame.height)
+//        }, completion: {(true) in
+//            self.eventToRemove?.removeFromSuperview()})
+//        
+//        
+//        let eventAddedMessage = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+//        eventAddedMessage.text = "event added"
+//        eventAddedMessage.font = eventAddedMessage.font.withSize(30)
+//        eventAddedMessage.textColor = UIColor.white
+//        eventAddedMessage.textAlignment = NSTextAlignment.center
+//        eventAddedMessage.layer.zPosition = 6
+//        eventAddedMessage.center = view.center
+//        view.addSubview(eventAddedMessage)
+//        UILabel.animate(withDuration: 2, animations: {
+//            eventAddedMessage.frame = CGRect(x: self.view.center.x, y: self.view.center.y - 100, width: 200, height: 200)
+//            eventAddedMessage.alpha = 0.0
+//        })
     }
     @IBAction func profileButtonPressed(_ sender: Any) {
         print("pressed my profile button")
