@@ -18,8 +18,11 @@ extension BrowseViewController {
     let dateString = formatter.string(from: date)
     return dateString
   }
-  func createString(userIs: Gender , lookingFor: Gender){
-    var output = ""
+  
+  func createString(userIs: Gender , lookingFor: Gender) -> String{
+    let output = "I am \(userIs.getString()) looking for \(lookingFor.getString())"
+    
+    return output
     
     
   }
