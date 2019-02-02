@@ -28,6 +28,7 @@ class BrowseViewController: UIViewController {
   
 
   
+  var mainUser :User?
   
   
     var eventNumber = 0;
@@ -40,8 +41,11 @@ class BrowseViewController: UIViewController {
         print("jenny view loaded")
         
         dataManager = DataManager()
-        
-        
+      
+        mainUser = dataManager?.getUser(userId: 0)
+      if let mainUser = mainUser {
+        print("The main user is \(mainUser)")
+      }
         
         navigationController?.navigationBar.layer.zPosition = 10;
         print("loaded browse view controller")
@@ -51,7 +55,9 @@ class BrowseViewController: UIViewController {
       event1Description.text = eventModel.description
         event1PosterName.text = eventModel.owner.firstName
       event1EstimatedCost.text = "Estimated Cost: \(eventModel.estimatedCostForGuestCAD)"
-        
+      
+      event1Date.text = self.createReadable(date: eventModel.startDateTime)
+      event1LookingFor.text = createString(userIs: eventModel.owner.gender, lookingFor: eventModel.lookingFor ?? Gender.NotApplicable)
     }
     
     
@@ -165,6 +171,12 @@ class BrowseViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //send any info we need here
         print("preparing for segue")
+      if segue.identifier == "toMyProfile"{
+        if let myProfile = segue.destination as? ProfileViewController{
+          myProfile.userToDisplay = mainUser
+          myProfile.isMyProfile = true
+        }
+      }
     }
     
     

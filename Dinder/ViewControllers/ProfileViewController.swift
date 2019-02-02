@@ -8,51 +8,36 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
- 
+class ProfileViewController: UIViewController{
+  var userToDisplay :User?
+  var isMyProfile = false
   
-  @IBOutlet weak var profileTableView: UITableView!
+  @IBOutlet weak var userImageScrollView: UIScrollView!
   
-    override func viewDidLoad() {
+  @IBOutlet weak var userRatting: UILabel!
+  @IBOutlet weak var userName: UILabel!
+  @IBOutlet weak var userNoShows: UILabel!
+  @IBOutlet weak var userAboutMe: UILabel!
+  
+  override func viewDidLoad() {
       super.viewDidLoad()
       print("loaded profile view controller")
-      profileTableView.dataSource = self
-      profileTableView.delegate = self
-      profileTableView.allowsSelection = false;
-    }
     
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 1
-  }
+    if let user = userToDisplay{
+      userName.text = user.firstName
+      userRatting.text = user.stringOfRating()
+      //TODO put in about me section
+      //userAboutMe.text = user.aboutMe
+    }
+      
+    }
   
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    print("setting up the profile display")
     
-    //if it is the main profile picture sectio
-    if indexPath.section == 0{
-      let cell = profileTableView.dequeueReusableCell(withIdentifier: "mainProfileCell", for: indexPath)
-      return cell
-    }
-    
-    //return the profile info cell
-    let cell = profileTableView.dequeueReusableCell(withIdentifier: "profileInfoCell", for: indexPath)
-    return cell
     
   }
   
-  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    //TODO fix this value
-    return view.frame.width
-  }
-  func numberOfSections(in tableView: UITableView) -> Int {
-    //TODO get data from profile
-    return 5
-    
-  }
-  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    if(section == 0){
-      return nil
-    }
-    return nil
-  }
 
 }

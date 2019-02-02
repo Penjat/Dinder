@@ -14,4 +14,16 @@ enum Gender{
     case Male
     case Female
     case NotApplicable
+  
+  func getString() -> String{
+    //returns a usable string version
+    switch (self){
+    case .Male:
+      return "a Man"
+    case .Female:
+      return "a Woman"
+    case .NotApplicable:
+      return "Anyone"
+    }
+  }
 }

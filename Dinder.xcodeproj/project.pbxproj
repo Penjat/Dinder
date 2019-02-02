@@ -11,11 +11,11 @@
 		0B1E32AF2203BCB600B5D58A /* MyActiveEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E32AE2203BCB600B5D58A /* MyActiveEventCell.swift */; };
 		0B1E32B12203BCE300B5D58A /* InterestedUsersContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E32B02203BCE300B5D58A /* InterestedUsersContainerCell.swift */; };
 		0B1E32B42203C94900B5D58A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E32B32203C94900B5D58A /* ProfileViewController.swift */; };
+		0B1EF901220541A20057BCD1 /* BrowseViewController+StringFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1EF900220541A20057BCD1 /* BrowseViewController+StringFormatting.swift */; };
 		0B341CEB220284530094EDD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B341CEA220284530094EDD1 /* AppDelegate.swift */; };
 		0B341CF0220284530094EDD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B341CEE220284530094EDD1 /* Main.storyboard */; };
 		0B341CF2220284540094EDD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B341CF1220284540094EDD1 /* Assets.xcassets */; };
 		0B341CF5220284540094EDD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B341CF3220284540094EDD1 /* LaunchScreen.storyboard */; };
-		0B341CFE2202B95B0094EDD1 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		0B341D002202B9690094EDD1 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B341CFF2202B9690094EDD1 /* BrowseViewController.swift */; };
 		0B43BFA22204E8780009FDC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B43BFA12204E8780009FDC4 /* GoogleService-Info.plist */; };
 		219FAC3CCC8223745E26A6D9 /* Pods_Dinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ECC337790D150159B44A22C /* Pods_Dinder.framework */; };
@@ -38,6 +38,7 @@
 		0B1E32AE2203BCB600B5D58A /* MyActiveEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActiveEventCell.swift; sourceTree = "<group>"; };
 		0B1E32B02203BCE300B5D58A /* InterestedUsersContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedUsersContainerCell.swift; sourceTree = "<group>"; };
 		0B1E32B32203C94900B5D58A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0B1EF900220541A20057BCD1 /* BrowseViewController+StringFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrowseViewController+StringFormatting.swift"; sourceTree = "<group>"; };
 		0B341CE7220284530094EDD1 /* Dinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B341CEA220284530094EDD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B341CEF220284530094EDD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 				0B341CF6220284540094EDD1 /* Info.plist */,
 				9F4FDE1B2203A90D002E23AB /* User.swift */,
 				9F4FDE232203AE36002E23AB /* Event.swift */,
+				0B1EF900220541A20057BCD1 /* BrowseViewController+StringFormatting.swift */,
 				9F4FDE292203B02D002E23AB /* Image.swift */,
 				9F4FDE272203AF25002E23AB /* Payer.swift */,
 				9F4FDE252203AE5A002E23AB /* RelationshipType.swift */,
@@ -275,15 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B1EF901220541A20057BCD1 /* BrowseViewController+StringFormatting.swift in Sources */,
 				0B1E32AF2203BCB600B5D58A /* MyActiveEventCell.swift in Sources */,
 				0B341D002202B9690094EDD1 /* BrowseViewController.swift in Sources */,
-<<<<<<< HEAD
-				0B341CFE2202B95B0094EDD1 /* (null) in Sources */,
-=======
-				0B1E32B82203F2DC00B5D58A /* EventInfoCell.swift in Sources */,
-				0B341CFE2202B95B0094EDD1 /* BuildFile in Sources */,
-				0B1E32B62203E90F00B5D58A /* EventMainCell.swift in Sources */,
->>>>>>> ca50b41163d910fb269c3bd02310e1fa0b7a384a
 				0B1E32B12203BCE300B5D58A /* InterestedUsersContainerCell.swift in Sources */,
 				9F13CA1722040A41009F98B4 /* UIImageViewExtension.swift in Sources */,
 				0B341CEB220284530094EDD1 /* AppDelegate.swift in Sources */,
