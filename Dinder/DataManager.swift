@@ -21,7 +21,7 @@ class DataManager{
     
     func getNextEvent(filters: [String:String]) -> Event{
         currentEventNum += 1
-        let _: User = getFirstUserFromFirebase(userId: 12)
+        let _: User = getUserFromFirebase(userId: 12)
         return self.events[currentEventNum % events.count] // need dictionary of options, plus keep track of current event
     }
     
@@ -53,7 +53,8 @@ class DataManager{
     
     func getUserFromFirebase(userId: Int) -> User{
         
-        let usersRef = Database.database().reference(withPath: "users")
+        var usersRef = Database.database().reference(withPath: "users")
+        usersRef = Database.database().reference()
        // let firstNameRef = usersRef.child("firstname")
        // print(usersRef.key!)
        // print(firstNameRef.key!)
