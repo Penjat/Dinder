@@ -18,6 +18,10 @@ struct User{
     let gender: Gender
     var emailAddress: String
     var mobilePhoneNumber: String?
+  
+    //Can we implement a userSelfDescription? -Spencer
+    //var userSelfDescription = ""
+  
     var images: [Image]
     
     var ratings: [UserRating]
@@ -111,7 +115,10 @@ struct User{
         }
         return String(data: data, encoding: String.Encoding.utf8)
     }
-    
+  func stringOfRating() -> String{
+    //TODO generate actual rating from string, or set up rating system in a different way
+    return "☆☆☆☆☆"
+  }
     
     func toAnyObject() -> [String:String] {
         

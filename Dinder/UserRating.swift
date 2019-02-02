@@ -22,4 +22,5 @@ struct UserRating{
         self.comment = comment
         self.reviewer = reviewer
     }
+  
 }
