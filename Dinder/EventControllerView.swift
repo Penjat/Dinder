@@ -5,6 +5,11 @@ import UIKit
 class EventControllerView: UIView {
   @IBOutlet var contentView: UIView!
   
+  @IBOutlet weak var mainImage: UIImageView!
+  @IBOutlet weak var posterImage: UIImageView!
+  @IBOutlet weak var posterName: UILabel!
+  
+  
   @IBOutlet weak var eventTitleLabel: UILabel!
   @IBOutlet weak var eventDescriptionLabel: UILabel!
   @IBOutlet weak var startTimeLabel: UILabel!
@@ -66,7 +71,12 @@ class EventControllerView: UIView {
     costLabel.text = "$\(event.estimatedCostForGuestCAD)"
     whoPaysLabel.text = event.whoPays?.getString()
     
+    //--------------Main Image
+    event.images[0].getImage(imageView: mainImage)
     
+    //--------------Poster Image and Name
+    event.owner.images[0].getImage(imageView: posterImage)
+    posterName.text = event.owner.firstName
     
   }
 
