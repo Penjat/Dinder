@@ -16,8 +16,11 @@ class MyActiveEventCell: UITableViewCell {
       
     }
   
-  func setUp(image:Image){
-    image.getImage(imageView: eventImage)
+  func setUp(event:Event){
+    if event.images.count > 0{
+      event.images[0].getImage(imageView: eventImage)
+    }
+    
   }
 
 }
