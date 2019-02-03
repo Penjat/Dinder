@@ -35,10 +35,12 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if indexPath.row == 0{
-      let cell = eventTableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath)
+      let cell = eventTableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! MyActiveEventCell
+      cell.setUp(image: eventsToShow[indexPath.section].images[0])
       return cell
     }
-    let cell = eventTableView.dequeueReusableCell(withIdentifier: "interestedUserCell", for: indexPath)
+    let cell = eventTableView.dequeueReusableCell(withIdentifier: "interestedUserCell", for: indexPath) as! InterestedUsersContainerCell
+    cell.setUp(event: eventsToShow[indexPath.section])
     return cell
   }
   

@@ -1,15 +1,10 @@
-//
-//  InterestedUsersContainerCell.swift
-//  Dinder
-//
-//  Created by Spencer Symington on 2019-01-31.
-//  Copyright © 2019 Spencer Symington. All rights reserved.
-//
+
 
 import UIKit
 
 class InterestedUsersContainerCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
   
+  var myEvent :Event?
   
   //this cell appears in conjunction with a MyPendingEventCell
   //contains a collection view that holds all interested users
@@ -35,16 +30,26 @@ class InterestedUsersContainerCell: UITableViewCell,UICollectionViewDelegate,UIC
     }
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 100
+    if let event = myEvent , let intereseted = event.interestedUsers{
+      return intereseted.count
+    }
+    return 0
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = interestedUserCollectionView.dequeueReusableCell(withReuseIdentifier: "interestedUserCell", for: indexPath)
+    let cell = interestedUserCollectionView.dequeueReusableCell(withReuseIdentifier: "interestedUserCell", for: indexPath) as! InterestedUserCell
+    if let event = myEvent , let intereseted = event.interestedUsers{
+      cell.setUp(user: intereseted[indexPath.row])
+    }
     
     return cell
   }
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return CGSize(width: 200, height: 200)
+  }
+  
+  func setUp(event:Event){
+    myEvent = event
   }
 
 }
