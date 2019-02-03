@@ -13,4 +13,17 @@ enum RelationshipType: String{
     case Friendship
     case PossiblyRomantic
     case Romantic
+  
+  func getString() -> String{
+    switch(self){
+    case .Anything:
+      return "Anything"
+    case .Friendship:
+      return "Friendship"
+    case .PossiblyRomantic:
+      return "Poissible Romance"
+    case .Romantic:
+      return "Romance"
+    }
+  }
 }

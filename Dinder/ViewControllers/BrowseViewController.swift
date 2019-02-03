@@ -33,26 +33,33 @@ class BrowseViewController: UIViewController {
   var colorArray = [UIColor.cyan,UIColor.blue,UIColor.orange,UIColor.purple,UIColor.red,UIColor.yellow]
   
   var dataManager: DataManager?
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      
-        
-        dataManager = DataManager()
-      
-        mainUser = dataManager?.getUser(userId: 0)
-      if let mainUser = mainUser {
-        //print("The main user is \(mainUser)")
-      }
-        
-        navigationController?.navigationBar.layer.zPosition = 10;
-        print("loaded browse view controller")
-//        //createNewEvent()
-//        let eventModel: Event = dataManager!.getNextEvent(filters: [:])
-//        event1Title.text = eventModel.title
-//      event1Description.text = eventModel.description
-//        event1PosterName.text = eventModel.owner.firstName
-//      event1EstimatedCost.text = "Estimated Cost: \(eventModel.estimatedCostForGuestCAD)"
+    //set up data manager
+    dataManager = DataManager()
+    
+    //get the main user
+    mainUser = dataManager?.getUser(userId: 0)
+    
+    
+    //start out with events
+    eventController1.populateEvent(getNextEvent())
+    eventController2.populateEvent(getNextEvent())
+    
+    
+    //make sure the navigation controller is on top
+    navigationController?.navigationBar.layer.zPosition = 10;
+    print("loaded browse view controller")
+    
+    
+    //        //createNewEvent()
+    //        let eventModel: Event = dataManager!.getNextEvent(filters: [:])
+    //        event1Title.text = eventModel.title
+    //      event1Description.text = eventModel.description
+    //        event1PosterName.text = eventModel.owner.firstName
+    //      event1EstimatedCost.text = "Estimated Cost: \(eventModel.estimatedCostForGuestCAD)"
 //
 //      event1Date.text = self.createReadable(date: eventModel.startDateTime)
 //      event1LookingFor.text = createString(userIs: eventModel.owner.gender, lookingFor: eventModel.lookingFor ?? Gender.NotApplicable)
@@ -66,29 +73,12 @@ class BrowseViewController: UIViewController {
     
     
 //
-  func downloadImage(urlString:String , imageView:UIImageView?){
-    
+  func getNextEvent() -> Event{
+    return dataManager!.getNextEvent(filters: [:])
   }
   
   
-  func createNewEvent(){
-        print("creeating new event")
-        let eventModel: Event = dataManager!.getNextEvent(filters: [:])
-        
-        //TODO get event data
-//        let guide = view.safeAreaLayoutGuide
-//
-//        currentEvent = EventView(frame: guide.layoutFrame)
-//        if let event = self.currentEvent{
-//            self.view.addSubview(event)
-//            event.setUp(eventModel: eventModel)
-//            currentEvent?.backgroundColor = colorArray[eventNumber%colorArray.count]
-//            eventNumber += 1
-//          print(#function, "The event hoster is \(eventModel.owner.firstName)")
-//          print(#function, "The event name is \(eventModel.description)")
-//        }
-        
-    }
+
     @IBAction func swippedLeft(_ sender: Any) {
         print("swipped left")
       
@@ -107,8 +97,10 @@ class BrowseViewController: UIViewController {
         
         }, completion: {(true) in
           self.eventMoving = false
+          self.eventView1.scrollToTop()
           self.trailingConstraint1.constant = 0
           self.leadingContraint1.constant = 0
+          self.eventController1.populateEvent(self.getNextEvent())
           self.view.insertSubview(self.eventView1,
                                   belowSubview: self.eventView2)
                     })
@@ -123,8 +115,10 @@ class BrowseViewController: UIViewController {
           
         }, completion: {(true) in
           self.eventMoving = false
+          self.eventView2.scrollToTop()
           self.trailingConstraint2.constant = 0
           self.leadingConstraint2.constant = 0
+          self.eventController2.populateEvent(self.getNextEvent())
           self.view.insertSubview(self.eventView2,
                         belowSubview: self.eventView1)
         })
