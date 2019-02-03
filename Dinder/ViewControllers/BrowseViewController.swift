@@ -10,17 +10,7 @@ import UIKit
 
 class BrowseViewController: UIViewController {
   
-  @IBOutlet weak var event1Title: UILabel!
-  @IBOutlet weak var event1Date: UILabel!
-  @IBOutlet weak var event1LookingFor: UILabel!
-  @IBOutlet weak var event1EstimatedCost: UILabel!
-  
-  @IBOutlet weak var event1Description: UILabel!
-  @IBOutlet weak var event1WhoPays: UILabel!
-  
-  @IBOutlet weak var event1MainImage: UIImageView!
-  @IBOutlet weak var event1PosterImage: UIImageView!
-  @IBOutlet weak var event1PosterName: UILabel!
+
   
   
   //    var currentEvent :EventView? //TODO make a custom class
@@ -49,21 +39,21 @@ class BrowseViewController: UIViewController {
         
         navigationController?.navigationBar.layer.zPosition = 10;
         print("loaded browse view controller")
-        //createNewEvent()
-        let eventModel: Event = dataManager!.getNextEvent(filters: [:])
-        event1Title.text = eventModel.title
-      event1Description.text = eventModel.description
-        event1PosterName.text = eventModel.owner.firstName
-      event1EstimatedCost.text = "Estimated Cost: \(eventModel.estimatedCostForGuestCAD)"
+//        //createNewEvent()
+//        let eventModel: Event = dataManager!.getNextEvent(filters: [:])
+//        event1Title.text = eventModel.title
+//      event1Description.text = eventModel.description
+//        event1PosterName.text = eventModel.owner.firstName
+//      event1EstimatedCost.text = "Estimated Cost: \(eventModel.estimatedCostForGuestCAD)"
+//
+//      event1Date.text = self.createReadable(date: eventModel.startDateTime)
+//      event1LookingFor.text = createString(userIs: eventModel.owner.gender, lookingFor: eventModel.lookingFor ?? Gender.NotApplicable)
+//      print("downloading image")
+//      print("the image url is: \(eventModel.images[1].urlString)")
+////      downloadImage(urlString: "https://news.nationalgeographic.com/content/dam/news/2018/05/17/you-can-train-your-cat/02-cat-training-NationalGeographic_1484324.ngsversion.1526587209178.adapt.1900.1.jpg",imageView:self.event1MainImage)
       
-      event1Date.text = self.createReadable(date: eventModel.startDateTime)
-      event1LookingFor.text = createString(userIs: eventModel.owner.gender, lookingFor: eventModel.lookingFor ?? Gender.NotApplicable)
-      print("downloading image")
-      print("the image url is: \(eventModel.images[1].urlString)")
-//      downloadImage(urlString: "https://news.nationalgeographic.com/content/dam/news/2018/05/17/you-can-train-your-cat/02-cat-training-NationalGeographic_1484324.ngsversion.1526587209178.adapt.1900.1.jpg",imageView:self.event1MainImage)
       
-      
-      eventModel.images[0].getImage(imageView: event1MainImage)
+//      eventModel.images[0].getImage(imageView: event1MainImage)
     }
     
     
