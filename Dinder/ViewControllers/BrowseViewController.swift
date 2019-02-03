@@ -99,7 +99,15 @@ class BrowseViewController: UIViewController {
         
         if let eventsMaster = segue.destination as? EventsMasterViewController{
           eventsMaster.mainUser = mainUser
+          
+          if let myEvents = dataManager?.getFutureEventsForUser(user: mainUser!){
             
+            eventsMaster.myEvents = myEvents
+            
+          }
+          if let interestedEvents = dataManager?.getEventsUserIsApplyingFor(user: mainUser!){
+          eventsMaster.interestedEvents = interestedEvents
+          }
         }
         
       }

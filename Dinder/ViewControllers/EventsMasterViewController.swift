@@ -1,16 +1,13 @@
-//
-//  EventsMasterViewController.swift
-//  Dinder
-//
-//  Created by Spencer Symington on 2019-01-31.
-//  Copyright © 2019 Spencer Symington. All rights reserved.
-//
+
 
 import UIKit
 
 class EventsMasterViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
   
   var mainUser: User?
+  var myEvents = [Event]()
+  var interestedEvents = [Event]()
+  
   var eventsToShow = [Event]()
   var showingMyEvents = true //true is my events, false is events I am interested in
   
@@ -32,8 +29,8 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
-    //if no events show with message
-    noEventsMsg.isHidden = (eventsToShow.count > 0)
+    
+    showMyEvents()
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,18 +56,39 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
     
   }
   @IBAction func switchToMyEvents(_ sender: Any) {
-    //TODO put in separet function
-    showingMyEvents = true
-    noEventsMsgLabel.alpha = 0.0
-    noEventsMsgLabel.text = "you have created no events"
-    UIView.animate(withDuration: 1.0, animations: {
-      self.noEventsMsgLabel.alpha = 1.0
-    })
-    
+    showMyEvents()
   }
   @IBAction func switchToInterestedEvents(_ sender: Any) {
-    //TODO put in separet function
+    showInterestedEvents()
+  }
+  func showMyEvents(){
+    eventsToShow = myEvents
+    
+    showingMyEvents = true
+    
+    if eventsToShow.count == 0 {
+      showNoEvents(message:"you have created no events")
+    }else{
+      noEventsMsg.isHidden = true
+    }
+    
+  }
+  func showInterestedEvents(){
+    eventsToShow = interestedEvents
     showingMyEvents = false
+    
+    //if no events show with message
+    if eventsToShow.count == 0 {
+      showNoEvents(message:"you are not intereste in any events")
+    }else{
+      noEventsMsg.isHidden = true
+    }
+    
+    
+    
+  }
+  func showNoEvents(message:String){
+    noEventsMsg.isHidden = false
     noEventsMsgLabel.alpha = 0.0
     noEventsMsgLabel.text = "you are not intereste in any events"
     UIView.animate(withDuration: 1.0, animations: {
