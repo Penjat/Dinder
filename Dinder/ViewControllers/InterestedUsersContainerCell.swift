@@ -18,7 +18,7 @@ class InterestedUsersContainerCell: UITableViewCell,UICollectionViewDelegate,UIC
       
       
       layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
-      layout.minimumLineSpacing = 32
+      layout.minimumLineSpacing = 0
       layout.minimumInteritemSpacing = 32
       layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
     }

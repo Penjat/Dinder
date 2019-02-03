@@ -36,15 +36,35 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if indexPath.row == 0{
       let cell = eventTableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! MyActiveEventCell
+      cell.prepareForReuse()
       cell.setUp(event: eventsToShow[indexPath.section])
+      
+      cell.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20);
+      
+      
+      
       return cell
     }
     let cell = eventTableView.dequeueReusableCell(withIdentifier: "interestedUserCell", for: indexPath) as! InterestedUsersContainerCell
+    cell.prepareForReuse()
     cell.setUp(event: eventsToShow[indexPath.section])
+    cell.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20);
     return cell
   }
   
+//  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//    let  headerCell = tableView.dequeueReusableCell(withIdentifier: "myEventsHeader")
+//    return headerCell
+//  }
+  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    return 0
+  }
+  func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    return 0
+  }
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    // 1 row for the event, one for the interested users
     return 2
   }
   func numberOfSections(in tableView: UITableView) -> Int {
