@@ -403,6 +403,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="eventController1" destination="6Ht-VF-tlO" id="LoR-AO-iQ6"/>
+                        <outlet property="eventController2" destination="Lw6-gp-NIT" id="GaV-kP-Mgz"/>
                         <outlet property="eventView1" destination="ecB-pz-l9a" id="aVW-NK-TVX"/>
                         <outlet property="eventView2" destination="MRE-Fh-xis" id="CEc-FJ-wqM"/>
                         <outlet property="leadingConstraint2" destination="h9o-sn-lKb" id="gbc-XT-zZa"/>

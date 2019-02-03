@@ -10,6 +10,9 @@ import UIKit
 
 class BrowseViewController: UIViewController {
   
+  @IBOutlet weak var eventController1: EventControllerView!
+  @IBOutlet weak var eventController2: EventControllerView!
+  
 
   @IBOutlet weak var eventView1: UIScrollView!
   @IBOutlet weak var eventView2: UIScrollView!
@@ -88,19 +91,6 @@ class BrowseViewController: UIViewController {
     }
     @IBAction func swippedLeft(_ sender: Any) {
         print("swipped left")
-        
-//        //swap the current event out for a new one
-//        eventToRemove = currentEvent
-//        createNewEvent()
-//
-//        //make sure the current event stays on top
-//        eventToRemove?.layer.zPosition = 5
-//        UIView.animate(withDuration: 1, animations: {
-//
-//            //slide over and remove the view on completion
-//            self.eventToRemove?.frame = CGRect(x: -self.view.frame.maxX, y: self.view.safeAreaLayoutGuide.layoutFrame.minY, width: self.view.frame.width, height: self.view.frame.height)
-//        }, completion: {(true) in
-//            self.eventToRemove?.removeFromSuperview()})
       
       //don't do anything until the event has stopped moving
       if eventMoving {
@@ -143,33 +133,55 @@ class BrowseViewController: UIViewController {
     
     @IBAction func swippedRight(_ sender: Any) {
         print("swipped right")
-        
-//        //swap the current event out for a new one
-//        eventToRemove = currentEvent
-//        createNewEvent()
-//        
-//        //make sure the current event stays on top
-//        eventToRemove?.layer.zPosition = 5
-//        UIView.animate(withDuration: 1, animations: {
-//            
-//            //slide over and remove the view on completion
-//            self.eventToRemove?.frame = CGRect(x: self.view.frame.maxX, y: self.view.safeAreaLayoutGuide.layoutFrame.minY, width: self.view.frame.width, height: self.view.frame.height)
-//        }, completion: {(true) in
-//            self.eventToRemove?.removeFromSuperview()})
-//        
-//        
-//        let eventAddedMessage = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-//        eventAddedMessage.text = "event added"
-//        eventAddedMessage.font = eventAddedMessage.font.withSize(30)
-//        eventAddedMessage.textColor = UIColor.white
-//        eventAddedMessage.textAlignment = NSTextAlignment.center
-//        eventAddedMessage.layer.zPosition = 6
-//        eventAddedMessage.center = view.center
-//        view.addSubview(eventAddedMessage)
-//        UILabel.animate(withDuration: 2, animations: {
-//            eventAddedMessage.frame = CGRect(x: self.view.center.x, y: self.view.center.y - 100, width: 200, height: 200)
-//            eventAddedMessage.alpha = 0.0
-//        })
+      //don't do anything until the event has stopped moving
+      if eventMoving {
+        return
+      }
+      if isOnFirstEvent {
+        isOnFirstEvent = false
+        eventMoving = true
+        UIView.animate(withDuration: 1, animations: {
+          self.trailingConstraint1.constant = self.view.frame.width*2
+          self.leadingContraint1.constant = self.view.frame.width
+          self.view.layoutIfNeeded()
+          
+          
+        }, completion: {(true) in
+          self.eventMoving = false
+          self.trailingConstraint1.constant = 0
+          self.leadingContraint1.constant = 0
+          self.view.insertSubview(self.eventView1,
+                                  belowSubview: self.eventView2)
+        })
+      }else{
+        isOnFirstEvent = true
+        eventMoving = true
+        UIView.animate(withDuration: 1, animations: {
+          self.trailingConstraint2.constant = self.view.frame.width*2
+          self.leadingConstraint2.constant = self.view.frame.width
+          self.view.layoutIfNeeded()
+          
+          
+        }, completion: {(true) in
+          self.eventMoving = false
+          self.trailingConstraint2.constant = 0
+          self.leadingConstraint2.constant = 0
+          self.view.insertSubview(self.eventView2,
+                                  belowSubview: self.eventView1)
+        })
+      }
+        let eventAddedMessage = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        eventAddedMessage.text = "event added"
+        eventAddedMessage.font = eventAddedMessage.font.withSize(30)
+        eventAddedMessage.textColor = UIColor.white
+        eventAddedMessage.textAlignment = NSTextAlignment.center
+        eventAddedMessage.layer.zPosition = 6
+        eventAddedMessage.center = view.center
+        view.addSubview(eventAddedMessage)
+        UILabel.animate(withDuration: 2, animations: {
+            eventAddedMessage.frame = CGRect(x: self.view.center.x, y: self.view.center.y - 100, width: 200, height: 200)
+            eventAddedMessage.alpha = 0.0
+        })
     }
     @IBAction func profileButtonPressed(_ sender: Any) {
         print("pressed my profile button")

@@ -21,5 +21,9 @@ class EventControllerView: UIView {
     contentView.frame = self.bounds
     contentView.autoresizingMask = [.flexibleWidth , .flexibleHeight]
   }
+  
+  func populateEvent(_ event:Event){
+    
+  }
 
 }
