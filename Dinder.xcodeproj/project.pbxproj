@@ -28,7 +28,6 @@
 		0B6017FF22065B5B0015DF62 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6017FE22065B5B0015DF62 /* ControlView.swift */; };
 		219FAC3CCC8223745E26A6D9 /* Pods_Dinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ECC337790D150159B44A22C /* Pods_Dinder.framework */; };
 		9F13CA152204030F009F98B4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13CA142204030F009F98B4 /* DataManager.swift */; };
-		9F13CA1722040A41009F98B4 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13CA1622040A41009F98B4 /* UIImageViewExtension.swift */; };
 		9F3C1EDB2203CFE400013DE7 /* FakeEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3C1EDA2203CFE400013DE7 /* FakeEvents.swift */; };
 		9F4FDE1C2203A90D002E23AB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FDE1B2203A90D002E23AB /* User.swift */; };
 		9F4FDE1E2203AAA2002E23AB /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FDE1D2203AAA2002E23AB /* Gender.swift */; };
@@ -67,7 +66,6 @@
 		22B255EF743AE116899C252B /* Pods-Dinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dinder/Pods-Dinder.release.xcconfig"; sourceTree = "<group>"; };
 		7ECC337790D150159B44A22C /* Pods_Dinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F13CA142204030F009F98B4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		9F13CA1622040A41009F98B4 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		9F3C1EDA2203CFE400013DE7 /* FakeEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEvents.swift; sourceTree = "<group>"; };
 		9F4FDE1B2203A90D002E23AB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9F4FDE1D2203AAA2002E23AB /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
@@ -123,7 +121,6 @@
 				0B341CF3220284540094EDD1 /* LaunchScreen.storyboard */,
 				9FC3B67A2203BAC300CD4D20 /* FakeUsers.swift */,
 				9F3C1EDA2203CFE400013DE7 /* FakeEvents.swift */,
-				9F13CA1622040A41009F98B4 /* UIImageViewExtension.swift */,
 				9F13CA142204030F009F98B4 /* DataManager.swift */,
 				0B341CF6220284540094EDD1 /* Info.plist */,
 				9F4FDE1B2203A90D002E23AB /* User.swift */,
@@ -311,7 +308,6 @@
 				0B1A8117220604E700ECB91A /* Image+DownlodingFunctions.swift in Sources */,
 				0B341D002202B9690094EDD1 /* BrowseViewController.swift in Sources */,
 				0B1E32B12203BCE300B5D58A /* InterestedUsersContainerCell.swift in Sources */,
-				9F13CA1722040A41009F98B4 /* UIImageViewExtension.swift in Sources */,
 				0B341CEB220284530094EDD1 /* AppDelegate.swift in Sources */,
 				0B1E32AD2203AE4800B5D58A /* EventsMasterViewController.swift in Sources */,
 				0B1E32B42203C94900B5D58A /* ProfileViewController.swift in Sources */,

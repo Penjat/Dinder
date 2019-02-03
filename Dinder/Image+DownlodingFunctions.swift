@@ -29,9 +29,9 @@ extension Image{
     
     
     //TODO swap the place holder url for the real on
-//    let imageURL = URL(string: urlString)!
+    let imageURL = URL(string: urlString)!
     
-    let imageURL = URL(string: "https://news.nationalgeographic.com/content/dam/news/2018/05/17/you-can-train-your-cat/02-cat-training-NationalGeographic_1484324.ngsversion.1526587209178.adapt.1900.1.jpg")!
+//    let imageURL = URL(string: "https://news.nationalgeographic.com/content/dam/news/2018/05/17/you-can-train-your-cat/02-cat-training-NationalGeographic_1484324.ngsversion.1526587209178.adapt.1900.1.jpg")!
     
     
     
@@ -52,15 +52,24 @@ extension Image{
             let image = UIImage(data: imageData)
             
             
-            //TODO update the Image to a class
+            
             // set the uiImage
-            //self.uiImage = image
+            self.uiImage = image
+            
             
             DispatchQueue.main.async{
               
               //if an imageView was passed in, update the image
               if let imageView = imageView{
-                imageView.image = image
+                if image == nil{
+                  print("----------------the image is nil -----------")
+                  //defaults to hys if image is nil
+                  imageView.image = UIImage(named: "hys")
+                  self.uiImage = UIImage(named: "hys")
+                }else{
+                  imageView.image = image
+                }
+                
               }
             }
             
