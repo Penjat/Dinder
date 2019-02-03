@@ -13,6 +13,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PagingControllerView" customModule="Dinder" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="SBo-At-SDg"/>
+                <outlet property="image1" destination="GSO-D0-Uex" id="rPa-NY-8Qa"/>
+                <outlet property="image2" destination="FTk-gv-K5s" id="LGD-dw-6Qf"/>
+                <outlet property="image3" destination="Wwk-X6-Rll" id="A9e-Oo-yBT"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

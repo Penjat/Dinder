@@ -13,6 +13,7 @@ class ProfileViewController: UIViewController{
   var isMyProfile = false
   
   @IBOutlet weak var userImageScrollView: UIScrollView!
+  @IBOutlet weak var profileImageController: PagingControllerView!
   
   @IBOutlet weak var userRatting: UILabel!
   @IBOutlet weak var userName: UILabel!
@@ -28,6 +29,7 @@ class ProfileViewController: UIViewController{
       userRatting.text = user.stringOfRating()
       //TODO put in about me section
       //userAboutMe.text = user.aboutMe
+      profileImageController.setUpImages(images: user.images)
     }
       
     }

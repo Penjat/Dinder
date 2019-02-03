@@ -122,6 +122,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="profile" image="circle-user-7" id="1gL-je-qEZ"/>
                     <connections>
+                        <outlet property="profileImageController" destination="ffs-PQ-lFQ" id="JKJ-a9-3DN"/>
                         <outlet property="userAboutMe" destination="IPq-Gz-9iq" id="hcT-TA-4FW"/>
                         <outlet property="userImageScrollView" destination="Dts-hU-CLC" id="tei-0u-bds"/>
                         <outlet property="userName" destination="LsY-dk-Z55" id="wu3-PT-Lzn"/>

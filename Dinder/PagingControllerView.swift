@@ -10,6 +10,9 @@ import UIKit
 
 class PagingControllerView: UIView {
   @IBOutlet var contentView: UIView!
+  @IBOutlet weak var image1: UIImageView!
+  @IBOutlet weak var image2: UIImageView!
+  @IBOutlet weak var image3: UIImageView!
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -26,6 +29,23 @@ class PagingControllerView: UIView {
     addSubview(contentView)
     contentView.frame = self.bounds
     contentView.autoresizingMask = [.flexibleWidth , .flexibleHeight]
+  }
+  func setUpImages(images:[Image?]){
+    if images.count > 1{
+      if let image = images[0]{
+        image.getImage(imageView:image1)
+      }
+    }
+    if images.count > 2{
+      if let image = images[1]{
+        image.getImage(imageView:image2)
+      }
+    }
+    if images.count > 3{
+      if let image = images[2]{
+        image.getImage(imageView:image3)
+      }
+    }
   }
 
 }
