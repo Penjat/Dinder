@@ -53,18 +53,14 @@ class BrowseViewController: UIViewController {
     navigationController?.navigationBar.layer.zPosition = 10;
     print("loaded browse view controller")
     
-    
-    
     }
     
     
-//
+
   func getNextEvent() -> Event{
     return dataManager!.getNextEvent(filters: [:])
   }
   
-  
-
     @IBAction func swippedLeft(_ sender: Any) {
         print("swipped left")
       leftSipe()
