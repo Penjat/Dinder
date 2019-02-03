@@ -10,8 +10,9 @@ import UIKit
 
 class EventsMasterViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
   
+  var mainUser: User?
   
-  
+  @IBOutlet weak var noEventsMsg: UIView!
   
   @IBOutlet weak var eventTableView: UITableView!
   
@@ -19,6 +20,14 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
     super.viewDidLoad()
     eventTableView.dataSource = self
     eventTableView.delegate = self
+    
+    //TODO check the events
+    noEventsMsg.isHidden = true
+    
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     
   }
   
@@ -35,7 +44,7 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
     return 2
   }
   func numberOfSections(in tableView: UITableView) -> Int {
-    return 3
+    return 0
   }
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     if indexPath.row == 0{
