@@ -130,7 +130,10 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         images.append(image2)
         images.append(image3)
         
-        
+        var keywords: [String] = [String]()
+        keywords.append("snow")
+        keywords.append("spa")
+        keywords.append("steak")
       
         let event: Event = Event(eventId: 0,
                                  title: "snow, spa, and meat!",
@@ -147,7 +150,7 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
                                  startDateTime: start!,
                                  endDateTime: end!,
                                  postedDateTime: currentDateTime,
-                                 description: "let's go to skiing at blackcomb, then the spa, and then the keg!!!")
+                                 description: "let's go to skiing at blackcomb, then the spa, and then the keg!!!", imageKeywords: keywords)
         
         return event
         
@@ -206,8 +209,13 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         images.append(image1)
         images.append(image2)
         
+        var keywords: [String] = [String]()
+        keywords.append("walk")
+        keywords.append("ocean")
+        
+        
    
-        let event: Event = Event(eventId: 1, title: "long walks by the ocean", eventRelationshipType: RelationshipType.Anything, lookingFor: Gender.NotApplicable, estimatedCombinedTotalCostCAD: 0, estimatedCostForGuestCAD: 0, whoPays: Payer.Free, interestedUsers: usersInterested, owner: jason, chosenPartner: nil, images: images, location: nil, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "just want to go for a nice walk in this beautiful weather! talk, laugh, whatever!!")
+        let event: Event = Event(eventId: 1, title: "long walks by the ocean", eventRelationshipType: RelationshipType.Anything, lookingFor: Gender.NotApplicable, estimatedCombinedTotalCostCAD: 0, estimatedCostForGuestCAD: 0, whoPays: Payer.Free, interestedUsers: usersInterested, owner: jason, chosenPartner: nil, images: images, location: nil, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "just want to go for a nice walk in this beautiful weather! talk, laugh, whatever!!", imageKeywords: keywords)
 //
 //
         
@@ -274,8 +282,12 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         images.append(image2)
         images.append(image3)
         
+        var keywords: [String] = [String]()
+        keywords.append("party")
+       
         
-        let event: Event = Event(eventId: 2, title: "let's get wild!", eventRelationshipType: RelationshipType.Friendship, lookingFor: Gender.Male, estimatedCombinedTotalCostCAD: 250, estimatedCostForGuestCAD: 125, whoPays: Payer.Dutch, interestedUsers: usersInterested, owner: jason, chosenPartner: nil, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "party time central. let's party hard together")
+        
+        let event: Event = Event(eventId: 2, title: "let's get wild!", eventRelationshipType: RelationshipType.Friendship, lookingFor: Gender.Male, estimatedCombinedTotalCostCAD: 250, estimatedCostForGuestCAD: 125, whoPays: Payer.Dutch, interestedUsers: usersInterested, owner: jason, chosenPartner: nil, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "party time central. let's party hard together", imageKeywords: keywords)
         
         
         
@@ -341,8 +353,13 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         images.append(image1)
         images.append(image2)
         
+        var keywords: [String] = [String]()
+        keywords.append("hiking")
+        keywords.append("concert")
         
-        let event: Event = Event(eventId: 3, title: "hike and rock", eventRelationshipType: RelationshipType.PossiblyRomantic, lookingFor: Gender.Male, estimatedCombinedTotalCostCAD: 400, estimatedCostForGuestCAD: 0, whoPays: Payer.PosterPays, interestedUsers: usersInterested, owner: spencer, chosenPartner: nil, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "spend the day in the sunshine, then the night rocking out")
+        
+        
+        let event: Event = Event(eventId: 3, title: "hike and rock", eventRelationshipType: RelationshipType.PossiblyRomantic, lookingFor: Gender.Male, estimatedCombinedTotalCostCAD: 400, estimatedCostForGuestCAD: 0, whoPays: Payer.PosterPays, interestedUsers: usersInterested, owner: spencer, chosenPartner: nil, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "spend the day in the sunshine, then the night rocking out", imageKeywords: keywords)
         
         
         return event
@@ -399,8 +416,13 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         
         images.append(image1)
         
+        var keywords: [String] = [String]()
+        keywords.append("heart")
+        keywords.append("hearts")
+        keywords.append("manicure")
         
-        let event: Event = Event(eventId: 4, title: "valentines nails!", eventRelationshipType: RelationshipType.PossiblyRomantic, lookingFor: Gender.Female, estimatedCombinedTotalCostCAD: 120, estimatedCostForGuestCAD: 10, whoPays: Payer.PosterPays, interestedUsers: usersInterested, owner: cassandra, chosenPartner: spencer, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "nothing to do on valentine's day? let's talk and relax together. i have a gift certificate; you just pay the tip :)")
+        
+        let event: Event = Event(eventId: 4, title: "valentines nails!", eventRelationshipType: RelationshipType.PossiblyRomantic, lookingFor: Gender.Female, estimatedCombinedTotalCostCAD: 120, estimatedCostForGuestCAD: 10, whoPays: Payer.PosterPays, interestedUsers: usersInterested, owner: cassandra, chosenPartner: spencer, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "nothing to do on valentine's day? let's talk and relax together. i have a gift certificate; you just pay the tip :)", imageKeywords: keywords)
         
         
         return event
@@ -453,8 +475,10 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         
         images.append(image1)
         
+        var keywords: [String] = [String]()
+        keywords.append("bowling")
         
-        let event: Event = Event(eventId: 4, title: "bowl", eventRelationshipType: RelationshipType.Friendship, lookingFor: Gender.NotApplicable, estimatedCombinedTotalCostCAD: 40, estimatedCostForGuestCAD: 20, whoPays: Payer.Dutch, interestedUsers: usersInterested, owner: spencer, chosenPartner: nil, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "let's bowl")
+        let event: Event = Event(eventId: 4, title: "bowl", eventRelationshipType: RelationshipType.Friendship, lookingFor: Gender.NotApplicable, estimatedCombinedTotalCostCAD: 40, estimatedCostForGuestCAD: 20, whoPays: Payer.Dutch, interestedUsers: usersInterested, owner: spencer, chosenPartner: nil, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "let's bowl", imageKeywords: keywords)
         
         
         return event
