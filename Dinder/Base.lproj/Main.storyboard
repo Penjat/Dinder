@@ -190,6 +190,7 @@
                         <viewLayoutGuide key="safeArea" id="MHY-cU-hnT"/>
                     </view>
                     <connections>
+                        <outlet property="createEventView" destination="lyE-bv-dQg" id="ilx-9x-qws"/>
                         <outlet property="datePicker" destination="Mzm-fs-I0n" id="fFW-wD-rMd"/>
                         <outlet property="descriptionField" destination="ldV-US-rh4" id="3Fb-MI-PbK"/>
                         <outlet property="titleField" destination="1WH-xT-5Ym" id="t6W-OI-s1k"/>

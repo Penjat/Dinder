@@ -3,33 +3,15 @@
 import UIKit
 
 class CreateEventViewController: UIViewController {
+  @IBOutlet weak var createEventView: ControlView!
   
   
-  @IBOutlet weak var titleField: UITextField!
-  @IBOutlet weak var descriptionField: UITextView!
-  
-  @IBOutlet weak var datePicker: UIDatePicker!
-  @IBOutlet weak var whereField: UITextField!
-  
-  //looking for
 
-  var lookingForButtons = [UIButton]()
-  
-  //cost break down
 
-  var costButtons = [UIButton]()
   
     override func viewDidLoad() {
         super.viewDidLoad()
-//      lookingForButtons.append(anythingButton)
-//      lookingForButtons.append(friendshipButton)
-//      lookingForButtons.append(posibleRomanceButton)
-//      lookingForButtons.append(romanceButton)
-//
-//      costButtons.append(posterPaysButton)
-//      costButtons.append(dutchButton)
-//      costButtons.append(youPayButton)
-//      costButtons.append(freeButton)
+
       
     }
   
@@ -43,27 +25,17 @@ class CreateEventViewController: UIViewController {
     self.dismiss(animated: true, completion: {})
     
   }
-//  @IBAction func toggleWhy(_ sender: UIButton) {
-//    
-//    
-//    for button in lookingForButtons {
-//      if button == sender{
-//        button.alpha = 1.0
-//      }else{
-//        button.alpha = 0.4
-//      }
-//    }
-//    
-//  }
+
   
   
   func processUserInput(){
     
     //TODO check all this input and make sure is clean
-    let eventTitle = titleField.text
-    let eventDescription = descriptionField.text
-    let startTime = datePicker.date
-    let evenLocationString = whereField.text
+    let eventTitle = createEventView.eventTitleLabel.text
+    let eventDescription = createEventView.eventDescription.text
+    let startTime = createEventView.eventDatePicker
+    let evenLocationString = createEventView.eventLocationField
+    let totalCost = createEventView.totalCostField
     
     //TODO generate enum from toggleButtons
 //    let lookingFor =
