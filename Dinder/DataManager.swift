@@ -16,8 +16,13 @@ class DataManager{
     var currentEventNum = 0
     var ref: DatabaseReference!
     
+    func getEventsUserIsApplyingFor(user: User) -> [Event]?{
+        return events;
+    }
     
-    
+    func getFutureEventsForUser(user: User) -> Event?{
+        return events[0];
+    }
     
     func getNextEvent(filters: [String:String]) -> Event{
         currentEventNum += 1
