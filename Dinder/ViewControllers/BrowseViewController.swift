@@ -10,31 +10,29 @@ import UIKit
 
 class BrowseViewController: UIViewController {
   
-  @IBOutlet weak var event1Title: UILabel!
-  @IBOutlet weak var event1Date: UILabel!
-  @IBOutlet weak var event1LookingFor: UILabel!
-  @IBOutlet weak var event1EstimatedCost: UILabel!
-  
-  @IBOutlet weak var event1Description: UILabel!
-  @IBOutlet weak var event1WhoPays: UILabel!
-  
-  @IBOutlet weak var event1MainImage: UIImageView!
-  @IBOutlet weak var event1PosterImage: UIImageView!
-  @IBOutlet weak var event1PosterName: UILabel!
-  
-  
-  //    var currentEvent :EventView? //TODO make a custom class
-//    var eventToRemove :EventView?
+  @IBOutlet weak var eventController1: EventControllerView!
+  @IBOutlet weak var eventController2: EventControllerView!
   
 
+  @IBOutlet weak var eventView1: UIScrollView!
+  @IBOutlet weak var eventView2: UIScrollView!
+  
+  @IBOutlet weak var leadingContraint1: NSLayoutConstraint!
+  @IBOutlet weak var trailingConstraint1: NSLayoutConstraint!
+  @IBOutlet weak var leadingConstraint2: NSLayoutConstraint!
+  @IBOutlet weak var trailingConstraint2: NSLayoutConstraint!
   
   var mainUser :User?
   
+  var eventMoving = false
+  var isOnFirstEvent = true // tracks if we are on the first or the second event view
+  let frontEventZPos = 7.0
+  let backEventZPos = 6.0
   
-    var eventNumber = 0;
-    var colorArray = [UIColor.cyan,UIColor.blue,UIColor.orange,UIColor.purple,UIColor.red,UIColor.yellow]
-    
-    var dataManager: DataManager?
+  var eventNumber = 0;
+  var colorArray = [UIColor.cyan,UIColor.blue,UIColor.orange,UIColor.purple,UIColor.red,UIColor.yellow]
+  
+  var dataManager: DataManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,30 +47,25 @@ class BrowseViewController: UIViewController {
         
         navigationController?.navigationBar.layer.zPosition = 10;
         print("loaded browse view controller")
-        //createNewEvent()
-        let eventModel: Event = dataManager!.getNextEvent(filters: [:])
-        event1Title.text = eventModel.title
-      event1Description.text = eventModel.description
-        event1PosterName.text = eventModel.owner.firstName
-      event1EstimatedCost.text = "Estimated Cost: \(eventModel.estimatedCostForGuestCAD)"
+//        //createNewEvent()
+//        let eventModel: Event = dataManager!.getNextEvent(filters: [:])
+//        event1Title.text = eventModel.title
+//      event1Description.text = eventModel.description
+//        event1PosterName.text = eventModel.owner.firstName
+//      event1EstimatedCost.text = "Estimated Cost: \(eventModel.estimatedCostForGuestCAD)"
+//
+//      event1Date.text = self.createReadable(date: eventModel.startDateTime)
+//      event1LookingFor.text = createString(userIs: eventModel.owner.gender, lookingFor: eventModel.lookingFor ?? Gender.NotApplicable)
+//      print("downloading image")
+//      print("the image url is: \(eventModel.images[1].urlString)")
+////      downloadImage(urlString: "https://news.nationalgeographic.com/content/dam/news/2018/05/17/you-can-train-your-cat/02-cat-training-NationalGeographic_1484324.ngsversion.1526587209178.adapt.1900.1.jpg",imageView:self.event1MainImage)
       
-      event1Date.text = self.createReadable(date: eventModel.startDateTime)
-      event1LookingFor.text = createString(userIs: eventModel.owner.gender, lookingFor: eventModel.lookingFor ?? Gender.NotApplicable)
-      print("downloading image")
-      print("the image url is: \(eventModel.images[1].urlString)")
-//      downloadImage(urlString: "https://news.nationalgeographic.com/content/dam/news/2018/05/17/you-can-train-your-cat/02-cat-training-NationalGeographic_1484324.ngsversion.1526587209178.adapt.1900.1.jpg",imageView:self.event1MainImage)
       
-      
-      eventModel.images[0].getImage(imageView: event1MainImage)
+//      eventModel.images[0].getImage(imageView: event1MainImage)
     }
     
     
-//    UIView.animate(withDuration: 5) {
-//      self.trailingConstraint.constant = -self.view.frame.width
-//      self.leadingConstraint.constant = -self.view.frame.width
-//      self.view.layoutIfNeeded()
-  
-//    }
+//
   func downloadImage(urlString:String , imageView:UIImageView?){
     
   }
@@ -98,50 +91,97 @@ class BrowseViewController: UIViewController {
     }
     @IBAction func swippedLeft(_ sender: Any) {
         print("swipped left")
+      
+      //don't do anything until the event has stopped moving
+      if eventMoving {
+        return
+      }
+      if isOnFirstEvent {
+        isOnFirstEvent = false
+        eventMoving = true
+      UIView.animate(withDuration: 1, animations: {
+        self.trailingConstraint1.constant = -self.view.frame.width
+        self.leadingContraint1.constant = -self.view.frame.width
+        self.view.layoutIfNeeded()
         
-//        //swap the current event out for a new one
-//        eventToRemove = currentEvent
-//        createNewEvent()
-//
-//        //make sure the current event stays on top
-//        eventToRemove?.layer.zPosition = 5
-//        UIView.animate(withDuration: 1, animations: {
-//
-//            //slide over and remove the view on completion
-//            self.eventToRemove?.frame = CGRect(x: -self.view.frame.maxX, y: self.view.safeAreaLayoutGuide.layoutFrame.minY, width: self.view.frame.width, height: self.view.frame.height)
-//        }, completion: {(true) in
-//            self.eventToRemove?.removeFromSuperview()})
+        
+        }, completion: {(true) in
+          self.eventMoving = false
+          self.trailingConstraint1.constant = 0
+          self.leadingContraint1.constant = 0
+          self.view.insertSubview(self.eventView1,
+                                  belowSubview: self.eventView2)
+                    })
+      }else{
+        isOnFirstEvent = true
+        eventMoving = true
+        UIView.animate(withDuration: 1, animations: {
+          self.trailingConstraint2.constant = -self.view.frame.width
+          self.leadingConstraint2.constant = -self.view.frame.width
+          self.view.layoutIfNeeded()
+          
+          
+        }, completion: {(true) in
+          self.eventMoving = false
+          self.trailingConstraint2.constant = 0
+          self.leadingConstraint2.constant = 0
+          self.view.insertSubview(self.eventView2,
+                        belowSubview: self.eventView1)
+        })
+      }
     }
     
     @IBAction func swippedRight(_ sender: Any) {
         print("swipped right")
-        
-//        //swap the current event out for a new one
-//        eventToRemove = currentEvent
-//        createNewEvent()
-//        
-//        //make sure the current event stays on top
-//        eventToRemove?.layer.zPosition = 5
-//        UIView.animate(withDuration: 1, animations: {
-//            
-//            //slide over and remove the view on completion
-//            self.eventToRemove?.frame = CGRect(x: self.view.frame.maxX, y: self.view.safeAreaLayoutGuide.layoutFrame.minY, width: self.view.frame.width, height: self.view.frame.height)
-//        }, completion: {(true) in
-//            self.eventToRemove?.removeFromSuperview()})
-//        
-//        
-//        let eventAddedMessage = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-//        eventAddedMessage.text = "event added"
-//        eventAddedMessage.font = eventAddedMessage.font.withSize(30)
-//        eventAddedMessage.textColor = UIColor.white
-//        eventAddedMessage.textAlignment = NSTextAlignment.center
-//        eventAddedMessage.layer.zPosition = 6
-//        eventAddedMessage.center = view.center
-//        view.addSubview(eventAddedMessage)
-//        UILabel.animate(withDuration: 2, animations: {
-//            eventAddedMessage.frame = CGRect(x: self.view.center.x, y: self.view.center.y - 100, width: 200, height: 200)
-//            eventAddedMessage.alpha = 0.0
-//        })
+      //don't do anything until the event has stopped moving
+      if eventMoving {
+        return
+      }
+      if isOnFirstEvent {
+        isOnFirstEvent = false
+        eventMoving = true
+        UIView.animate(withDuration: 1, animations: {
+          self.trailingConstraint1.constant = self.view.frame.width*2
+          self.leadingContraint1.constant = self.view.frame.width
+          self.view.layoutIfNeeded()
+          
+          
+        }, completion: {(true) in
+          self.eventMoving = false
+          self.trailingConstraint1.constant = 0
+          self.leadingContraint1.constant = 0
+          self.view.insertSubview(self.eventView1,
+                                  belowSubview: self.eventView2)
+        })
+      }else{
+        isOnFirstEvent = true
+        eventMoving = true
+        UIView.animate(withDuration: 1, animations: {
+          self.trailingConstraint2.constant = self.view.frame.width*2
+          self.leadingConstraint2.constant = self.view.frame.width
+          self.view.layoutIfNeeded()
+          
+          
+        }, completion: {(true) in
+          self.eventMoving = false
+          self.trailingConstraint2.constant = 0
+          self.leadingConstraint2.constant = 0
+          self.view.insertSubview(self.eventView2,
+                                  belowSubview: self.eventView1)
+        })
+      }
+        let eventAddedMessage = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        eventAddedMessage.text = "event added"
+        eventAddedMessage.font = eventAddedMessage.font.withSize(30)
+        eventAddedMessage.textColor = UIColor.white
+        eventAddedMessage.textAlignment = NSTextAlignment.center
+        eventAddedMessage.layer.zPosition = 6
+        eventAddedMessage.center = view.center
+        view.addSubview(eventAddedMessage)
+        UILabel.animate(withDuration: 2, animations: {
+            eventAddedMessage.frame = CGRect(x: self.view.center.x, y: self.view.center.y - 100, width: 200, height: 200)
+            eventAddedMessage.alpha = 0.0
+        })
     }
     @IBAction func profileButtonPressed(_ sender: Any) {
         print("pressed my profile button")
