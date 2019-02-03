@@ -11,20 +11,25 @@ import UIKit
 class BrowseViewController: UIViewController {
   
 
+  @IBOutlet weak var eventView1: UIScrollView!
+  @IBOutlet weak var eventView2: UIScrollView!
   
-  
-  //    var currentEvent :EventView? //TODO make a custom class
-//    var eventToRemove :EventView?
-  
-
+  @IBOutlet weak var leadingContraint1: NSLayoutConstraint!
+  @IBOutlet weak var trailingConstraint1: NSLayoutConstraint!
+  @IBOutlet weak var leadingConstraint2: NSLayoutConstraint!
+  @IBOutlet weak var trailingConstraint2: NSLayoutConstraint!
   
   var mainUser :User?
   
+  var eventMoving = false
+  var isOnFirstEvent = true // tracks if we are on the first or the second event view
+  let frontEventZPos = 7.0
+  let backEventZPos = 6.0
   
-    var eventNumber = 0;
-    var colorArray = [UIColor.cyan,UIColor.blue,UIColor.orange,UIColor.purple,UIColor.red,UIColor.yellow]
-    
-    var dataManager: DataManager?
+  var eventNumber = 0;
+  var colorArray = [UIColor.cyan,UIColor.blue,UIColor.orange,UIColor.purple,UIColor.red,UIColor.yellow]
+  
+  var dataManager: DataManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,12 +62,7 @@ class BrowseViewController: UIViewController {
     }
     
     
-//    UIView.animate(withDuration: 5) {
-//      self.trailingConstraint.constant = -self.view.frame.width
-//      self.leadingConstraint.constant = -self.view.frame.width
-//      self.view.layoutIfNeeded()
-  
-//    }
+//
   func downloadImage(urlString:String , imageView:UIImageView?){
     
   }
@@ -101,6 +101,44 @@ class BrowseViewController: UIViewController {
 //            self.eventToRemove?.frame = CGRect(x: -self.view.frame.maxX, y: self.view.safeAreaLayoutGuide.layoutFrame.minY, width: self.view.frame.width, height: self.view.frame.height)
 //        }, completion: {(true) in
 //            self.eventToRemove?.removeFromSuperview()})
+      
+      //don't do anything until the event has stopped moving
+      if eventMoving {
+        return
+      }
+      if isOnFirstEvent {
+        isOnFirstEvent = false
+        eventMoving = true
+      UIView.animate(withDuration: 1, animations: {
+        self.trailingConstraint1.constant = -self.view.frame.width
+        self.leadingContraint1.constant = -self.view.frame.width
+        self.view.layoutIfNeeded()
+        
+        
+        }, completion: {(true) in
+          self.eventMoving = false
+          self.trailingConstraint1.constant = 0
+          self.leadingContraint1.constant = 0
+          self.view.insertSubview(self.eventView1,
+                                  belowSubview: self.eventView2)
+                    })
+      }else{
+        isOnFirstEvent = true
+        eventMoving = true
+        UIView.animate(withDuration: 1, animations: {
+          self.trailingConstraint2.constant = -self.view.frame.width
+          self.leadingConstraint2.constant = -self.view.frame.width
+          self.view.layoutIfNeeded()
+          
+          
+        }, completion: {(true) in
+          self.eventMoving = false
+          self.trailingConstraint2.constant = 0
+          self.leadingConstraint2.constant = 0
+          self.view.insertSubview(self.eventView2,
+                        belowSubview: self.eventView1)
+        })
+      }
     }
     
     @IBAction func swippedRight(_ sender: Any) {

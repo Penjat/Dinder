@@ -335,7 +335,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lw6-gp-NIT" customClass="EventControllerView" customModule="Dinder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="237" width="375" height="128"/>
+                                        <rect key="frame" x="0.0" y="8" width="375" height="595"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
@@ -346,7 +346,7 @@
                                     <constraint firstItem="Lw6-gp-NIT" firstAttribute="leading" secondItem="MRE-Fh-xis" secondAttribute="leading" id="b07-RL-K9K"/>
                                 </constraints>
                             </scrollView>
-                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ecB-pz-l9a" userLabel=" Scroll View 1">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ecB-pz-l9a" userLabel=" Scroll View 1">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Ht-VF-tlO" customClass="EventControllerView" customModule="Dinder" customModuleProvider="target">
@@ -403,6 +403,12 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="eventView1" destination="ecB-pz-l9a" id="aVW-NK-TVX"/>
+                        <outlet property="eventView2" destination="MRE-Fh-xis" id="CEc-FJ-wqM"/>
+                        <outlet property="leadingConstraint2" destination="h9o-sn-lKb" id="gbc-XT-zZa"/>
+                        <outlet property="leadingContraint1" destination="brr-Rp-W9D" id="c2u-ke-22Z"/>
+                        <outlet property="trailingConstraint1" destination="4rE-sr-XCQ" id="XH7-R9-aaf"/>
+                        <outlet property="trailingConstraint2" destination="Ail-6P-Hzh" id="cLr-Y8-uTp"/>
                         <segue destination="QEm-Yk-R0g" kind="show" identifier="toMyProfile" id="o0Q-jJ-7ic"/>
                         <segue destination="3xD-lG-LEC" kind="presentation" identifier="toCreateEvent" id="Ybc-OT-dFZ"/>
                     </connections>
