@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-struct Image{
+class Image{
     
     let keyword: String
     let urlString: String
-    let uiImage: UIImage? = nil
+    var uiImage: UIImage? = nil
     
     init(keyword: String, urlString: String) {
         self.keyword = keyword
