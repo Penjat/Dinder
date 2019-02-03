@@ -16,8 +16,26 @@ class DataManager{
     var currentEventNum = 0
     var ref: DatabaseReference!
     
+    func getEventsUserIsApplyingFor(user: User) -> [Event]?{
+        return events;
+    }
     
+    func getFutureEventsForUser(user: User) -> Event?{
+        return events[0];
+    }
     
+    func createEvent(host: User, eventDetails: Event) -> Event?{
+        return events[1];
+    }
+    
+    // returns true if it worked
+    func applyFor(applicant: User, event: Event) -> Bool{
+        return true;
+    }
+    
+    func notInterestedIn(user: User, event: Event){
+        print("\(user.firstName) not interested in \(event.title)");
+    }
     
     func getNextEvent(filters: [String:String]) -> Event{
         currentEventNum += 1
