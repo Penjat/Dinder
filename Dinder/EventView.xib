@@ -13,6 +13,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventControllerView" customModule="Dinder" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="KxJ-A1-GMI"/>
+                <outlet property="costLabel" destination="3UA-cW-Ade" id="DrD-7e-quV"/>
+                <outlet property="eventDescriptionLabel" destination="Gzo-YJ-zBM" id="lLZ-xy-f79"/>
+                <outlet property="eventTitleLabel" destination="lP0-tT-IeU" id="Ixq-Mj-f4c"/>
+                <outlet property="guestGenderLabel" destination="he4-4k-wFg" id="oKq-DC-F7v"/>
+                <outlet property="relationshipTypeLabel" destination="amc-hQ-nnS" id="sWq-cq-k5K"/>
+                <outlet property="startTimeLabel" destination="ZQo-fq-Lw0" id="wsK-3P-gyp"/>
+                <outlet property="userGenderLabel" destination="yJf-ms-xXT" id="1wk-iL-juJ"/>
+                <outlet property="whoPaysLabel" destination="jaJ-MX-PS8" id="Vox-8o-X0B"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
