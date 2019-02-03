@@ -12,32 +12,24 @@ class CreateEventViewController: UIViewController {
   @IBOutlet weak var whereField: UITextField!
   
   //looking for
-  @IBOutlet weak var anythingButton: UIButton!
-  @IBOutlet weak var friendshipButton: UIButton!
-  @IBOutlet weak var posibleRomanceButton: UIButton!
-  @IBOutlet weak var romanceButton: UIButton!
-  @IBOutlet weak var lookingForLabel: UILabel!
+
   var lookingForButtons = [UIButton]()
   
   //cost break down
-  @IBOutlet weak var estimatedCostLabel: UITextField!
-  @IBOutlet weak var posterPaysButton: UIButton!
-  @IBOutlet weak var dutchButton: UIButton!
-  @IBOutlet weak var youPayButton: UIButton!
-  @IBOutlet weak var freeButton: UIButton!
+
   var costButtons = [UIButton]()
   
     override func viewDidLoad() {
         super.viewDidLoad()
-      lookingForButtons.append(anythingButton)
-      lookingForButtons.append(friendshipButton)
-      lookingForButtons.append(posibleRomanceButton)
-      lookingForButtons.append(romanceButton)
-      
-      costButtons.append(posterPaysButton)
-      costButtons.append(dutchButton)
-      costButtons.append(youPayButton)
-      costButtons.append(freeButton)
+//      lookingForButtons.append(anythingButton)
+//      lookingForButtons.append(friendshipButton)
+//      lookingForButtons.append(posibleRomanceButton)
+//      lookingForButtons.append(romanceButton)
+//
+//      costButtons.append(posterPaysButton)
+//      costButtons.append(dutchButton)
+//      costButtons.append(youPayButton)
+//      costButtons.append(freeButton)
       
     }
   
@@ -51,29 +43,19 @@ class CreateEventViewController: UIViewController {
     self.dismiss(animated: true, completion: {})
     
   }
-  @IBAction func toggleWhy(_ sender: UIButton) {
-    
-    
-    for button in lookingForButtons {
-      if button == sender{
-        button.alpha = 1.0
-      }else{
-        button.alpha = 0.4
-      }
-    }
-    
-  }
+//  @IBAction func toggleWhy(_ sender: UIButton) {
+//    
+//    
+//    for button in lookingForButtons {
+//      if button == sender{
+//        button.alpha = 1.0
+//      }else{
+//        button.alpha = 0.4
+//      }
+//    }
+//    
+//  }
   
-  @IBAction func toggleWhoPays(_ sender: UIButton) {
-    
-    for button in costButtons {
-      if button == sender{
-        button.backgroundColor = UIColor.blue
-      }else{
-        button.backgroundColor = UIColor.clear
-      }
-    }
-  }
   
   func processUserInput(){
     
@@ -85,7 +67,7 @@ class CreateEventViewController: UIViewController {
     
     //TODO generate enum from toggleButtons
 //    let lookingFor =
-    let estimatedCost = estimatedCostLabel.text
+//    let estimatedCost = estimatedCostLabel.text
     //TODO generate enum from costButtons
 //    let whoPays =
     
