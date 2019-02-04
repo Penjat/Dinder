@@ -2,9 +2,10 @@
 
 import UIKit
 
-class MyActiveEventView: UIView ,UICollectionViewDelegate, UICollectionViewDataSource {
+class MyActiveEventView: UIView ,UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
   @IBOutlet weak var interestedUserCollectionView: UICollectionView!
   
+  @IBOutlet weak var noneInterestedmsg: UIView!
   
   var currentEvent :Event?
   
@@ -27,7 +28,11 @@ class MyActiveEventView: UIView ,UICollectionViewDelegate, UICollectionViewDataS
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = interestedUserCollectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath)
+    let cell = interestedUserCollectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath) as!InterestedUserCell
+    cell.backgroundColor = UIColor.blue
+    if let event = currentEvent, let  interested = event.interestedUsers{
+      cell.setUp(user: interested[indexPath.row]) 
+    }
     
     return cell
   }
@@ -52,6 +57,17 @@ class MyActiveEventView: UIView ,UICollectionViewDelegate, UICollectionViewDataS
     interestedUserCollectionView.dataSource = self
     interestedUserCollectionView.delegate = self
     
+    let cellSize = CGSize(width:120 , height:120)
+    
+    let layout = UICollectionViewFlowLayout()
+    
+    layout.itemSize = cellSize
+    layout.sectionInset = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
+    layout.minimumLineSpacing = 1.0
+    layout.minimumInteritemSpacing = 1.0
+    interestedUserCollectionView.setCollectionViewLayout(layout, animated: true)
+    
+    
   }
   
   func setUp(event: Event) {
@@ -66,6 +82,14 @@ class MyActiveEventView: UIView ,UICollectionViewDelegate, UICollectionViewDataS
     formatter.dateFormat = ukFormat
     eventDate.text = formatter.string(from: event.startDateTime)
     
+    if let interested = event.interestedUsers , interested.count > 0{
+      noneInterestedmsg.isHidden = true
+    }else{
+      noneInterestedmsg.isHidden = false
+    }
+    
   }
+  
+  
 
 }
