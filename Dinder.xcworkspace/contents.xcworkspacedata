@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/spencersymington/Desktop/Projects/Dinder/Dinder/Fill Me With Color.ttf">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/spencersymington/Desktop/Projects/Dinder/Dinder/Monserga-regular-FFP.ttf">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/spencersymington/Desktop/Projects/Dinder/Dinder/Simply Rounded.ttf">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/spencersymington/Desktop/Projects/Dinder/Dinder/Typo_Round_Italic_Demo.otf">
+   </FileRef>
+   <FileRef
       location = "group:Dinder.xcodeproj">
    </FileRef>
    <FileRef

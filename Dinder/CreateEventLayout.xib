@@ -34,7 +34,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SoO-ZI-4il">
-                    <rect key="frame" x="16" y="105" width="343" height="206"/>
+                    <rect key="frame" x="16" y="140" width="343" height="206"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BoJ-tU-dHr">
                             <rect key="frame" x="32" y="16" width="279" height="30"/>
@@ -64,19 +64,19 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="What?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWz-QX-fE0">
-                    <rect key="frame" x="16" y="84" width="343" height="45.5"/>
+                    <rect key="frame" x="16" y="84" width="343" height="56"/>
                     <fontDescription key="fontDescription" name="TypoRound-ItalicDemo" family="Typo Round" pointSize="47"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="When?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMV-iS-Xrd">
-                    <rect key="frame" x="16" y="343" width="343" height="21"/>
+                    <rect key="frame" x="16" y="378" width="343" height="56"/>
                     <fontDescription key="fontDescription" name="TypoRound-ItalicDemo" family="Typo Round" pointSize="47"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X9p-rZ-ZfT">
-                    <rect key="frame" x="16" y="364" width="343" height="216"/>
+                    <rect key="frame" x="16" y="434" width="343" height="216"/>
                     <subviews>
                         <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Tew-Dk-FOa">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="216"/>
@@ -95,13 +95,13 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Who?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYY-x9-JNE">
-                    <rect key="frame" x="16" y="727" width="343" height="21"/>
+                    <rect key="frame" x="16" y="832" width="343" height="56"/>
                     <fontDescription key="fontDescription" name="TypoRound-ItalicDemo" family="Typo Round" pointSize="47"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AvN-EO-oit">
-                    <rect key="frame" x="16" y="633" width="343" height="62"/>
+                    <rect key="frame" x="16" y="738" width="343" height="62"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u7f-Kc-uWZ">
                             <rect key="frame" x="32" y="16" width="279" height="30"/>
@@ -119,13 +119,13 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Where?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpd-tg-xNx">
-                    <rect key="frame" x="16" y="612" width="343" height="21"/>
+                    <rect key="frame" x="16" y="682" width="343" height="56"/>
                     <fontDescription key="fontDescription" name="TypoRound-ItalicDemo" family="Typo Round" pointSize="47"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="How Much?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pb-NY-8Wt">
-                    <rect key="frame" x="16" y="1184" width="254.5" height="21"/>
+                    <rect key="frame" x="16" y="1149" width="248.5" height="56"/>
                     <fontDescription key="fontDescription" name="TypoRound-ItalicDemo" family="Typo Round" pointSize="47"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -147,6 +147,7 @@
                                 <segment title="You Pay"/>
                                 <segment title="Free!"/>
                             </segments>
+                            <color key="tintColor" red="0.7843137255" green="0.78823529410000004" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </segmentedControl>
                     </subviews>
                     <color key="backgroundColor" red="0.91764705882352937" green="0.37254901960784315" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -161,44 +162,35 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Why?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAg-fC-WZf">
-                    <rect key="frame" x="16" y="869" width="343" height="21"/>
+                    <rect key="frame" x="16" y="1009" width="343" height="56"/>
                     <fontDescription key="fontDescription" name="TypoRound-ItalicDemo" family="Typo Round" pointSize="47"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MWU-yO-bAu">
-                    <rect key="frame" x="16" y="890" width="343" height="109"/>
+                    <rect key="frame" x="16" y="1065" width="343" height="52"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bti-gu-5eH">
-                            <rect key="frame" x="16" y="16" width="311" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mbX-pv-VOa">
-                            <rect key="frame" x="16" y="61" width="311" height="29"/>
+                            <rect key="frame" x="16" y="8" width="311" height="29"/>
                             <segments>
                                 <segment title="Friendship"/>
                                 <segment title="Romance"/>
-                                <segment title="Possible Romance "/>
-                                <segment title="" image="circle-user-7"/>
+                                <segment title="?Romance?"/>
+                                <segment title="Whatever"/>
                             </segments>
                             <color key="tintColor" red="0.78431372549019607" green="0.78823529411764703" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </segmentedControl>
                     </subviews>
                     <color key="backgroundColor" red="0.91764705882352937" green="0.37254901960784315" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="mbX-pv-VOa" firstAttribute="top" secondItem="Bti-gu-5eH" secondAttribute="bottom" constant="32" id="1Fi-5v-7cn"/>
                         <constraint firstItem="mbX-pv-VOa" firstAttribute="leading" secondItem="MWU-yO-bAu" secondAttribute="leading" constant="16" id="2DJ-dj-gGJ"/>
-                        <constraint firstAttribute="trailing" secondItem="Bti-gu-5eH" secondAttribute="trailing" constant="16" id="Jf9-Ms-G4N"/>
-                        <constraint firstItem="Bti-gu-5eH" firstAttribute="top" secondItem="MWU-yO-bAu" secondAttribute="top" constant="16" id="PPz-Rz-87X"/>
-                        <constraint firstItem="Bti-gu-5eH" firstAttribute="leading" secondItem="MWU-yO-bAu" secondAttribute="leading" constant="16" id="RxY-ps-2Pg"/>
                         <constraint firstAttribute="trailing" secondItem="mbX-pv-VOa" secondAttribute="trailing" constant="16" id="TxC-bG-sUq"/>
+                        <constraint firstItem="mbX-pv-VOa" firstAttribute="top" secondItem="MWU-yO-bAu" secondAttribute="top" constant="16" id="ZzD-Ur-5Tw"/>
                         <constraint firstAttribute="bottom" secondItem="mbX-pv-VOa" secondAttribute="bottom" constant="16" id="xK8-s0-BTC"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QQZ-1Z-d60">
-                    <rect key="frame" x="16" y="748" width="343" height="89"/>
+                    <rect key="frame" x="16" y="888" width="343" height="89"/>
                     <subviews>
                         <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="i1g-Ca-0KR">
                             <rect key="frame" x="16" y="45" width="311" height="29"/>
@@ -272,7 +264,4 @@
             <point key="canvasLocation" x="47.200000000000003" y="355.7721139430285"/>
         </view>
     </objects>
-    <resources>
-        <image name="circle-user-7" width="30" height="30"/>
-    </resources>
 </document>

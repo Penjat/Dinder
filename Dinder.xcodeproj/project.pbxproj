@@ -32,10 +32,6 @@
 		0B6017FB22061D6C0015DF62 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6017FA22061D6C0015DF62 /* CreateEventViewController.swift */; };
 		0B6017FD220659800015DF62 /* CreateEventLayout.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B6017FC220659800015DF62 /* CreateEventLayout.xib */; };
 		0B6017FF22065B5B0015DF62 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6017FE22065B5B0015DF62 /* ControlView.swift */; };
-		0B685F1722081D8D00701CE0 /* Simply Rounded.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B685F1622081D8D00701CE0 /* Simply Rounded.ttf */; };
-		0B685F192208217100701CE0 /* Monserga-regular-FFP.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B685F182208217100701CE0 /* Monserga-regular-FFP.ttf */; };
-		0B685F1B220821C800701CE0 /* Typo_Round_Italic_Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0B685F1A220821C800701CE0 /* Typo_Round_Italic_Demo.otf */; };
-		0B685F1D2208247F00701CE0 /* Fill Me With Color.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B685F1C2208247E00701CE0 /* Fill Me With Color.ttf */; };
 		0B9912262207F6B800293D25 /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9912252207F6B800293D25 /* NavigationDelegate.swift */; };
 		0B9912282208022200293D25 /* InspectEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9912272208022200293D25 /* InspectEventController.swift */; };
 		0BEA60A82207E0F70000527C /* InterestedUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA60A72207E0F70000527C /* InterestedUserCell.swift */; };
@@ -83,13 +79,13 @@
 		0B39666B2207AAB90059EE38 /* MyInterestedEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInterestedEventView.swift; sourceTree = "<group>"; };
 		0B3966712207C08F0059EE38 /* MyInterestedEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInterestedEventCell.swift; sourceTree = "<group>"; };
 		0B43BFA12204E8780009FDC4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0B4ADDF22208B5AC00E8FEE0 /* Typo_Round_Italic_Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Typo_Round_Italic_Demo.otf; path = /Users/spencersymington/Desktop/Projects/Dinder/Dinder/Typo_Round_Italic_Demo.otf; sourceTree = "<absolute>"; };
+		0B4ADDF32208B5AC00E8FEE0 /* Monserga-regular-FFP.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Monserga-regular-FFP.ttf"; path = "/Users/spencersymington/Desktop/Projects/Dinder/Dinder/Monserga-regular-FFP.ttf"; sourceTree = "<absolute>"; };
+		0B4ADDF42208B5AD00E8FEE0 /* Fill Me With Color.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Fill Me With Color.ttf"; path = "/Users/spencersymington/Desktop/Projects/Dinder/Dinder/Fill Me With Color.ttf"; sourceTree = "<absolute>"; };
+		0B4ADDF52208B5AD00E8FEE0 /* Simply Rounded.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Simply Rounded.ttf"; path = "/Users/spencersymington/Desktop/Projects/Dinder/Dinder/Simply Rounded.ttf"; sourceTree = "<absolute>"; };
 		0B6017FA22061D6C0015DF62 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		0B6017FC220659800015DF62 /* CreateEventLayout.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateEventLayout.xib; sourceTree = "<group>"; };
 		0B6017FE22065B5B0015DF62 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
-		0B685F1622081D8D00701CE0 /* Simply Rounded.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Simply Rounded.ttf"; path = "../../../../Downloads/simply-rounded/Simply Rounded.ttf"; sourceTree = "<group>"; };
-		0B685F182208217100701CE0 /* Monserga-regular-FFP.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Monserga-regular-FFP.ttf"; path = "../../../../Downloads/monserga-outline/Monserga-regular-FFP.ttf"; sourceTree = "<group>"; };
-		0B685F1A220821C800701CE0 /* Typo_Round_Italic_Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Typo_Round_Italic_Demo.otf; path = "../../../../Downloads/typo-round/Typo_Round_Italic_Demo.otf"; sourceTree = "<group>"; };
-		0B685F1C2208247E00701CE0 /* Fill Me With Color.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Fill Me With Color.ttf"; path = "../../../../Downloads/fill-me-with-color/Fill Me With Color.ttf"; sourceTree = "<group>"; };
 		0B9912252207F6B800293D25 /* NavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
 		0B9912272208022200293D25 /* InspectEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectEventController.swift; sourceTree = "<group>"; };
 		0BEA60A72207E0F70000527C /* InterestedUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedUserCell.swift; sourceTree = "<group>"; };
@@ -147,14 +143,15 @@
 		0B341CE9220284530094EDD1 /* Dinder */ = {
 			isa = PBXGroup;
 			children = (
+				0B4ADDF42208B5AD00E8FEE0 /* Fill Me With Color.ttf */,
+				0B4ADDF32208B5AC00E8FEE0 /* Monserga-regular-FFP.ttf */,
+				0B4ADDF52208B5AD00E8FEE0 /* Simply Rounded.ttf */,
+				0B4ADDF22208B5AC00E8FEE0 /* Typo_Round_Italic_Demo.otf */,
 				0B43BFA12204E8780009FDC4 /* GoogleService-Info.plist */,
 				0B341CEA220284530094EDD1 /* AppDelegate.swift */,
 				0B341CEE220284530094EDD1 /* Main.storyboard */,
-				0B685F1622081D8D00701CE0 /* Simply Rounded.ttf */,
 				0B014BB12206811B0035ABB6 /* BrowseViewController+Swiping.swift */,
 				0B6017FC220659800015DF62 /* CreateEventLayout.xib */,
-				0B685F1A220821C800701CE0 /* Typo_Round_Italic_Demo.otf */,
-				0B685F182208217100701CE0 /* Monserga-regular-FFP.ttf */,
 				0B6017FE22065B5B0015DF62 /* ControlView.swift */,
 				0B341CF1220284540094EDD1 /* Assets.xcassets */,
 				0B341CF3220284540094EDD1 /* LaunchScreen.storyboard */,
@@ -184,7 +181,6 @@
 				0B39665E22076F180059EE38 /* PagingProfile.xib */,
 				0B341CFC2202B88A0094EDD1 /* ViewControllers */,
 				0B014BAD220676A80035ABB6 /* EventView.xib */,
-				0B685F1C2208247E00701CE0 /* Fill Me With Color.ttf */,
 			);
 			path = Dinder;
 			sourceTree = "<group>";
@@ -294,7 +290,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B39666A2207AA7F0059EE38 /* MyInterestedEvent.xib in Resources */,
-				0B685F1B220821C800701CE0 /* Typo_Round_Italic_Demo.otf in Resources */,
 				0B6017FD220659800015DF62 /* CreateEventLayout.xib in Resources */,
 				0B341CF5220284540094EDD1 /* LaunchScreen.storyboard in Resources */,
 				0B39665F22076F180059EE38 /* PagingProfile.xib in Resources */,
@@ -302,10 +297,7 @@
 				0B014BAE220676A80035ABB6 /* EventView.xib in Resources */,
 				0B341CF2220284540094EDD1 /* Assets.xcassets in Resources */,
 				0B3966662207A7A90059EE38 /* MyActiveEvent.xib in Resources */,
-				0B685F192208217100701CE0 /* Monserga-regular-FFP.ttf in Resources */,
 				0B341CF0220284530094EDD1 /* Main.storyboard in Resources */,
-				0B685F1722081D8D00701CE0 /* Simply Rounded.ttf in Resources */,
-				0B685F1D2208247F00701CE0 /* Fill Me With Color.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
