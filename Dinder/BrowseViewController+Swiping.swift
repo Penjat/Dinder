@@ -32,6 +32,11 @@ extension BrowseViewController {
         self.leadingContraint1.constant = 0
         self.view.insertSubview(self.eventView1,
                                 belowSubview: self.eventView2)
+        if let event = self.eventController1.currentEvent, let me = self.mainUser{
+            self.dataManager?.applyFor(applicant: me, event: event)
+        }
+        
+        self.eventController1.populateEvent(self.getNextEvent())
       })
     }else{
       isOnFirstEvent = true
@@ -48,6 +53,11 @@ extension BrowseViewController {
         self.leadingConstraint2.constant = 0
         self.view.insertSubview(self.eventView2,
                                 belowSubview: self.eventView1)
+        if let event = self.eventController2.currentEvent, let me = self.mainUser{
+            self.dataManager?.applyFor(applicant: me, event: event)
+        }
+        
+        self.eventController2.populateEvent(self.getNextEvent())
       })
     }
     
@@ -55,9 +65,8 @@ extension BrowseViewController {
     /*
      // swiped right on current event
      */
-    if let event = self.eventController1.currentEvent, let me = self.mainUser{
-        self.dataManager?.applyFor(applicant: me, event: event)
-    }
+    
+
     
     let eventAddedMessage = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
     eventAddedMessage.text = "event added"
@@ -102,6 +111,7 @@ extension BrowseViewController {
         if let event = self.eventController1.currentEvent, let me = self.mainUser{
             self.dataManager?.notInterestedIn(user: me, event: event)
         }
+        
         
         self.eventController1.populateEvent(self.getNextEvent())
         self.view.insertSubview(self.eventView1,
