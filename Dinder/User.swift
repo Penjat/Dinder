@@ -146,10 +146,8 @@ struct User{
             gend = "male"
         case Gender.Female:
             gend = "female"
-        default:
-            gend = "female"
-            
-            assert(false == true)
+           
+           
         }
         
         //let array = [ "one", "two" ]

@@ -22,6 +22,9 @@ struct Event{
     var interestedUsers: [User]?
     let owner: User
     var chosenPartner: User?
+    
+    let imageKeywords: [String]
+    
     let images: [Image]
     //let imageKeywords: [String]
     
@@ -38,7 +41,7 @@ struct Event{
     init(eventId: Int, title: String, eventRelationshipType: RelationshipType?, lookingFor: Gender?,
          estimatedCombinedTotalCostCAD: Int, estimatedCostForGuestCAD: Int, whoPays: Payer?,
          interestedUsers: [User], owner: User, chosenPartner: User?, images: [Image],
-         location: CLLocation?, startDateTime: Date, endDateTime: Date, postedDateTime: Date, description: String) {
+         location: CLLocation?, startDateTime: Date, endDateTime: Date, postedDateTime: Date, description: String, imageKeywords: [String]) {
         self.eventId = eventId
         self.title = title
         self.eventRelationshipType = eventRelationshipType
@@ -59,7 +62,7 @@ struct Event{
         self.postedDateTime = postedDateTime
         self.description = description
         
-        
+        self.imageKeywords = imageKeywords
     }
 }
 
