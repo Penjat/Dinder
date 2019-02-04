@@ -742,14 +742,16 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
     func getMidtermPrepByJason() -> Event{
         
         let fakeUsers: FakeUsers = FakeUsers()
-        //let anjali: User = fakeUsers.getAnjali()
-        //let spencer: User = fakeUsers.getSpencer()
-        //let cassandra: User = fakeUsers.getCassandra()
+        let anjali: User = fakeUsers.getAnjali()
+        let spencer: User = fakeUsers.getSpencer()
+        let cassandra: User = fakeUsers.getCassandra()
         //
         let jason: User = fakeUsers.getJason()
 
         let usersInterested: [User] = [User]()
-        
+        usersInterested.append(anjali)
+        usersInterested.append(jason)
+        usersInterested.append(cassandra)
         
         var calendar = Calendar.current
         var dateComponents = DateComponents()
@@ -789,7 +791,7 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         var keywords: [String] = [String]()
         keywords.append("help")
         
-        let event: Event = Event(eventId: 5, title: "PLEASE HELP! Midterm due...", eventRelationshipType: RelationshipType.Friendship, lookingFor: Gender.NotApplicable, estimatedCombinedTotalCostCAD: 40, estimatedCostForGuestCAD: 5000, whoPays: Payer.Dutch, interestedUsers: usersInterested, owner: jason, chosenPartner: nil, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "HELP ME!!! I have to present an iOS app on Monday and I have NO IDEA what I'm doing!!!", imageKeywords: keywords)
+        let event: Event = Event(eventId: 5, title: "PLEASE HELP! Midterm due...", eventRelationshipType: RelationshipType.Friendship, lookingFor: Gender.NotApplicable, estimatedCombinedTotalCostCAD: 40, estimatedCostForGuestCAD: 5000, whoPays: Payer.Dutch, interestedUsers: usersInterested, owner: spencer, chosenPartner: nil, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "HELP ME!!! I have to present an iOS app on Monday and I have NO IDEA what I'm doing!!!", imageKeywords: keywords)
         
         
         return event
