@@ -19,6 +19,7 @@ class EventControllerView: UIView {
   @IBOutlet weak var costLabel: UILabel!
   @IBOutlet weak var whoPaysLabel: UILabel!
   
+    var currentEvent :Event?
   
   
   override init(frame: CGRect) {
@@ -39,6 +40,10 @@ class EventControllerView: UIView {
   }
   
   func populateEvent(_ event:Event){
+    
+    /* here, view is populated */
+    self.currentEvent = event;
+    
     
     //title and description
     eventTitleLabel.text = event.title

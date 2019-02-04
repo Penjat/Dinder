@@ -79,8 +79,8 @@ class BrowseViewController: UIViewController, ImageReceiver {
     
     @IBAction func swippedRight(_ sender: Any) {
         print("swipped right")
-      rightSwipe()
-      
+        rightSwipe()
+        
     }
     @IBAction func profileButtonPressed(_ sender: Any) {
         print("pressed my profile button")
