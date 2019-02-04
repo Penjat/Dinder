@@ -49,10 +49,6 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
     
   }
   
-//  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//    let  headerCell = tableView.dequeueReusableCell(withIdentifier: "myEventsHeader")
-//    return headerCell
-//  }
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
     return 0
   }

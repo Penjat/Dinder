@@ -2,19 +2,35 @@
 
 import UIKit
 
-class MyActiveEventView: UIView {
+class MyActiveEventView: UIView ,UICollectionViewDelegate, UICollectionViewDataSource {
+  @IBOutlet weak var interestedUserCollectionView: UICollectionView!
   
+  
+  var currentEvent :Event?
   
   @IBOutlet weak var eventImage: UIImageView!
   @IBOutlet weak var eventTitle: UILabel!
   @IBOutlet weak var eventDate: UILabel!
   
-  @IBOutlet weak var interestedUsersCollectionView: UICollectionView!
+
   
   
   
   @IBOutlet var contentView: UIView!
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    
+    if let event = currentEvent, let  interested = event.interestedUsers{
+      return interested.count
+    }
+    return 0
+    
+  }
   
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = interestedUserCollectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath)
+    
+    return cell
+  }
   override init(frame: CGRect) {
     super.init(frame: frame)
     commonInit()
@@ -30,11 +46,17 @@ class MyActiveEventView: UIView {
     addSubview(contentView)
     contentView.frame = self.bounds
     contentView.autoresizingMask = [.flexibleWidth , .flexibleHeight]
+    
+    interestedUserCollectionView.register(InterestedUserCell.self, forCellWithReuseIdentifier: "MyCell")
+    
+    interestedUserCollectionView.dataSource = self
+    interestedUserCollectionView.delegate = self
+    
   }
   
   func setUp(event: Event) {
     //TODO check if images > 0
-    
+    currentEvent = event
     event.images[0].getImage(imageView: eventImage)
     eventTitle.text = event.title
     let gbLocale = Locale(identifier: "en_GB")
