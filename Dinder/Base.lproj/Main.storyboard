@@ -469,6 +469,7 @@
                         <outlet property="trailingConstraint2" destination="Ail-6P-Hzh" id="cLr-Y8-uTp"/>
                         <segue destination="QEm-Yk-R0g" kind="show" identifier="toMyProfile" id="o0Q-jJ-7ic"/>
                         <segue destination="3xD-lG-LEC" kind="presentation" identifier="toCreateEvent" id="Ybc-OT-dFZ"/>
+                        <segue destination="QEm-Yk-R0g" kind="show" identifier="toUserProfile" id="etp-cU-fCt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PIA-ps-5u8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -512,6 +513,6 @@
         <image name="text-list" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aiw-4E-CcK"/>
+        <segue reference="etp-cU-fCt"/>
     </inferredMetricsTieBreakers>
 </document>

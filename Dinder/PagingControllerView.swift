@@ -9,6 +9,7 @@
 import UIKit
 
 class PagingControllerView: UIView {
+  var delegate :NavigationDelegate?
   @IBOutlet var contentView: UIView!
   @IBOutlet weak var image1: UIImageView!
   @IBOutlet weak var image2: UIImageView!

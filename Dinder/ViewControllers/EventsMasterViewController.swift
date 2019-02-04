@@ -131,7 +131,7 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
     
     //if no events show with message
     if eventsToShow.count == 0 {
-      showNoEvents(message:"you are not intereste in any events")
+      showNoEvents(message:"you are not interested in any events")
     }else{
       noEventsMsg.isHidden = true
     }
@@ -142,7 +142,7 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
   func showNoEvents(message:String){
     noEventsMsg.isHidden = false
     noEventsMsgLabel.alpha = 0.0
-    noEventsMsgLabel.text = "you are not intereste in any events"
+    noEventsMsgLabel.text = message
     UIView.animate(withDuration: 1.0, animations: {
       self.noEventsMsgLabel.alpha = 1.0
     })

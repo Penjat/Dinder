@@ -222,6 +222,10 @@ class DataManager{
     
     
     /* user is interested in this event */
+  func createMyEvent(event: Event){
+    //DEMO
+    myEvents.append(event)
+  }
     func applyFor(applicant: User, event: Event){
       
       //DEMO
