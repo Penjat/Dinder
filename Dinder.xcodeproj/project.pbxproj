@@ -23,7 +23,6 @@
 		0B39665D220762E70059EE38 /* UIScrollView+ScrollToPos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B39665C220762E70059EE38 /* UIScrollView+ScrollToPos.swift */; };
 		0B39665F22076F180059EE38 /* PagingProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B39665E22076F180059EE38 /* PagingProfile.xib */; };
 		0B396661220770AD0059EE38 /* PagingControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B396660220770AD0059EE38 /* PagingControllerView.swift */; };
-		0B396663220797930059EE38 /* InterestedUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B396662220797930059EE38 /* InterestedUserCell.swift */; };
 		0B3966662207A7A90059EE38 /* MyActiveEvent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3966652207A7A90059EE38 /* MyActiveEvent.xib */; };
 		0B3966682207A7F70059EE38 /* MyActiveEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3966672207A7F70059EE38 /* MyActiveEventView.swift */; };
 		0B39666A2207AA7F0059EE38 /* MyInterestedEvent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3966692207AA7F0059EE38 /* MyInterestedEvent.xib */; };
@@ -33,6 +32,9 @@
 		0B6017FB22061D6C0015DF62 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6017FA22061D6C0015DF62 /* CreateEventViewController.swift */; };
 		0B6017FD220659800015DF62 /* CreateEventLayout.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B6017FC220659800015DF62 /* CreateEventLayout.xib */; };
 		0B6017FF22065B5B0015DF62 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6017FE22065B5B0015DF62 /* ControlView.swift */; };
+		0B9912262207F6B800293D25 /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9912252207F6B800293D25 /* NavigationDelegate.swift */; };
+		0B9912282208022200293D25 /* InspectEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9912272208022200293D25 /* InspectEventController.swift */; };
+		0BEA60A82207E0F70000527C /* InterestedUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA60A72207E0F70000527C /* InterestedUserCell.swift */; };
 		219FAC3CCC8223745E26A6D9 /* Pods_Dinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ECC337790D150159B44A22C /* Pods_Dinder.framework */; };
 		9F13CA152204030F009F98B4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13CA142204030F009F98B4 /* DataManager.swift */; };
 		9F13CA242207B667009F98B4 /* ImageReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13CA232207B667009F98B4 /* ImageReceiver.swift */; };
@@ -71,7 +73,6 @@
 		0B39665C220762E70059EE38 /* UIScrollView+ScrollToPos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ScrollToPos.swift"; sourceTree = "<group>"; };
 		0B39665E22076F180059EE38 /* PagingProfile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PagingProfile.xib; sourceTree = "<group>"; };
 		0B396660220770AD0059EE38 /* PagingControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingControllerView.swift; sourceTree = "<group>"; };
-		0B396662220797930059EE38 /* InterestedUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedUserCell.swift; sourceTree = "<group>"; };
 		0B3966652207A7A90059EE38 /* MyActiveEvent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyActiveEvent.xib; sourceTree = "<group>"; };
 		0B3966672207A7F70059EE38 /* MyActiveEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActiveEventView.swift; sourceTree = "<group>"; };
 		0B3966692207AA7F0059EE38 /* MyInterestedEvent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyInterestedEvent.xib; sourceTree = "<group>"; };
@@ -81,6 +82,9 @@
 		0B6017FA22061D6C0015DF62 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		0B6017FC220659800015DF62 /* CreateEventLayout.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateEventLayout.xib; sourceTree = "<group>"; };
 		0B6017FE22065B5B0015DF62 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
+		0B9912252207F6B800293D25 /* NavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
+		0B9912272208022200293D25 /* InspectEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectEventController.swift; sourceTree = "<group>"; };
+		0BEA60A72207E0F70000527C /* InterestedUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedUserCell.swift; sourceTree = "<group>"; };
 		1E99680A355E73C8E7BAC120 /* Pods-Dinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dinder/Pods-Dinder.debug.xcconfig"; sourceTree = "<group>"; };
 		22B255EF743AE116899C252B /* Pods-Dinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dinder/Pods-Dinder.release.xcconfig"; sourceTree = "<group>"; };
 		7ECC337790D150159B44A22C /* Pods_Dinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,8 +182,8 @@
 			children = (
 				0B1E32AC2203AE4800B5D58A /* EventsMasterViewController.swift */,
 				0B1E32B32203C94900B5D58A /* ProfileViewController.swift */,
-				0B396662220797930059EE38 /* InterestedUserCell.swift */,
 				0B341CFF2202B9690094EDD1 /* BrowseViewController.swift */,
+				0B9912272208022200293D25 /* InspectEventController.swift */,
 				0B1E32AE2203BCB600B5D58A /* MyActiveEventCell.swift */,
 				0B6017FA22061D6C0015DF62 /* CreateEventViewController.swift */,
 			);
@@ -191,9 +195,11 @@
 			children = (
 				0B3966652207A7A90059EE38 /* MyActiveEvent.xib */,
 				0B3966672207A7F70059EE38 /* MyActiveEventView.swift */,
+				0B9912252207F6B800293D25 /* NavigationDelegate.swift */,
 				0B3966692207AA7F0059EE38 /* MyInterestedEvent.xib */,
 				0B39666B2207AAB90059EE38 /* MyInterestedEventView.swift */,
 				0B3966712207C08F0059EE38 /* MyInterestedEventCell.swift */,
+				0BEA60A72207E0F70000527C /* InterestedUserCell.swift */,
 			);
 			path = "Events Display";
 			sourceTree = "<group>";
@@ -348,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B39666C2207AAB90059EE38 /* MyInterestedEventView.swift in Sources */,
+				0B9912282208022200293D25 /* InspectEventController.swift in Sources */,
 				0B396661220770AD0059EE38 /* PagingControllerView.swift in Sources */,
 				9F13CA2C2207BFDF009F98B4 /* FlickrSearchResults.swift in Sources */,
 				0B1EF901220541A20057BCD1 /* BrowseViewController+StringFormatting.swift in Sources */,
@@ -358,7 +365,6 @@
 				0B014BB22206811B0035ABB6 /* BrowseViewController+Swiping.swift in Sources */,
 				0B6017FF22065B5B0015DF62 /* ControlView.swift in Sources */,
 				0B1A8117220604E700ECB91A /* Image+DownlodingFunctions.swift in Sources */,
-				0B396663220797930059EE38 /* InterestedUserCell.swift in Sources */,
 				0B341D002202B9690094EDD1 /* BrowseViewController.swift in Sources */,
 				0B341CEB220284530094EDD1 /* AppDelegate.swift in Sources */,
 				0B1E32AD2203AE4800B5D58A /* EventsMasterViewController.swift in Sources */,
@@ -366,6 +372,7 @@
 				9F13CA152204030F009F98B4 /* DataManager.swift in Sources */,
 				9F4FDE2A2203B02D002E23AB /* Image.swift in Sources */,
 				9F4FDE242203AE36002E23AB /* Event.swift in Sources */,
+				0BEA60A82207E0F70000527C /* InterestedUserCell.swift in Sources */,
 				0B014BB02206774C0035ABB6 /* EventControllerView.swift in Sources */,
 				9F13CA262207BF2E009F98B4 /* Flickr.swift in Sources */,
 				9F4FDE1E2203AAA2002E23AB /* Gender.swift in Sources */,
@@ -375,6 +382,7 @@
 				9F3C1EDB2203CFE400013DE7 /* FakeEvents.swift in Sources */,
 				0B6017FB22061D6C0015DF62 /* CreateEventViewController.swift in Sources */,
 				9FC3B67B2203BAC300CD4D20 /* FakeUsers.swift in Sources */,
+				0B9912262207F6B800293D25 /* NavigationDelegate.swift in Sources */,
 				9F13CA2A2207BFC0009F98B4 /* Result.swift in Sources */,
 				9F13CA242207B667009F98B4 /* ImageReceiver.swift in Sources */,
 				9F13CA282207BF8C009F98B4 /* FlickrPhoto.swift in Sources */,
@@ -527,7 +535,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 637GVRP677;
+				DEVELOPMENT_TEAM = L688AU9RCV;
 				INFOPLIST_FILE = Dinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -546,7 +554,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 637GVRP677;
+				DEVELOPMENT_TEAM = L688AU9RCV;
 				INFOPLIST_FILE = Dinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

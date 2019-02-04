@@ -2,7 +2,17 @@
 import UIKit
 
 class MyInterestedEventView: UIView{
+  @IBOutlet weak var eventImage: UIImageView!
+  @IBOutlet weak var posterImage: UIImageView!
+  
+  @IBOutlet weak var eventTime: UILabel!
+  @IBOutlet weak var eventTitle: UILabel!
+  
   func setUp(event: Event) {
+    event.owner.images[0].getImage(imageView: posterImage)
+    event.images[0].getImage(imageView: eventImage)
+    eventTitle.text = event.title
+    eventTime.text = event.getFormattedDate()
     
   }
   

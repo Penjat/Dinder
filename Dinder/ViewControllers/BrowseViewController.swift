@@ -8,7 +8,12 @@
 
 import UIKit
 
-class BrowseViewController: UIViewController {
+class BrowseViewController: UIViewController, ImageReceiver {
+  func receiveImages(images: FlickrSearchResults) {
+    print("---------------------receiving images")
+    print(images)
+  }
+  
   
   @IBOutlet weak var eventController1: EventControllerView!
   @IBOutlet weak var eventController2: EventControllerView!
@@ -37,8 +42,13 @@ class BrowseViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    
+    
+    
+    
     //set up data manager
     dataManager = DataManager()
+    dataManager?.getArrayOfImages(subject: "Dog", receiver: self)
     
     //get the main user
     mainUser = dataManager?.getUser(userId: 0)

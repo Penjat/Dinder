@@ -64,6 +64,14 @@ struct Event{
         
         self.imageKeywords = imageKeywords
     }
+  func getFormattedDate() -> String{
+    let gbLocale = Locale(identifier: "en_US")
+    let customFormat = "dMMMMhh"
+    let ukFormat = DateFormatter.dateFormat(fromTemplate: customFormat, options: 0, locale: gbLocale)
+    let formatter = DateFormatter()
+    formatter.dateFormat = ukFormat
+    return formatter.string(from: startDateTime)
+  }
 }
 
 
