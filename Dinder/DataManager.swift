@@ -12,7 +12,7 @@ import Firebase
 class DataManager{
     
     var events: [Event] = FakeEvents().events
-    var users: [User] = FakeUsers().users
+    var users: [User]  = FakeUsers().users
     
     var currentEventNum = 0
     var ref: DatabaseReference!
@@ -126,19 +126,27 @@ class DataManager{
         return events[1];
     }
     
-    /* user is interested in this event */
-    func applyFor(applicant: User, event: Event){
-       // print("\(applicant.firstName) interested in \(event.title)")
+    
+    
+    
+    
+    func getEventByHostAndStartTime(hostEmailAddress: String, startTime: Date) -> Event?{
+        for i in 0 ..< self.events.count{
+            if self.events[i].startDateTime == startTime{
+                if self.events[i].owner.emailAddress == hostEmailAddress{
+                    return self.events[i]
+                }
+            }
+        }
         
-        // update data model
         
-        let emailOfHost = event.owner.emailAddress
+        let emailOfHost = hostEmailAddress
         
         
         
         let keyworthyEmail = emailOfHost.replacingOccurrences(of: ".", with: "__DOT__")
         
-        let startDateTime = event.startDateTime
+        let startDateTime = startTime
         
         
         
@@ -152,21 +160,137 @@ class DataManager{
         key.append("~")
         key.append(defaultTimeZoneStr)
         
-       // print("THE KEY IS \(key)")
+    //    print("key is \(key)")
+        /*
+        let usersRefs = Database.database().reference(withPath: "events")
         
+        usersRefs.observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            
+            
+            if let allEvents = snapshot.value as? [String:Any] {
+                for (eventKey,event) in allEvents {
+                    
+                    let evt = event as? [String:Any]
+                    
+                    //     print("eeeeeee: \(event) for event key \(eventKey)");
+                    
+                    let aps = evt!["applicants"];
+                    print("the applicants arrrrrre \(aps)")
+                    //       print("HOST HOST HOST")
+                    //      print(host!);
+                }}})
+        */
         
+        let eventsRef = Database.database().reference(withPath: "events")
+        let oneEventRef = eventsRef.child(key)
         
-        
-        let usersRef = Database.database().reference(withPath: "events")
-        let amyRef = usersRef.child(key)
-        let amyBdRef = amyRef.child("emailaddress")
-        amyBdRef.observeSingleEvent(of: .value, with: { (snapshot) in
-        //    print("GOT IT \(snapshot.value ?? "unknown email")!")
+        oneEventRef.observeSingleEvent(of: .value, with: { (snapshot) in
+        //    print("GOT IT \(snapshot.value ?? "unknown applcnt")!")
+            
         })
-        //  amyBdRef.setValue("1999-12-31")
         
-        // return users[0]
         
+//        let oneEventsApplicantsRef = oneEventRef.child("applicants")
+//        oneEventsApplicantsRef.observeSingleEvent(of: .value, with: { (snapshot) in
+//                print("GOT IT \(snapshot.value ?? "unknown applcnt")!")
+//            return snap;
+//
+//        })
+        
+        
+        
+       
+        
+        return nil
+    }
+    
+    
+    
+    
+    
+    
+    
+    /* user is interested in this event */
+    func applyFor(applicant: User, event: Event){
+        
+        
+        
+        
+        
+        
+        
+       // print("\(applicant.firstName) interested in \(event.title)")
+        
+        // update data model
+        
+        let emailOfHost = event.owner.emailAddress
+        
+    //    print("applying: \(applicant.emailAddress)")
+        
+        let keyworthyEmail = emailOfHost.replacingOccurrences(of: ".", with: "__DOT__")
+        
+        let startDateTime = event.startDateTime
+        
+    //    print("start date time is \(startDateTime)")
+        
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let defaultTimeZoneStr = formatter.string(from: startDateTime)
+        
+        // firebase key is in format of:
+        // email__DOT__COM~yyyy-mm-dd hh:mm:ss
+        var key: String = keyworthyEmail
+        key.append("~")
+        key.append(defaultTimeZoneStr)
+        
+       
+        var ev: Event = getEventByHostAndStartTime(
+            hostEmailAddress: event.owner.emailAddress,
+                   startTime:  event.startDateTime)!
+        
+     //   print("event applicants are \(ev.interestedUsers)")
+
+        
+        ev.interestedUsers?.append(applicant)
+        
+     //   print("NOW, event applicants are \(ev.interestedUsers)")
+
+//
+//
+//       // print("THE KEY IS \(key)")
+//
+//
+//        let usersRef = Database.database().reference(withPath: "events")
+//        let amyRef = usersRef.child(key)
+//        let amyBdRef = amyRef.child("emailaddress")
+//        amyBdRef.observeSingleEvent(of: .value, with: { (snapshot) in
+//        //    print("GOT IT \(snapshot.value ?? "unknown email")!")
+//        })
+//        //  amyBdRef.setValue("1999-12-31")
+//
+//        // return users[0]
+//
+//
+//        // start actual function here
+//
+//        // get all applicants for this event
+//        // and add this user too
+//
+//        let allEventsRef = Database.database().reference(withPath: "events")
+//        let oneEventRef = allEventsRef.child(key)
+//        let applicantsForOneEvent = oneEventRef.child("applicants")
+//        applicantsForOneEvent.observeSingleEvent(of: .value, with: { (snapshot) in
+//            //    print("GOT IT \(snapshot.value ?? "unknown email")!")
+//            print("applicants are \(snapshot.value)")
+//        })
+//
+        
+        
+        
+        
+        // end actual function here
         
         
     }
@@ -414,13 +538,13 @@ class DataManager{
     
     
     func getNextEvent(filters: [String:String]) -> Event{
-        currentEventNum += 1
+        self.currentEventNum += 1
         let _: User = getUserFromFirebase(userId: 12)
         
         
    //     print("event number \(currentEventNum)")
         
-        return self.events[currentEventNum % events.count] // need dictionary of options, plus keep track of current event
+        return self.events[self.currentEventNum % self.events.count] // need dictionary of options, plus keep track of current event
         
         
         
@@ -434,6 +558,7 @@ class DataManager{
     
     
     func getUser(userId: Int) -> User{
+        createUsers()
         return self.users[0] // check userId field
     }
     
@@ -448,7 +573,7 @@ class DataManager{
                 // print(userDict.debugDescription)
           //  }
         })
-        return users[0]
+        return self.users[0]
         
     }
     
@@ -460,7 +585,7 @@ class DataManager{
         //  var flickrURL: String = "https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=3b801d634be562e16044124f4c11f184&tags="
         
         
-        flickr.searchFlickr(for: subject) { searchResults in
+        self.flickr.searchFlickr(for: subject) { searchResults in
             
             switch searchResults {
             case .error(let error) :
@@ -487,7 +612,7 @@ class DataManager{
         })
         //  amyBdRef.setValue("1999-12-31")
         
-        return users[0]
+        return self.users[0]
     }
     
     
