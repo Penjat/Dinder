@@ -12,6 +12,7 @@ import Firebase
 class DataManager{
     
     var events: [Event] = FakeEvents().events
+    var demoEvents = FakeEvents().events
     var users: [User]  = FakeUsers().users
     
     var currentEventNum = 0
@@ -538,9 +539,12 @@ class DataManager{
     
     
     func getNextEvent(filters: [String:String]) -> Event{
-      
-      
+        //DEMO return just the fake events
+      let event = demoEvents[currentEventNum%demoEvents.count]
         self.currentEventNum += 1
+        return event
+      
+      
         let _: User = getUserFromFirebase(userId: 12)
         
         
