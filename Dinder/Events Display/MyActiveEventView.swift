@@ -78,6 +78,7 @@ class MyActiveEventView: UIView ,UICollectionViewDelegate, UICollectionViewDataS
     layout.sectionInset = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
     layout.minimumLineSpacing = 1.0
     layout.minimumInteritemSpacing = 1.0
+    layout.scrollDirection = .horizontal
     interestedUserCollectionView.setCollectionViewLayout(layout, animated: true)
     
     

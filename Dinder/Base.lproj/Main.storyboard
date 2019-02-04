@@ -142,22 +142,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="af5-u6-4dQ" customClass="EventControllerView" customModule="Dinder" customModuleProvider="target">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uu3-0N-Rhd">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="52j-1J-8Al" customClass="EventControllerView" customModule="Dinder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="167" width="375" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="52j-1J-8Al" secondAttribute="trailing" id="0Df-EC-2FA"/>
+                                    <constraint firstItem="52j-1J-8Al" firstAttribute="leading" secondItem="Uu3-0N-Rhd" secondAttribute="leading" id="GDI-PX-LYc"/>
+                                    <constraint firstItem="52j-1J-8Al" firstAttribute="top" secondItem="Uu3-0N-Rhd" secondAttribute="top" id="QMs-d4-m6s"/>
+                                    <constraint firstAttribute="bottom" secondItem="52j-1J-8Al" secondAttribute="bottom" id="vy6-zu-lcw"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="XL1-oz-qbc" firstAttribute="bottom" secondItem="af5-u6-4dQ" secondAttribute="bottom" id="478-YF-mfU"/>
-                            <constraint firstItem="XL1-oz-qbc" firstAttribute="trailing" secondItem="af5-u6-4dQ" secondAttribute="trailing" id="8bD-zi-DBS"/>
-                            <constraint firstItem="af5-u6-4dQ" firstAttribute="top" secondItem="XL1-oz-qbc" secondAttribute="top" id="FRh-zl-1Md"/>
-                            <constraint firstItem="af5-u6-4dQ" firstAttribute="leading" secondItem="XL1-oz-qbc" secondAttribute="leading" id="x6c-hK-WnS"/>
+                            <constraint firstItem="XL1-oz-qbc" firstAttribute="bottom" secondItem="Uu3-0N-Rhd" secondAttribute="bottom" id="3u7-dd-E21"/>
+                            <constraint firstItem="Uu3-0N-Rhd" firstAttribute="leading" secondItem="XL1-oz-qbc" secondAttribute="leading" id="8uX-ar-pYH"/>
+                            <constraint firstItem="XL1-oz-qbc" firstAttribute="trailing" secondItem="Uu3-0N-Rhd" secondAttribute="trailing" id="eZd-FF-pCH"/>
+                            <constraint firstItem="52j-1J-8Al" firstAttribute="width" secondItem="cov-zZ-b0z" secondAttribute="width" id="mC7-Gk-V4g"/>
+                            <constraint firstItem="Uu3-0N-Rhd" firstAttribute="top" secondItem="XL1-oz-qbc" secondAttribute="top" id="xXr-vE-sMU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XL1-oz-qbc"/>
                     </view>
                     <connections>
-                        <outlet property="eventView" destination="af5-u6-4dQ" id="t9Y-dF-2w1"/>
+                        <outlet property="eventView" destination="52j-1J-8Al" id="2yV-0G-m3N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s6t-du-BIj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -174,8 +186,16 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbP-ns-Zd5">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.91764705882352937" green="0.37254901960784315" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <offsetWrapper key="textShadowOffset" horizontal="100" vertical="0.0"/>
+                                </textAttributes>
                                 <items>
-                                    <navigationItem title="Create Event" id="Ivw-8b-A8k">
+                                    <navigationItem title="New Event" id="Ivw-8b-A8k">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="gKi-Rg-QIf">
                                             <connections>
                                                 <action selector="pressedCancel:" destination="3xD-lG-LEC" id="Mnh-Kg-axm"/>

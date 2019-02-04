@@ -18,16 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2019-01-31 at 3.14.49 PM" translatesAutoresizingMaskIntoConstraints="NO" id="pqR-Ow-YVZ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2019-01-31 at 3.14.49 PM" translatesAutoresizingMaskIntoConstraints="NO" id="pqR-Ow-YVZ">
+                                <rect key="frame" x="-262.5" y="-125.5" width="900" height="938"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.84665006399154663" green="0.13121607730459794" blue="0.1154940853730884" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pqR-Ow-YVZ" secondAttribute="trailing" id="Fc0-Da-XWH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pqR-Ow-YVZ" secondAttribute="bottom" id="QFv-ok-MZw"/>
-                            <constraint firstItem="pqR-Ow-YVZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WA1-qA-jiX"/>
-                            <constraint firstItem="pqR-Ow-YVZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yjw-T5-Gl9"/>
+                            <constraint firstItem="pqR-Ow-YVZ" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="2.4" id="Xvy-AE-LYn"/>
+                            <constraint firstItem="pqR-Ow-YVZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="coI-eO-Drm"/>
+                            <constraint firstItem="pqR-Ow-YVZ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="zwV-jR-2gh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Screen Shot 2019-01-31 at 3.14.49 PM" width="659" height="469"/>
+        <image name="Screen Shot 2019-01-31 at 3.14.49 PM" width="1318" height="938"/>
     </resources>
 </document>

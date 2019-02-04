@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Typo_Round_Italic_Demo.otf">
+            <string>TypoRound-ItalicDemo</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ControlView" customModule="Dinder" customModuleProvider="target">
             <connections>
@@ -47,7 +52,7 @@
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.91764705882352937" green="0.37254901960784315" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="ume-Ez-gqY" secondAttribute="bottom" constant="16" id="7md-ee-WyR"/>
                         <constraint firstItem="ume-Ez-gqY" firstAttribute="top" secondItem="BoJ-tU-dHr" secondAttribute="bottom" constant="16" id="NNq-Dl-Q0D"/>
@@ -58,15 +63,15 @@
                         <constraint firstAttribute="trailing" secondItem="BoJ-tU-dHr" secondAttribute="trailing" constant="32" id="v8E-SP-m3H"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWz-QX-fE0">
-                    <rect key="frame" x="16" y="84" width="90.5" height="38.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="What?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWz-QX-fE0">
+                    <rect key="frame" x="16" y="84" width="343" height="45.5"/>
+                    <fontDescription key="fontDescription" name="TypoRound-ItalicDemo" family="Typo Round" pointSize="47"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="When?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMV-iS-Xrd">
-                    <rect key="frame" x="16" y="343" width="98" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <rect key="frame" x="16" y="343" width="343" height="21"/>
+                    <fontDescription key="fontDescription" name="TypoRound-ItalicDemo" family="Typo Round" pointSize="47"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -75,12 +80,13 @@
                     <subviews>
                         <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Tew-Dk-FOa">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="216"/>
+                            <color key="backgroundColor" red="0.91764705882352937" green="0.37254901960784315" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <date key="date" timeIntervalSinceReferenceDate="570845906.78555202">
                                 <!--2019-02-03 00:18:26 +0000-->
                             </date>
                         </datePicker>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.91764705879999997" green="0.37254901959999998" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="Tew-Dk-FOa" secondAttribute="bottom" id="dTo-o3-uDd"/>
                         <constraint firstAttribute="trailing" secondItem="Tew-Dk-FOa" secondAttribute="trailing" id="oA5-g8-yEh"/>
@@ -89,8 +95,8 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Who?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYY-x9-JNE">
-                    <rect key="frame" x="16" y="727" width="81" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <rect key="frame" x="16" y="727" width="343" height="21"/>
+                    <fontDescription key="fontDescription" name="TypoRound-ItalicDemo" family="Typo Round" pointSize="47"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -104,7 +110,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.91764705882352937" green="0.37254901960784315" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="u7f-Kc-uWZ" secondAttribute="bottom" constant="16" id="CC8-Gs-fSH"/>
                         <constraint firstAttribute="trailing" secondItem="u7f-Kc-uWZ" secondAttribute="trailing" constant="32" id="Nps-Ti-chW"/>
@@ -113,14 +119,14 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Where?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpd-tg-xNx">
-                    <rect key="frame" x="16" y="612" width="107" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <rect key="frame" x="16" y="612" width="343" height="21"/>
+                    <fontDescription key="fontDescription" name="TypoRound-ItalicDemo" family="Typo Round" pointSize="47"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="How Much?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pb-NY-8Wt">
-                    <rect key="frame" x="16" y="1184" width="165" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <rect key="frame" x="16" y="1184" width="254.5" height="21"/>
+                    <fontDescription key="fontDescription" name="TypoRound-ItalicDemo" family="Typo Round" pointSize="47"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -143,7 +149,7 @@
                             </segments>
                         </segmentedControl>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.91764705882352937" green="0.37254901960784315" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="V4T-7e-8pi" secondAttribute="trailing" constant="16" id="0QS-0a-UUP"/>
                         <constraint firstItem="Mk3-FY-j8r" firstAttribute="centerX" secondItem="gf2-iB-Yve" secondAttribute="centerX" id="5XL-ns-N4k"/>
@@ -155,15 +161,15 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Why?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAg-fC-WZf">
-                    <rect key="frame" x="16" y="869" width="80" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <rect key="frame" x="16" y="869" width="343" height="21"/>
+                    <fontDescription key="fontDescription" name="TypoRound-ItalicDemo" family="Typo Round" pointSize="47"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MWU-yO-bAu">
                     <rect key="frame" x="16" y="890" width="343" height="109"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bti-gu-5eH">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bti-gu-5eH">
                             <rect key="frame" x="16" y="16" width="311" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
@@ -177,9 +183,10 @@
                                 <segment title="Possible Romance "/>
                                 <segment title="" image="circle-user-7"/>
                             </segments>
+                            <color key="tintColor" red="0.78431372549019607" green="0.78823529411764703" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </segmentedControl>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.91764705882352937" green="0.37254901960784315" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="mbX-pv-VOa" firstAttribute="top" secondItem="Bti-gu-5eH" secondAttribute="bottom" constant="32" id="1Fi-5v-7cn"/>
                         <constraint firstItem="mbX-pv-VOa" firstAttribute="leading" secondItem="MWU-yO-bAu" secondAttribute="leading" constant="16" id="2DJ-dj-gGJ"/>
@@ -200,15 +207,16 @@
                                 <segment title="a Woman"/>
                                 <segment title="Anyone"/>
                             </segments>
+                            <color key="tintColor" red="0.78431372549019607" green="0.78823529411764703" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </segmentedControl>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="looking for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ZX-3I-puF">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="looking for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ZX-3I-puF">
                             <rect key="frame" x="16" y="16" width="311" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.91764705882352937" green="0.37254901960784315" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="i1g-Ca-0KR" firstAttribute="top" secondItem="2ZX-3I-puF" secondAttribute="bottom" constant="8" id="0Ne-pJ-pZn"/>
                         <constraint firstItem="2ZX-3I-puF" firstAttribute="top" secondItem="QQZ-1Z-d60" secondAttribute="top" constant="16" id="5uv-eu-U7e"/>
@@ -220,13 +228,16 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.95230836029999999" green="1" blue="0.0011735280899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.86274509803921573" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QQZ-1Z-d60" secondAttribute="trailing" constant="16" id="0cR-Em-1Gk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cpd-tg-xNx" secondAttribute="trailing" constant="16" id="0fG-JQ-gi5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dMV-iS-Xrd" secondAttribute="trailing" constant="16" id="9F5-go-Hom"/>
                 <constraint firstItem="4pb-NY-8Wt" firstAttribute="top" secondItem="MWU-yO-bAu" secondAttribute="bottom" constant="32" id="A6g-kf-PqG"/>
                 <constraint firstItem="gf2-iB-Yve" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Bc3-ME-wFb"/>
                 <constraint firstItem="fYY-x9-JNE" firstAttribute="top" secondItem="AvN-EO-oit" secondAttribute="bottom" constant="32" id="BsK-Fo-CDW"/>
                 <constraint firstItem="dMV-iS-Xrd" firstAttribute="top" secondItem="SoO-ZI-4il" secondAttribute="bottom" constant="32" id="DhG-w8-LbC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mAg-fC-WZf" secondAttribute="trailing" constant="16" id="Ejj-oK-kbK"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="X9p-rZ-ZfT" secondAttribute="trailing" constant="16" id="FMk-tO-Mqt"/>
                 <constraint firstItem="AvN-EO-oit" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="HCP-K5-Qgq"/>
                 <constraint firstItem="QQZ-1Z-d60" firstAttribute="top" secondItem="fYY-x9-JNE" secondAttribute="bottom" id="IC3-t7-BAa"/>
@@ -234,6 +245,7 @@
                 <constraint firstItem="AvN-EO-oit" firstAttribute="top" secondItem="cpd-tg-xNx" secondAttribute="bottom" id="Iv9-Bh-1AX"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gf2-iB-Yve" secondAttribute="bottom" constant="32" id="JUb-Pm-Yh9"/>
                 <constraint firstItem="SoO-ZI-4il" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Jar-oF-hUL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OWz-QX-fE0" secondAttribute="trailing" constant="16" id="KO6-xi-hgP"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SoO-ZI-4il" secondAttribute="trailing" constant="16" id="Kfw-Iy-KMO"/>
                 <constraint firstItem="MWU-yO-bAu" firstAttribute="top" secondItem="mAg-fC-WZf" secondAttribute="bottom" id="Krq-2B-RLp"/>
                 <constraint firstItem="X9p-rZ-ZfT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Mza-vY-FAt"/>
@@ -243,6 +255,7 @@
                 <constraint firstItem="mAg-fC-WZf" firstAttribute="top" secondItem="QQZ-1Z-d60" secondAttribute="bottom" constant="32" id="XoT-c8-MVy"/>
                 <constraint firstItem="MWU-yO-bAu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="YgK-sJ-hQi"/>
                 <constraint firstItem="OWz-QX-fE0" firstAttribute="leading" secondItem="SoO-ZI-4il" secondAttribute="leading" id="YzP-Ad-dXz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fYY-x9-JNE" secondAttribute="trailing" constant="16" id="ZgR-jH-FEr"/>
                 <constraint firstItem="OWz-QX-fE0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="64" id="aoY-aV-4BY"/>
                 <constraint firstItem="dMV-iS-Xrd" firstAttribute="leading" secondItem="X9p-rZ-ZfT" secondAttribute="leading" id="bnm-b8-yvK"/>
                 <constraint firstItem="cpd-tg-xNx" firstAttribute="leading" secondItem="AvN-EO-oit" secondAttribute="leading" id="gUZ-NR-59G"/>
