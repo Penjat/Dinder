@@ -35,13 +35,14 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if showingMyEvents {
-      let cell = eventTableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath)
+      let cell = eventTableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! MyActiveEventCell
       cell.prepareForReuse()
+      cell.setUp(event: eventsToShow[indexPath.row])
       return cell
     }
-    let cell = eventTableView.dequeueReusableCell(withIdentifier: "myInterestedEventCell", for: indexPath)
+    let cell = eventTableView.dequeueReusableCell(withIdentifier: "myInterestedEventCell", for: indexPath) as! MyInterestedEventCell
     cell.prepareForReuse()
-    
+    cell.setUp(event: eventsToShow[indexPath.row])
     
     return cell
     
@@ -60,11 +61,11 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // 1 row for the event, one for the interested users
-    return 15
+    
+    return eventsToShow.count
   }
   func numberOfSections(in tableView: UITableView) -> Int {
-    return eventsToShow.count
+    return 1
   }
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     

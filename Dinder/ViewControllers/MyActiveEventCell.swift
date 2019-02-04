@@ -3,7 +3,8 @@
 import UIKit
 
 class MyActiveEventCell: UITableViewCell {
-  @IBOutlet weak var eventImage: UIImageView!
+  @IBOutlet weak var activeEventController: MyActiveEventView!
+  
   
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,9 +18,7 @@ class MyActiveEventCell: UITableViewCell {
     }
   
   func setUp(event:Event){
-    if event.images.count > 0{
-      event.images[0].getImage(imageView: eventImage)
-    }
+    activeEventController.setUp(event: event)
     
   }
 

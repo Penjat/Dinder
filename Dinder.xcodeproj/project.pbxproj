@@ -13,7 +13,6 @@
 		0B1A8117220604E700ECB91A /* Image+DownlodingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A8116220604E700ECB91A /* Image+DownlodingFunctions.swift */; };
 		0B1E32AD2203AE4800B5D58A /* EventsMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E32AC2203AE4800B5D58A /* EventsMasterViewController.swift */; };
 		0B1E32AF2203BCB600B5D58A /* MyActiveEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E32AE2203BCB600B5D58A /* MyActiveEventCell.swift */; };
-		0B1E32B12203BCE300B5D58A /* InterestedUsersContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E32B02203BCE300B5D58A /* InterestedUsersContainerCell.swift */; };
 		0B1E32B42203C94900B5D58A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E32B32203C94900B5D58A /* ProfileViewController.swift */; };
 		0B1EF901220541A20057BCD1 /* BrowseViewController+StringFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1EF900220541A20057BCD1 /* BrowseViewController+StringFormatting.swift */; };
 		0B341CEB220284530094EDD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B341CEA220284530094EDD1 /* AppDelegate.swift */; };
@@ -29,6 +28,7 @@
 		0B3966682207A7F70059EE38 /* MyActiveEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3966672207A7F70059EE38 /* MyActiveEventView.swift */; };
 		0B39666A2207AA7F0059EE38 /* MyInterestedEvent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3966692207AA7F0059EE38 /* MyInterestedEvent.xib */; };
 		0B39666C2207AAB90059EE38 /* MyInterestedEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B39666B2207AAB90059EE38 /* MyInterestedEventView.swift */; };
+		0B3966722207C08F0059EE38 /* MyInterestedEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3966712207C08F0059EE38 /* MyInterestedEventCell.swift */; };
 		0B43BFA22204E8780009FDC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B43BFA12204E8780009FDC4 /* GoogleService-Info.plist */; };
 		0B6017FB22061D6C0015DF62 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6017FA22061D6C0015DF62 /* CreateEventViewController.swift */; };
 		0B6017FD220659800015DF62 /* CreateEventLayout.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B6017FC220659800015DF62 /* CreateEventLayout.xib */; };
@@ -54,7 +54,6 @@
 		0B1A8116220604E700ECB91A /* Image+DownlodingFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+DownlodingFunctions.swift"; sourceTree = "<group>"; };
 		0B1E32AC2203AE4800B5D58A /* EventsMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsMasterViewController.swift; sourceTree = "<group>"; };
 		0B1E32AE2203BCB600B5D58A /* MyActiveEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActiveEventCell.swift; sourceTree = "<group>"; };
-		0B1E32B02203BCE300B5D58A /* InterestedUsersContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedUsersContainerCell.swift; sourceTree = "<group>"; };
 		0B1E32B32203C94900B5D58A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0B1EF900220541A20057BCD1 /* BrowseViewController+StringFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrowseViewController+StringFormatting.swift"; sourceTree = "<group>"; };
 		0B341CE7220284530094EDD1 /* Dinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +71,7 @@
 		0B3966672207A7F70059EE38 /* MyActiveEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActiveEventView.swift; sourceTree = "<group>"; };
 		0B3966692207AA7F0059EE38 /* MyInterestedEvent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyInterestedEvent.xib; sourceTree = "<group>"; };
 		0B39666B2207AAB90059EE38 /* MyInterestedEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInterestedEventView.swift; sourceTree = "<group>"; };
+		0B3966712207C08F0059EE38 /* MyInterestedEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInterestedEventCell.swift; sourceTree = "<group>"; };
 		0B43BFA12204E8780009FDC4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0B6017FA22061D6C0015DF62 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		0B6017FC220659800015DF62 /* CreateEventLayout.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateEventLayout.xib; sourceTree = "<group>"; };
@@ -166,7 +166,6 @@
 				0B396662220797930059EE38 /* InterestedUserCell.swift */,
 				0B341CFF2202B9690094EDD1 /* BrowseViewController.swift */,
 				0B1E32AE2203BCB600B5D58A /* MyActiveEventCell.swift */,
-				0B1E32B02203BCE300B5D58A /* InterestedUsersContainerCell.swift */,
 				0B6017FA22061D6C0015DF62 /* CreateEventViewController.swift */,
 			);
 			path = ViewControllers;
@@ -179,6 +178,7 @@
 				0B3966672207A7F70059EE38 /* MyActiveEventView.swift */,
 				0B3966692207AA7F0059EE38 /* MyInterestedEvent.xib */,
 				0B39666B2207AAB90059EE38 /* MyInterestedEventView.swift */,
+				0B3966712207C08F0059EE38 /* MyInterestedEventCell.swift */,
 			);
 			path = "Events Display";
 			sourceTree = "<group>";
@@ -338,12 +338,12 @@
 				0B1E32AF2203BCB600B5D58A /* MyActiveEventCell.swift in Sources */,
 				0B3966682207A7F70059EE38 /* MyActiveEventView.swift in Sources */,
 				0B39665D220762E70059EE38 /* UIScrollView+ScrollToPos.swift in Sources */,
+				0B3966722207C08F0059EE38 /* MyInterestedEventCell.swift in Sources */,
 				0B014BB22206811B0035ABB6 /* BrowseViewController+Swiping.swift in Sources */,
 				0B6017FF22065B5B0015DF62 /* ControlView.swift in Sources */,
 				0B1A8117220604E700ECB91A /* Image+DownlodingFunctions.swift in Sources */,
 				0B396663220797930059EE38 /* InterestedUserCell.swift in Sources */,
 				0B341D002202B9690094EDD1 /* BrowseViewController.swift in Sources */,
-				0B1E32B12203BCE300B5D58A /* InterestedUsersContainerCell.swift in Sources */,
 				0B341CEB220284530094EDD1 /* AppDelegate.swift in Sources */,
 				0B1E32AD2203AE4800B5D58A /* EventsMasterViewController.swift in Sources */,
 				0B1E32B42203C94900B5D58A /* ProfileViewController.swift in Sources */,

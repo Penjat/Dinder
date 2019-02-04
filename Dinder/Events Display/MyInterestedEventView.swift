@@ -1,7 +1,11 @@
 
 import UIKit
 
-class MyInterestedEventView: UIView {
+class MyInterestedEventView: UIView{
+  func setUp(event: Event) {
+    
+  }
+  
   @IBOutlet var contentView: UIView!
   
   override init(frame: CGRect) {
