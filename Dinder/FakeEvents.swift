@@ -62,13 +62,263 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         self.locationManager.requestLocation()
         self.locationManager.startUpdatingLocation()
         events.append(getSkiingSpaKegByJason())
+        events.append(getDND())
         events.append(getSeawallWalkByJason())
         events.append(getBarMarijuanaWrestlingByJason())
         events.append(getMetallicaGrouseGrindBySpencer())
         events.append(getNailsDoneByCassandra())
         events.append(getBowlingBySpencer())
-        
+      events.append(getSoccer())
+      events.append(getWorkout())
+      
+      
     }
+  func getWorkout() -> Event{
+    let fakeUsers: FakeUsers = FakeUsers()
+    let anjali: User = fakeUsers.getAnjali()
+    let spencer: User = fakeUsers.getSpencer()
+    let cassandra: User = fakeUsers.getCassandra()
+    let jason: User = fakeUsers.getJason()
+    
+    var usersInterested: [User] = [User]()
+    usersInterested.append(anjali)
+    
+    
+    
+    var calendar = Calendar.current
+    var dateComponents = DateComponents()
+    dateComponents.year = 2019
+    dateComponents.month = 2
+    dateComponents.day = 6
+    dateComponents.hour = 18
+    dateComponents.minute = 30
+    dateComponents.timeZone = TimeZone(abbreviation: "PST") // Japan Standard Time
+    let start = calendar.date(from: dateComponents)
+    
+    
+    calendar = Calendar.current
+    dateComponents = DateComponents()
+    dateComponents.year = 2019
+    dateComponents.month = 2
+    dateComponents.day = 6
+    dateComponents.hour = 22
+    dateComponents.minute = 0
+    dateComponents.timeZone = TimeZone(abbreviation: "PST") // Japan Standard Time
+    let end = calendar.date(from: dateComponents)
+    
+    
+    // print(start!)
+    //   print(end!)
+    
+    
+    
+    
+    let currentLocation = self.locationManager.location
+    
+    let currentDateTime = Date()
+    
+    
+    var images: [Image] = [Image]()
+    let image1: Image = Image(keyword: "steak", urlString: "https://www.firmdalehotels.com/media/1036949/crosby-street-hotel-gym.jpg?a=1&anchor=center&mode=crop&width=798&height=544&bgcolor=fff")
+    
+    let image2: Image = Image(keyword: "skiing", urlString: "https://www.gannett-cdn.com/-mm-/cdc474566ace20d250e073fffa69f18ef59abe14/c=0-0-3088-2322/local/-/media/2018/07/12/USATODAY/USATODAY/636670040300145437-EPA-RUSSIA-SOCCER-FIFA-WORLD-CUP-2018.jpg?width=534&height=401&fit=crop")
+    
+    let image3: Image = Image(keyword: "spa", urlString: "https://www.flickr.com/photos/73154039@N00/15294645804/in/photolist-pix4kJ-21UvBjN-pnW1xb-2e7uhK4-P15wpv-4RhekR-pDN3d1-87MkD6-87MkMF-o1jnZ3-axhoRX-q42DXL-87Qxwf-9xyJzY-rjKvUs-k4uTVk-atioCb-7PKSnG-9hp2Ph-VreWGL-bHaNHH-FGbJrE-Qgq7Bx-iocUoU-cjG7Nb-qQP6pW-gZBEWQ-2iUmXW-5SQiP-W1NZC2-ddWrSg-6QJrA-9hWupn-nLGj2G-7ZyTbg-4xGAVM-eWLPdC-moXnH1-5Wxswg-cTmYAd-moX6Hf-9hSBCT-5AMJo4-9y67ft-aCHG1K-9fU5qD-9rJ4Vw-kadje9-hJghmy-oYJwCT")
+    
+    
+    
+    images.append(image1)
+    images.append(image2)
+    images.append(image3)
+    
+    var keywords: [String] = [String]()
+    keywords.append("snow")
+    keywords.append("spa")
+    keywords.append("steak")
+    
+    let event: Event = Event(eventId: 0,
+                             title: "Workout Partner",
+                             eventRelationshipType:  RelationshipType.Friendship,
+                             lookingFor: Gender.Male,
+                             estimatedCombinedTotalCostCAD: 0,
+                             estimatedCostForGuestCAD: 0,
+                             whoPays: Payer.Free,
+                             interestedUsers: usersInterested,
+                             owner: jason,
+                             chosenPartner: cassandra,
+                             images: images,
+                             location: currentLocation,
+                             startDateTime: start!,
+                             endDateTime: end!,
+                             postedDateTime: currentDateTime,
+                             description: "I am looking for a workout partner this weekend.  I need a spotter for bench press.  We can grab a bite after if you are up for it.", imageKeywords: keywords)
+    
+    return event
+  }
+  func getSoccer() -> Event{
+    let fakeUsers: FakeUsers = FakeUsers()
+    let anjali: User = fakeUsers.getAnjali()
+    let spencer: User = fakeUsers.getSpencer()
+    let cassandra: User = fakeUsers.getCassandra()
+    let jason: User = fakeUsers.getJason()
+    
+    var usersInterested: [User] = [User]()
+    usersInterested.append(anjali)
+    
+    
+    
+    var calendar = Calendar.current
+    var dateComponents = DateComponents()
+    dateComponents.year = 2019
+    dateComponents.month = 2
+    dateComponents.day = 6
+    dateComponents.hour = 18
+    dateComponents.minute = 30
+    dateComponents.timeZone = TimeZone(abbreviation: "PST") // Japan Standard Time
+    let start = calendar.date(from: dateComponents)
+    
+    
+    calendar = Calendar.current
+    dateComponents = DateComponents()
+    dateComponents.year = 2019
+    dateComponents.month = 2
+    dateComponents.day = 6
+    dateComponents.hour = 22
+    dateComponents.minute = 0
+    dateComponents.timeZone = TimeZone(abbreviation: "PST") // Japan Standard Time
+    let end = calendar.date(from: dateComponents)
+    
+    
+    // print(start!)
+    //   print(end!)
+    
+    
+    
+    
+    let currentLocation = self.locationManager.location
+    
+    let currentDateTime = Date()
+    
+    
+    var images: [Image] = [Image]()
+    let image1: Image = Image(keyword: "steak", urlString: "https://www.gannett-cdn.com/-mm-/cdc474566ace20d250e073fffa69f18ef59abe14/c=0-0-3088-2322/local/-/media/2018/07/12/USATODAY/USATODAY/636670040300145437-EPA-RUSSIA-SOCCER-FIFA-WORLD-CUP-2018.jpg?width=534&height=401&fit=crop")
+    
+    let image2: Image = Image(keyword: "skiing", urlString: "https://www.gannett-cdn.com/-mm-/cdc474566ace20d250e073fffa69f18ef59abe14/c=0-0-3088-2322/local/-/media/2018/07/12/USATODAY/USATODAY/636670040300145437-EPA-RUSSIA-SOCCER-FIFA-WORLD-CUP-2018.jpg?width=534&height=401&fit=crop")
+    
+    let image3: Image = Image(keyword: "spa", urlString: "https://www.flickr.com/photos/73154039@N00/15294645804/in/photolist-pix4kJ-21UvBjN-pnW1xb-2e7uhK4-P15wpv-4RhekR-pDN3d1-87MkD6-87MkMF-o1jnZ3-axhoRX-q42DXL-87Qxwf-9xyJzY-rjKvUs-k4uTVk-atioCb-7PKSnG-9hp2Ph-VreWGL-bHaNHH-FGbJrE-Qgq7Bx-iocUoU-cjG7Nb-qQP6pW-gZBEWQ-2iUmXW-5SQiP-W1NZC2-ddWrSg-6QJrA-9hWupn-nLGj2G-7ZyTbg-4xGAVM-eWLPdC-moXnH1-5Wxswg-cTmYAd-moX6Hf-9hSBCT-5AMJo4-9y67ft-aCHG1K-9fU5qD-9rJ4Vw-kadje9-hJghmy-oYJwCT")
+    
+    
+    
+    images.append(image1)
+    images.append(image2)
+    images.append(image3)
+    
+    var keywords: [String] = [String]()
+    keywords.append("snow")
+    keywords.append("spa")
+    keywords.append("steak")
+    
+    let event: Event = Event(eventId: 0,
+                             title: "Women's casual soccer game",
+                             eventRelationshipType:  RelationshipType.Friendship,
+                             lookingFor: Gender.NotApplicable,
+                             estimatedCombinedTotalCostCAD: 0,
+                             estimatedCostForGuestCAD: 0,
+                             whoPays: Payer.PosterPays,
+                             interestedUsers: usersInterested,
+                             owner: jason,
+                             chosenPartner: cassandra,
+                             images: images,
+                             location: currentLocation,
+                             startDateTime: start!,
+                             endDateTime: end!,
+                             postedDateTime: currentDateTime,
+                             description: "We play every Sarurday at Trout Lake park and are looking for more players.  We are playing this Saturday and then heading up to commercial drive for some drinks.  Come and join us.", imageKeywords: keywords)
+    
+    return event
+  }
+  func getDND() -> Event{
+    let fakeUsers: FakeUsers = FakeUsers()
+    let anjali: User = fakeUsers.getAnjali()
+    let spencer: User = fakeUsers.getSpencer()
+    let cassandra: User = fakeUsers.getCassandra()
+    let jason: User = fakeUsers.getJason()
+    
+    var usersInterested: [User] = [User]()
+    usersInterested.append(anjali)
+    
+    
+    
+    var calendar = Calendar.current
+    var dateComponents = DateComponents()
+    dateComponents.year = 2019
+    dateComponents.month = 2
+    dateComponents.day = 6
+    dateComponents.hour = 18
+    dateComponents.minute = 30
+    dateComponents.timeZone = TimeZone(abbreviation: "PST") // Japan Standard Time
+    let start = calendar.date(from: dateComponents)
+    
+    
+    calendar = Calendar.current
+    dateComponents = DateComponents()
+    dateComponents.year = 2019
+    dateComponents.month = 2
+    dateComponents.day = 6
+    dateComponents.hour = 22
+    dateComponents.minute = 0
+    dateComponents.timeZone = TimeZone(abbreviation: "PST") // Japan Standard Time
+    let end = calendar.date(from: dateComponents)
+    
+    
+    // print(start!)
+    //   print(end!)
+    
+    
+    
+    
+    let currentLocation = self.locationManager.location
+    
+    let currentDateTime = Date()
+    
+    
+    var images: [Image] = [Image]()
+    let image1: Image = Image(keyword: "steak", urlString: "https://theboardgamingway.com/wp-content/uploads/2015/03/New-York-Times-photo-on-D-and-D-dice.jpg")
+    
+    let image2: Image = Image(keyword: "skiing", urlString: "http://static1.squarespace.com/static/550a089fe4b0aa7b05658388/55529cfbe4b0a95eac5e0109/5801496b2994cada9102f6be/1503627309100/dnd.jpg?format=1500w")
+    
+    let image3: Image = Image(keyword: "spa", urlString: "https://www.flickr.com/photos/73154039@N00/15294645804/in/photolist-pix4kJ-21UvBjN-pnW1xb-2e7uhK4-P15wpv-4RhekR-pDN3d1-87MkD6-87MkMF-o1jnZ3-axhoRX-q42DXL-87Qxwf-9xyJzY-rjKvUs-k4uTVk-atioCb-7PKSnG-9hp2Ph-VreWGL-bHaNHH-FGbJrE-Qgq7Bx-iocUoU-cjG7Nb-qQP6pW-gZBEWQ-2iUmXW-5SQiP-W1NZC2-ddWrSg-6QJrA-9hWupn-nLGj2G-7ZyTbg-4xGAVM-eWLPdC-moXnH1-5Wxswg-cTmYAd-moX6Hf-9hSBCT-5AMJo4-9y67ft-aCHG1K-9fU5qD-9rJ4Vw-kadje9-hJghmy-oYJwCT")
+    
+    
+    
+    images.append(image1)
+    images.append(image2)
+    images.append(image3)
+    
+    var keywords: [String] = [String]()
+    keywords.append("snow")
+    keywords.append("spa")
+    keywords.append("steak")
+    
+    let event: Event = Event(eventId: 0,
+                             title: "DnD Players wanted",
+                             eventRelationshipType:  RelationshipType.Friendship,
+                             lookingFor: Gender.NotApplicable,
+                             estimatedCombinedTotalCostCAD: 0,
+                             estimatedCostForGuestCAD: 0,
+                             whoPays: Payer.PosterPays,
+                             interestedUsers: usersInterested,
+                             owner: jason,
+                             chosenPartner: cassandra,
+                             images: images,
+                             location: currentLocation,
+                             startDateTime: start!,
+                             endDateTime: end!,
+                             postedDateTime: currentDateTime,
+                             description: "We are looking for more players to join our DnD campaing.  We have an experinced DM but don't worry if you don't have any experince.  Everyone welcome!", imageKeywords: keywords)
+    
+    return event
+  }
     
     func getSkiingSpaKegByJason() -> Event{
         
