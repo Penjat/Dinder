@@ -748,7 +748,7 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         //
         let jason: User = fakeUsers.getJason()
 
-        let usersInterested: [User] = [User]()
+        var usersInterested: [User] = [User]()
         usersInterested.append(anjali)
         usersInterested.append(jason)
         usersInterested.append(cassandra)
