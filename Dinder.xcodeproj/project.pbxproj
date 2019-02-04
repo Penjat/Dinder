@@ -30,6 +30,11 @@
 		0B6017FF22065B5B0015DF62 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6017FE22065B5B0015DF62 /* ControlView.swift */; };
 		219FAC3CCC8223745E26A6D9 /* Pods_Dinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ECC337790D150159B44A22C /* Pods_Dinder.framework */; };
 		9F13CA152204030F009F98B4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13CA142204030F009F98B4 /* DataManager.swift */; };
+		9F13CA242207B667009F98B4 /* ImageReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13CA232207B667009F98B4 /* ImageReceiver.swift */; };
+		9F13CA262207BF2E009F98B4 /* Flickr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13CA252207BF2E009F98B4 /* Flickr.swift */; };
+		9F13CA282207BF8C009F98B4 /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13CA272207BF8C009F98B4 /* FlickrPhoto.swift */; };
+		9F13CA2A2207BFC0009F98B4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13CA292207BFC0009F98B4 /* Result.swift */; };
+		9F13CA2C2207BFDF009F98B4 /* FlickrSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13CA2B2207BFDF009F98B4 /* FlickrSearchResults.swift */; };
 		9F3C1EDB2203CFE400013DE7 /* FakeEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3C1EDA2203CFE400013DE7 /* FakeEvents.swift */; };
 		9F4FDE1C2203A90D002E23AB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FDE1B2203A90D002E23AB /* User.swift */; };
 		9F4FDE1E2203AAA2002E23AB /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FDE1D2203AAA2002E23AB /* Gender.swift */; };
@@ -70,6 +75,11 @@
 		22B255EF743AE116899C252B /* Pods-Dinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dinder/Pods-Dinder.release.xcconfig"; sourceTree = "<group>"; };
 		7ECC337790D150159B44A22C /* Pods_Dinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F13CA142204030F009F98B4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		9F13CA232207B667009F98B4 /* ImageReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageReceiver.swift; sourceTree = "<group>"; };
+		9F13CA252207BF2E009F98B4 /* Flickr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flickr.swift; sourceTree = "<group>"; };
+		9F13CA272207BF8C009F98B4 /* FlickrPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhoto.swift; sourceTree = "<group>"; };
+		9F13CA292207BFC0009F98B4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		9F13CA2B2207BFDF009F98B4 /* FlickrSearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrSearchResults.swift; sourceTree = "<group>"; };
 		9F3C1EDA2203CFE400013DE7 /* FakeEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEvents.swift; sourceTree = "<group>"; };
 		9F4FDE1B2203A90D002E23AB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9F4FDE1D2203AAA2002E23AB /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
@@ -126,6 +136,11 @@
 				9FC3B67A2203BAC300CD4D20 /* FakeUsers.swift */,
 				9F3C1EDA2203CFE400013DE7 /* FakeEvents.swift */,
 				9F13CA142204030F009F98B4 /* DataManager.swift */,
+				9F13CA252207BF2E009F98B4 /* Flickr.swift */,
+				9F13CA272207BF8C009F98B4 /* FlickrPhoto.swift */,
+				9F13CA292207BFC0009F98B4 /* Result.swift */,
+				9F13CA2B2207BFDF009F98B4 /* FlickrSearchResults.swift */,
+				9F13CA232207B667009F98B4 /* ImageReceiver.swift */,
 				0B341CF6220284540094EDD1 /* Info.plist */,
 				9F4FDE1B2203A90D002E23AB /* User.swift */,
 				9F4FDE232203AE36002E23AB /* Event.swift */,
@@ -308,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B396661220770AD0059EE38 /* PagingControllerView.swift in Sources */,
+				9F13CA2C2207BFDF009F98B4 /* FlickrSearchResults.swift in Sources */,
 				0B1EF901220541A20057BCD1 /* BrowseViewController+StringFormatting.swift in Sources */,
 				0B1E32AF2203BCB600B5D58A /* MyActiveEventCell.swift in Sources */,
 				0B39665D220762E70059EE38 /* UIScrollView+ScrollToPos.swift in Sources */,
@@ -323,6 +339,7 @@
 				9F4FDE2A2203B02D002E23AB /* Image.swift in Sources */,
 				9F4FDE242203AE36002E23AB /* Event.swift in Sources */,
 				0B014BB02206774C0035ABB6 /* EventControllerView.swift in Sources */,
+				9F13CA262207BF2E009F98B4 /* Flickr.swift in Sources */,
 				9F4FDE1E2203AAA2002E23AB /* Gender.swift in Sources */,
 				9F4FDE282203AF25002E23AB /* Payer.swift in Sources */,
 				9F4FDE1C2203A90D002E23AB /* User.swift in Sources */,
@@ -330,6 +347,9 @@
 				9F3C1EDB2203CFE400013DE7 /* FakeEvents.swift in Sources */,
 				0B6017FB22061D6C0015DF62 /* CreateEventViewController.swift in Sources */,
 				9FC3B67B2203BAC300CD4D20 /* FakeUsers.swift in Sources */,
+				9F13CA2A2207BFC0009F98B4 /* Result.swift in Sources */,
+				9F13CA242207B667009F98B4 /* ImageReceiver.swift in Sources */,
+				9F13CA282207BF8C009F98B4 /* FlickrPhoto.swift in Sources */,
 				9F4FDE202203AC3A002E23AB /* UserRatingCategory.swift in Sources */,
 				9F4FDE262203AE5A002E23AB /* RelationshipType.swift in Sources */,
 			);

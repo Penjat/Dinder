@@ -106,8 +106,8 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         let end = calendar.date(from: dateComponents)
         
         
-        print(start!)
-        print(end!)
+       // print(start!)
+     //   print(end!)
         
         
 

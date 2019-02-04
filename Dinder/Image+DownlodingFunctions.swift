@@ -45,7 +45,7 @@ extension Image{
       } else {
         // No errors found.
         if let res = response as? HTTPURLResponse {
-          print(#function ,"Downloaded the image with response code \(res.statusCode)")
+         // print(#function ,"Downloaded the image with response code \(res.statusCode)")
           if let imageData = data {
             
             // convert that Data into an image
