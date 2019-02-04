@@ -26,8 +26,8 @@ class DataManager{
         return events;
     }
     
-    func getFutureEventsForUser(user: User) -> Event?{
-        return events[0];
+    func getFutureEventsForUser(user: User) -> [Event]?{
+        return events;
     }
     
     func createEvent(host: User, eventDetails: Event) -> Event?{
