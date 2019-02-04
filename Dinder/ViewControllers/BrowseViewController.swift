@@ -8,7 +8,15 @@
 
 import UIKit
 
-class BrowseViewController: UIViewController, ImageReceiver {
+class BrowseViewController: UIViewController, ImageReceiver , NavigationDelegate {
+  func navigateTo(user: User) {
+    performSegue(withIdentifier: "toUserProfile", sender: self)
+  }
+  
+  func navigateTo(event: Event) {
+    
+  }
+  
   func receiveImages(images: FlickrSearchResults) {
     print("---------------------receiving images")
     print(images)
@@ -45,7 +53,8 @@ class BrowseViewController: UIViewController, ImageReceiver {
     
     
     
-    
+    eventController1.delegate = self
+    eventController2.delegate = self
     //set up data manager
     dataManager = DataManager()
     dataManager?.getArrayOfImages(subject: "Dog", receiver: self)
@@ -105,6 +114,24 @@ class BrowseViewController: UIViewController, ImageReceiver {
           myProfile.userToDisplay = mainUser
           myProfile.isMyProfile = true
         }
+      }else if segue.identifier == "toCreateEvent"{
+        if let createController = segue.destination as? CreateEventViewController{
+          createController.dataManager = dataManager
+          createController.poster = mainUser
+        }
+        
+      }else if segue.identifier == "toUserProfile"{
+        if let profile = segue.destination as? ProfileViewController{
+          if isOnFirstEvent{
+            
+            profile.userToDisplay = eventController1!.currentEvent!.owner
+          }else{
+            profile.userToDisplay = eventController2!.currentEvent!.owner
+          }
+          
+          profile.isMyProfile = false
+        }
+        
       }else if segue.identifier == "toEventsMaster"{
         
         if let eventsMaster = segue.destination as? EventsMasterViewController{

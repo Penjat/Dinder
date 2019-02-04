@@ -18,7 +18,7 @@ class EventControllerView: UIView {
   @IBOutlet weak var relationshipTypeLabel: UILabel!
   @IBOutlet weak var costLabel: UILabel!
   @IBOutlet weak var whoPaysLabel: UILabel!
-  
+  var delegate :NavigationDelegate?
     var currentEvent :Event?
   
   
@@ -30,6 +30,12 @@ class EventControllerView: UIView {
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     commonInit()
+  }
+  @IBAction func tappedOnUserImage(_ sender: Any) {
+    print("tapped on profile image")
+    if let delegate = delegate , let event = currentEvent{
+      delegate.navigateTo(user: event.owner)
+    }
   }
   
   private func commonInit(){

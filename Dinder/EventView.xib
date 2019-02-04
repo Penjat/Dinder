@@ -46,9 +46,10 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Gz-TL-Ed8">
+                <imageView opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Gz-TL-Ed8">
                     <rect key="frame" x="32" y="1157" width="311" height="311"/>
                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="5Gz-TL-Ed8" secondAttribute="height" multiplier="1:1" id="snT-An-g07"/>
                     </constraints>
@@ -58,6 +59,9 @@
                             <integer key="value" value="120"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="pgV-tf-DaY" appends="YES" id="9hW-Ds-WqX"/>
+                    </connections>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poster Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfQ-4B-koy">
                     <rect key="frame" x="32" y="1420.5" width="311" height="31.5"/>
@@ -186,5 +190,10 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="50.399999999999999" y="467.76611694152928"/>
         </view>
+        <tapGestureRecognizer id="pgV-tf-DaY">
+            <connections>
+                <action selector="tappedOnUserImage:" destination="-1" id="tAF-gr-SCB"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>
