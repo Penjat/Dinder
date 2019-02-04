@@ -13,6 +13,10 @@ class DataManager{
     
     var events: [Event] = FakeEvents().events
     var demoEvents = FakeEvents().events
+  
+  var myEvents = [Event]()
+  var interestedEvents = [Event]()
+  
     var users: [User]  = FakeUsers().users
     
     var currentEventNum = 0
@@ -29,7 +33,12 @@ class DataManager{
         createEvents()
     }
     
-    
+  func getMyEvents() -> [Event]{
+    return myEvents
+  }
+  func getInterestedEvents() -> [Event]{
+    return interestedEvents
+  }
     
     
     
@@ -214,8 +223,9 @@ class DataManager{
     
     /* user is interested in this event */
     func applyFor(applicant: User, event: Event){
-        
-        
+      
+      //DEMO
+        interestedEvents.append(event)
         
         
         

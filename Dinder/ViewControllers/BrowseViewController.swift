@@ -110,14 +110,17 @@ class BrowseViewController: UIViewController, ImageReceiver {
         if let eventsMaster = segue.destination as? EventsMasterViewController{
           eventsMaster.mainUser = mainUser
           
-          if let myEvents = dataManager?.getFutureEventsForUser(user: mainUser!){
-            
-            eventsMaster.myEvents = myEvents
-            
-          }
-          if let interestedEvents = dataManager?.getEventsUserIsApplyingFor(user: mainUser!){
-          eventsMaster.interestedEvents = interestedEvents
-          }
+          //DEMO
+          eventsMaster.myEvents = (dataManager?.getMyEvents())!
+          eventsMaster.interestedEvents = (dataManager?.getInterestedEvents())!
+//          if let myEvents = dataManager?.getFutureEventsForUser(user: mainUser!){
+//
+//            eventsMaster.myEvents = dataManager?.getMyEvents()
+//
+//          }
+//          if let interestedEvents = dataManager?.getEventsUserIsApplyingFor(user: mainUser!){
+//          eventsMaster.interestedEvents = interestedEvents
+//          }
         }
         
       }
