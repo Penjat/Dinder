@@ -34,22 +34,18 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    if indexPath.row == 0{
-      let cell = eventTableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! MyActiveEventCell
+    if showingMyEvents {
+      let cell = eventTableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath)
       cell.prepareForReuse()
-      cell.setUp(event: eventsToShow[indexPath.section])
-      
-      cell.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20);
-      
-      
-      
       return cell
     }
-    let cell = eventTableView.dequeueReusableCell(withIdentifier: "interestedUserCell", for: indexPath) as! InterestedUsersContainerCell
+    let cell = eventTableView.dequeueReusableCell(withIdentifier: "myInterestedEventCell", for: indexPath)
     cell.prepareForReuse()
-    cell.setUp(event: eventsToShow[indexPath.section])
-    cell.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20);
+    
+    
     return cell
+    
+    
   }
   
 //  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -65,16 +61,14 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     // 1 row for the event, one for the interested users
-    return 2
+    return 15
   }
   func numberOfSections(in tableView: UITableView) -> Int {
     return eventsToShow.count
   }
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    if indexPath.row == 0{
-      return 400
-    }
-    return 250
+    
+    return 400
     
   }
   @IBAction func switchToMyEvents(_ sender: Any) {
@@ -93,6 +87,7 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
     }else{
       noEventsMsg.isHidden = true
     }
+    eventTableView.reloadData()
     
   }
   func showInterestedEvents(){
@@ -105,7 +100,7 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
     }else{
       noEventsMsg.isHidden = true
     }
-    
+    eventTableView.reloadData()
     
     
   }

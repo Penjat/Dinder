@@ -25,6 +25,10 @@
 		0B39665F22076F180059EE38 /* PagingProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B39665E22076F180059EE38 /* PagingProfile.xib */; };
 		0B396661220770AD0059EE38 /* PagingControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B396660220770AD0059EE38 /* PagingControllerView.swift */; };
 		0B396663220797930059EE38 /* InterestedUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B396662220797930059EE38 /* InterestedUserCell.swift */; };
+		0B3966662207A7A90059EE38 /* MyActiveEvent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3966652207A7A90059EE38 /* MyActiveEvent.xib */; };
+		0B3966682207A7F70059EE38 /* MyActiveEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3966672207A7F70059EE38 /* MyActiveEventView.swift */; };
+		0B39666A2207AA7F0059EE38 /* MyInterestedEvent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3966692207AA7F0059EE38 /* MyInterestedEvent.xib */; };
+		0B39666C2207AAB90059EE38 /* MyInterestedEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B39666B2207AAB90059EE38 /* MyInterestedEventView.swift */; };
 		0B43BFA22204E8780009FDC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B43BFA12204E8780009FDC4 /* GoogleService-Info.plist */; };
 		0B6017FB22061D6C0015DF62 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6017FA22061D6C0015DF62 /* CreateEventViewController.swift */; };
 		0B6017FD220659800015DF62 /* CreateEventLayout.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B6017FC220659800015DF62 /* CreateEventLayout.xib */; };
@@ -64,6 +68,10 @@
 		0B39665E22076F180059EE38 /* PagingProfile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PagingProfile.xib; sourceTree = "<group>"; };
 		0B396660220770AD0059EE38 /* PagingControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingControllerView.swift; sourceTree = "<group>"; };
 		0B396662220797930059EE38 /* InterestedUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedUserCell.swift; sourceTree = "<group>"; };
+		0B3966652207A7A90059EE38 /* MyActiveEvent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyActiveEvent.xib; sourceTree = "<group>"; };
+		0B3966672207A7F70059EE38 /* MyActiveEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActiveEventView.swift; sourceTree = "<group>"; };
+		0B3966692207AA7F0059EE38 /* MyInterestedEvent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyInterestedEvent.xib; sourceTree = "<group>"; };
+		0B39666B2207AAB90059EE38 /* MyInterestedEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInterestedEventView.swift; sourceTree = "<group>"; };
 		0B43BFA12204E8780009FDC4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0B6017FA22061D6C0015DF62 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		0B6017FC220659800015DF62 /* CreateEventLayout.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateEventLayout.xib; sourceTree = "<group>"; };
@@ -136,6 +144,7 @@
 				0B014BAF2206774C0035ABB6 /* EventControllerView.swift */,
 				9F4FDE272203AF25002E23AB /* Payer.swift */,
 				9F4FDE252203AE5A002E23AB /* RelationshipType.swift */,
+				0B3966642207A7590059EE38 /* Events Display */,
 				0B1A8116220604E700ECB91A /* Image+DownlodingFunctions.swift */,
 				9F4FDE1F2203AC3A002E23AB /* UserRatingCategory.swift */,
 				0B39665C220762E70059EE38 /* UIScrollView+ScrollToPos.swift */,
@@ -161,6 +170,17 @@
 				0B6017FA22061D6C0015DF62 /* CreateEventViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0B3966642207A7590059EE38 /* Events Display */ = {
+			isa = PBXGroup;
+			children = (
+				0B3966652207A7A90059EE38 /* MyActiveEvent.xib */,
+				0B3966672207A7F70059EE38 /* MyActiveEventView.swift */,
+				0B3966692207AA7F0059EE38 /* MyInterestedEvent.xib */,
+				0B39666B2207AAB90059EE38 /* MyInterestedEventView.swift */,
+			);
+			path = "Events Display";
 			sourceTree = "<group>";
 		};
 		5DE852F1D327F7AF37F695D0 /* Pods */ = {
@@ -240,12 +260,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B39666A2207AA7F0059EE38 /* MyInterestedEvent.xib in Resources */,
 				0B6017FD220659800015DF62 /* CreateEventLayout.xib in Resources */,
 				0B341CF5220284540094EDD1 /* LaunchScreen.storyboard in Resources */,
 				0B39665F22076F180059EE38 /* PagingProfile.xib in Resources */,
 				0B43BFA22204E8780009FDC4 /* GoogleService-Info.plist in Resources */,
 				0B014BAE220676A80035ABB6 /* EventView.xib in Resources */,
 				0B341CF2220284540094EDD1 /* Assets.xcassets in Resources */,
+				0B3966662207A7A90059EE38 /* MyActiveEvent.xib in Resources */,
 				0B341CF0220284530094EDD1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,9 +332,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B39666C2207AAB90059EE38 /* MyInterestedEventView.swift in Sources */,
 				0B396661220770AD0059EE38 /* PagingControllerView.swift in Sources */,
 				0B1EF901220541A20057BCD1 /* BrowseViewController+StringFormatting.swift in Sources */,
 				0B1E32AF2203BCB600B5D58A /* MyActiveEventCell.swift in Sources */,
+				0B3966682207A7F70059EE38 /* MyActiveEventView.swift in Sources */,
 				0B39665D220762E70059EE38 /* UIScrollView+ScrollToPos.swift in Sources */,
 				0B014BB22206811B0035ABB6 /* BrowseViewController+Swiping.swift in Sources */,
 				0B6017FF22065B5B0015DF62 /* ControlView.swift in Sources */,
