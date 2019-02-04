@@ -43,7 +43,8 @@ class MyActiveEventView: UIView ,UICollectionViewDelegate, UICollectionViewDataS
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = interestedUserCollectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath) as!InterestedUserCell
     cell.backgroundColor = UIColor.blue
-    if let event = currentEvent, let  interested = event.interestedUsers{
+    //HOT FIX checking the dount of the interested users
+    if let event = currentEvent, let  interested = event.interestedUsers , interested.count > indexPath.row{
       cell.setUp(user: interested[indexPath.row] )
     }
     

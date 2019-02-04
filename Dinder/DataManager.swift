@@ -538,6 +538,8 @@ class DataManager{
     
     
     func getNextEvent(filters: [String:String]) -> Event{
+      
+      
         self.currentEventNum += 1
         let _: User = getUserFromFirebase(userId: 12)
         
