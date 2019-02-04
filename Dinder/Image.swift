@@ -11,7 +11,7 @@ import UIKit
 
 class Image{
     
-    let keyword: String
+    let keyword: String?
     let urlString: String
     var uiImage: UIImage? = nil
     
