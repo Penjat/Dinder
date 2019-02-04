@@ -134,6 +134,36 @@
             </objects>
             <point key="canvasLocation" x="-850.39999999999998" y="-1123.088455772114"/>
         </scene>
+        <!--Inspect Event Controller-->
+        <scene sceneID="q4s-Hg-lZV">
+            <objects>
+                <viewController id="rJu-ew-jih" customClass="InspectEventController" customModule="Dinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cov-zZ-b0z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="af5-u6-4dQ" customClass="EventControllerView" customModule="Dinder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XL1-oz-qbc" firstAttribute="bottom" secondItem="af5-u6-4dQ" secondAttribute="bottom" id="478-YF-mfU"/>
+                            <constraint firstItem="XL1-oz-qbc" firstAttribute="trailing" secondItem="af5-u6-4dQ" secondAttribute="trailing" id="8bD-zi-DBS"/>
+                            <constraint firstItem="af5-u6-4dQ" firstAttribute="top" secondItem="XL1-oz-qbc" secondAttribute="top" id="FRh-zl-1Md"/>
+                            <constraint firstItem="af5-u6-4dQ" firstAttribute="leading" secondItem="XL1-oz-qbc" secondAttribute="leading" id="x6c-hK-WnS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XL1-oz-qbc"/>
+                    </view>
+                    <connections>
+                        <outlet property="eventView" destination="af5-u6-4dQ" id="t9Y-dF-2w1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s6t-du-BIj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="865" y="-1669"/>
+        </scene>
         <!--Create Event View Controller-->
         <scene sceneID="ib4-zR-cFJ">
             <objects>
@@ -321,6 +351,8 @@
                         <outlet property="eventTableView" destination="MLE-e6-R1R" id="APK-UZ-n5d"/>
                         <outlet property="noEventsMsg" destination="4DU-9M-XEj" id="hRA-I9-KgU"/>
                         <outlet property="noEventsMsgLabel" destination="HXA-Gx-k8Z" id="xZ9-EX-yBI"/>
+                        <segue destination="QEm-Yk-R0g" kind="show" identifier="toOtherUserProfile" id="aiw-4E-CcK"/>
+                        <segue destination="rJu-ew-jih" kind="show" identifier="toInspectEvent" id="h6n-G9-Obl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbu-C1-Pim" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -459,4 +491,7 @@
         <image name="plus-sign" width="29" height="30"/>
         <image name="text-list" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="aiw-4E-CcK"/>
+    </inferredMetricsTieBreakers>
 </document>

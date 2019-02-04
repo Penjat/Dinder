@@ -2,7 +2,9 @@
 
 import UIKit
 
-class EventsMasterViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class EventsMasterViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,NavigationDelegate {
+  
+  
   
   var mainUser: User?
   var myEvents = [Event]()
@@ -25,6 +27,42 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
     
     
   }
+  func navigateTo(user: User) {
+    //TODO navigate to profile
+    print("navigating to user")
+    performSegue(withIdentifier: "toOtherUserProfile", sender: user)
+  }
+  
+  func navigateTo(event: Event) {
+    //TODO navigate to eventView
+    print("navigating to event")
+    
+  }
+  func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+    let event = eventsToShow[indexPath.row]
+    performSegue(withIdentifier: "toInspectEvent", sender: event)
+    return false
+  }
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //send any info we need here
+    print("preparing for segue")
+    if segue.identifier == "toOtherUserProfile"{
+      if let userProfile = segue.destination as? ProfileViewController{
+        if let user = sender as? User{
+          userProfile.userToDisplay = user
+          userProfile.isMyProfile = false
+        }
+        
+      }
+    }else if segue.identifier == "toInspectEvent"{
+      if let eventInspector = segue.destination as? InspectEventController{
+        if let event = sender as? Event{
+          eventInspector.eventToLoad = event
+        }
+        
+      }
+    }
+  }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -37,7 +75,7 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
     if showingMyEvents {
       let cell = eventTableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! MyActiveEventCell
       cell.prepareForReuse()
-      cell.setUp(event: eventsToShow[indexPath.row])
+      cell.setUp(event: eventsToShow[indexPath.row], delegate:self)
       return cell
     }
     let cell = eventTableView.dequeueReusableCell(withIdentifier: "myInterestedEventCell", for: indexPath) as! MyInterestedEventCell
@@ -49,10 +87,6 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
     
   }
   
-//  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//    let  headerCell = tableView.dequeueReusableCell(withIdentifier: "myEventsHeader")
-//    return headerCell
-//  }
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
     return 0
   }
