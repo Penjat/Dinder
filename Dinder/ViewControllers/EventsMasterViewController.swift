@@ -2,7 +2,9 @@
 
 import UIKit
 
-class EventsMasterViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class EventsMasterViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,NavigationDelegate {
+  
+  
   
   var mainUser: User?
   var myEvents = [Event]()
@@ -25,6 +27,16 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
     
     
   }
+  func navigateTo(user: User) {
+    //TODO navigate to profile
+    print("navigating to user")
+    performSegue(withIdentifier: "toOtherUserProfile", sender: nil)
+  }
+  
+  func navigateTo(event: Event) {
+    //TODO navigate to eventView
+    print("navigating to event")
+  }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -37,7 +49,7 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
     if showingMyEvents {
       let cell = eventTableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! MyActiveEventCell
       cell.prepareForReuse()
-      cell.setUp(event: eventsToShow[indexPath.row])
+      cell.setUp(event: eventsToShow[indexPath.row], delegate:self)
       return cell
     }
     let cell = eventTableView.dequeueReusableCell(withIdentifier: "myInterestedEventCell", for: indexPath) as! MyInterestedEventCell

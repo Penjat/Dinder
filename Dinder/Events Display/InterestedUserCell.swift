@@ -10,7 +10,8 @@ import UIKit
 
 class InterestedUserCell: UICollectionViewCell {
   var myImage: UIImageView?
-  func setUp(user:User){
+  
+  func setUp(user:User ){
     
     if let image = myImage {
       user.images[0].getImage(imageView: image)

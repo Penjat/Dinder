@@ -2,12 +2,25 @@
 
 import UIKit
 
-class MyActiveEventView: UIView ,UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+class MyActiveEventView: UIView ,UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout ,NavigationDelegate{
+  func navigateTo(user: User) {
+    if let delegate = delegate{
+      delegate.navigateTo(user: user)
+    }
+  }
+  
+  func navigateTo(event: Event) {
+    if let delegate = delegate{
+      delegate.navigateTo(event: event)
+    }
+  }
+  
   @IBOutlet weak var interestedUserCollectionView: UICollectionView!
   
   @IBOutlet weak var noneInterestedmsg: UIView!
   
   var currentEvent :Event?
+  var delegate :NavigationDelegate?
   
   @IBOutlet weak var eventImage: UIImageView!
   @IBOutlet weak var eventTitle: UILabel!
@@ -31,7 +44,7 @@ class MyActiveEventView: UIView ,UICollectionViewDelegate, UICollectionViewDataS
     let cell = interestedUserCollectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath) as!InterestedUserCell
     cell.backgroundColor = UIColor.blue
     if let event = currentEvent, let  interested = event.interestedUsers{
-      cell.setUp(user: interested[indexPath.row]) 
+      cell.setUp(user: interested[indexPath.row] )
     }
     
     return cell
@@ -70,9 +83,10 @@ class MyActiveEventView: UIView ,UICollectionViewDelegate, UICollectionViewDataS
     
   }
   
-  func setUp(event: Event) {
+  func setUp(event: Event , delegate:NavigationDelegate) {
     //TODO check if images > 0
     currentEvent = event
+    self.delegate = delegate
     event.images[0].getImage(imageView: eventImage)
     eventTitle.text = event.title
     let gbLocale = Locale(identifier: "en_GB")
@@ -88,6 +102,14 @@ class MyActiveEventView: UIView ,UICollectionViewDelegate, UICollectionViewDataS
       noneInterestedmsg.isHidden = false
     }
     
+  }
+  func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+    print("clicked at indexPath: \(indexPath)")
+    //clicked on a users picture
+    if let event = currentEvent ,let users = event.interestedUsers  {
+      delegate?.navigateTo(user: users[indexPath.row])
+    }
+    return false
   }
   
   
