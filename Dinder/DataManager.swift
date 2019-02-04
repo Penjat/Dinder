@@ -16,6 +16,12 @@ class DataManager{
     var currentEventNum = 0
     var ref: DatabaseReference!
     
+    // Flickr-specific data
+    private var searches: [FlickrSearchResults] = []
+    private let flickr = Flickr()
+    
+    
+    
     func getEventsUserIsApplyingFor(user: User) -> [Event]?{
         return events;
     }
@@ -61,72 +67,69 @@ class DataManager{
         usersRef.observeSingleEvent(of: .value, with: { (snapshot) in
             print("snapshot value is \(String(describing: snapshot.value))")
             if let userDict = snapshot.value as? [String : Any] {
-                print(userDict.debugDescription)
+               // print(userDict.debugDescription)
             }
         })
         return users[0]
-    
+        
     }
     
     
-    func getUserFromFirebase(userId: Int) -> User{
+    
+    func getArrayOfImages(subject: String , receiver: ImageReceiver){
         
-        var usersRef = Database.database().reference(withPath: "users")
-        usersRef = Database.database().reference()
-       // let firstNameRef = usersRef.child("firstname")
-       // print(usersRef.key!)
-       // print(firstNameRef.key!)
-        // print(usersRef.value(forKey: "firstname")!)
+    //    var feeds: [Image] = [Image]()
+      //  var flickrURL: String = "https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=3b801d634be562e16044124f4c11f184&tags="
         
         
-        usersRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            print("snapshot value is \(String(describing: snapshot.value))")
-            if let userDict = snapshot.value as? [String : Any] {
-                print(userDict.debugDescription)
+        flickr.searchFlickr(for: subject) { searchResults in
+            
+            switch searchResults {
+            case .error(let error) :
+                print("Error Searching: \(error)")
+            case .results(let results):
+                print("Found \(results.searchResults.count) matching \(results.searchTerm)")
+                self.searches.insert(results, at: 0)
+                
+                receiver.receiveImages(images: results)
             }
-        })
-
-        
-//        ref.queryOrdered(byChild: "completed").observe(.value, with: { snapshot in
-//            var newItems: [GroceryItem] = []
-//            for child in snapshot.children {
-//                if let snapshot = child as? DataSnapshot,
-//                    let groceryItem = GroceryItem(snapshot: snapshot) {
-//                    newItems.append(groceryItem)
-//                }
-//            }
-//
-//            self.items = newItems
-//            self.tableView.reloadData()
-//        })
-        
-//        ref.queryOrdered(byChild: "users").observe(.value, with: { snapshot in
-//            print("querying")
-//            var newUsers: [User] = [User]()
-//            for child in snapshot.children {
-//                print("child...")
-//                if let snapshot = child as? DataSnapshot,
-//                    let user = User(snapshot: snapshot) {
-//                    newUsers.append(user)
-//                }
-//            }
-//
-//            self.users = newUsers
-//            print("the users are \(self.users)")
-//        })
-//
-//        print(users[1].emailAddress)
-//
-        return users[0]
-   }
-
-        
-        func getOwnerOf(event: Event) -> User{
-            return self.users[0] // check owner field
         }
+    
+    
+    
+}
+
+
+
+func getUserFromFirebase(userId: Int) -> User{
+    
+    var usersRef = Database.database().reference(withPath: "users")
+    usersRef = Database.database().reference()
+    
+    
+    usersRef.observeSingleEvent(of: .value, with: { (snapshot) in
+      //  print("snapshot value is \(String(describing: snapshot.value))")
         
-        func getApplicantsFor(event: Event) -> [User]{
-            return [User]() // checking interestedUsers[] field
+        
+        //print("one value is \(snapshot.value)")
+        
+        
+        if let userDict = snapshot.value as? [String : Any] {
+           // print(userDict.debugDescription)
         }
+    })
+    
+    
+    return users[0]
+}
+
+
+func getOwnerOf(event: Event) -> User{
+    return self.users[0] // check owner field
+}
+
+func getApplicantsFor(event: Event) -> [User]{
+    return [User]() // checking interestedUsers[] field
+}
 
 }
