@@ -70,6 +70,7 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         events.append(getBowlingBySpencer())
       events.append(getSoccer())
       events.append(getWorkout())
+        events.append(getMidtermPrepByJason())
       
       
     }
@@ -729,6 +730,66 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         keywords.append("bowling")
         
         let event: Event = Event(eventId: 4, title: "bowl", eventRelationshipType: RelationshipType.Friendship, lookingFor: Gender.NotApplicable, estimatedCombinedTotalCostCAD: 40, estimatedCostForGuestCAD: 20, whoPays: Payer.Dutch, interestedUsers: usersInterested, owner: anjali, chosenPartner: nil, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "let's bowl", imageKeywords: keywords)
+        
+        
+        return event
+    }
+    
+    
+    
+    
+    
+    func getMidtermPrepByJason() -> Event{
+        
+        let fakeUsers: FakeUsers = FakeUsers()
+        //let anjali: User = fakeUsers.getAnjali()
+        //let spencer: User = fakeUsers.getSpencer()
+        //let cassandra: User = fakeUsers.getCassandra()
+        //
+        let jason: User = fakeUsers.getJason()
+
+        let usersInterested: [User] = [User]()
+        
+        
+        var calendar = Calendar.current
+        var dateComponents = DateComponents()
+        dateComponents.year = 2019
+        dateComponents.month = 2
+        dateComponents.day = 5
+        dateComponents.hour = 18
+        dateComponents.minute = 45
+        dateComponents.timeZone = TimeZone(abbreviation: "PST") // Japan Standard Time
+        let start = calendar.date(from: dateComponents)
+        
+        
+        calendar = Calendar.current
+        dateComponents = DateComponents()
+        dateComponents.year = 2019
+        dateComponents.month = 2
+        dateComponents.day = 5
+        dateComponents.hour = 20
+        dateComponents.minute = 15
+        dateComponents.timeZone = TimeZone(abbreviation: "PST") // Japan Standard Time
+        let end = calendar.date(from: dateComponents)
+        
+        
+        let currentLocation = self.locationManager.location
+        
+        
+        
+        let currentDateTime = Date()
+        
+        
+        var images: [Image] = [Image]()
+        let image1: Image = Image(keyword: "ppt", urlString: "https://amp.businessinsider.com/images/4b609ada0000000000e9147b-480-360.jpg")
+        
+        
+        images.append(image1)
+        
+        var keywords: [String] = [String]()
+        keywords.append("help")
+        
+        let event: Event = Event(eventId: 5, title: "PLEASE HELP! Midterm due...", eventRelationshipType: RelationshipType.Friendship, lookingFor: Gender.NotApplicable, estimatedCombinedTotalCostCAD: 40, estimatedCostForGuestCAD: 5000, whoPays: Payer.Dutch, interestedUsers: usersInterested, owner: jason, chosenPartner: nil, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "HELP ME!!! I have to present an iOS app on Monday and I have NO IDEA what I'm doing!!!", imageKeywords: keywords)
         
         
         return event
