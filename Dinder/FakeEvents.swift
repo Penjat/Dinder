@@ -70,13 +70,14 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         events.append(getBowlingBySpencer())
       events.append(getSoccer())
       events.append(getWorkout())
+        events.append(getMidtermPrepByJason())
       
       
     }
   func getWorkout() -> Event{
     let fakeUsers: FakeUsers = FakeUsers()
     let anjali: User = fakeUsers.getAnjali()
-    let spencer: User = fakeUsers.getSpencer()
+    //let spencer: User = fakeUsers.getSpencer()
     let cassandra: User = fakeUsers.getCassandra()
     let jason: User = fakeUsers.getJason()
     
@@ -158,7 +159,7 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
   func getSoccer() -> Event{
     let fakeUsers: FakeUsers = FakeUsers()
     let anjali: User = fakeUsers.getAnjali()
-    let spencer: User = fakeUsers.getSpencer()
+    //let spencer: User = fakeUsers.getSpencer()
     let cassandra: User = fakeUsers.getCassandra()
     let jason: User = fakeUsers.getJason()
     
@@ -240,7 +241,7 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
   func getDND() -> Event{
     let fakeUsers: FakeUsers = FakeUsers()
     let anjali: User = fakeUsers.getAnjali()
-    let spencer: User = fakeUsers.getSpencer()
+  //  let spencer: User = fakeUsers.getSpencer()
     let cassandra: User = fakeUsers.getCassandra()
     let jason: User = fakeUsers.getJason()
     
@@ -324,13 +325,13 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         
         let fakeUsers: FakeUsers = FakeUsers()
         let anjali: User = fakeUsers.getAnjali()
-        let spencer: User = fakeUsers.getSpencer()
+     //   let spencer: User = fakeUsers.getSpencer()
         let cassandra: User = fakeUsers.getCassandra()
         let jason: User = fakeUsers.getJason()
         
         var usersInterested: [User] = [User]()
         usersInterested.append(anjali)
-        usersInterested.append(spencer)
+    //    usersInterested.append(spencer)
         usersInterested.append(cassandra)
         
         
@@ -554,8 +555,8 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         
         let fakeUsers: FakeUsers = FakeUsers()
         //let anjali: User = fakeUsers.getAnjali()
-        let spencer: User = fakeUsers.getSpencer()
-        //let cassandra: User = fakeUsers.getCassandra()
+     //   let spencer: User = fakeUsers.getSpencer()
+        let cassandra: User = fakeUsers.getCassandra()
         //let jason: User = fakeUsers.getJason()
         
         let usersInterested: [User] = [User]()
@@ -609,7 +610,7 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         
         
         
-        let event: Event = Event(eventId: 3, title: "hike and rock", eventRelationshipType: RelationshipType.PossiblyRomantic, lookingFor: Gender.Male, estimatedCombinedTotalCostCAD: 400, estimatedCostForGuestCAD: 0, whoPays: Payer.PosterPays, interestedUsers: usersInterested, owner: spencer, chosenPartner: nil, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "spend the day in the sunshine, then the night rocking out", imageKeywords: keywords)
+        let event: Event = Event(eventId: 3, title: "hike and rock", eventRelationshipType: RelationshipType.PossiblyRomantic, lookingFor: Gender.Male, estimatedCombinedTotalCostCAD: 400, estimatedCostForGuestCAD: 0, whoPays: Payer.PosterPays, interestedUsers: usersInterested, owner: cassandra, chosenPartner: nil, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "spend the day in the sunshine, then the night rocking out", imageKeywords: keywords)
         
         
         return event
@@ -622,13 +623,13 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         
         let fakeUsers: FakeUsers = FakeUsers()
         //let anjali: User = fakeUsers.getAnjali()
-        let spencer: User = fakeUsers.getSpencer()
+   //     let spencer: User = fakeUsers.getSpencer()
         let cassandra: User = fakeUsers.getCassandra()
         let jason: User = fakeUsers.getJason()
         
         var usersInterested: [User] = [User]()
         usersInterested.append(jason)
-        usersInterested.append(spencer)
+     //   usersInterested.append(spencer)
         
         
         var calendar = Calendar.current
@@ -672,7 +673,7 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         keywords.append("manicure")
         
         
-        let event: Event = Event(eventId: 4, title: "valentines nails!", eventRelationshipType: RelationshipType.PossiblyRomantic, lookingFor: Gender.Female, estimatedCombinedTotalCostCAD: 120, estimatedCostForGuestCAD: 10, whoPays: Payer.PosterPays, interestedUsers: usersInterested, owner: cassandra, chosenPartner: spencer, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "nothing to do on valentine's day? let's talk and relax together. i have a gift certificate; you just pay the tip :)", imageKeywords: keywords)
+        let event: Event = Event(eventId: 4, title: "valentines nails!", eventRelationshipType: RelationshipType.PossiblyRomantic, lookingFor: Gender.Female, estimatedCombinedTotalCostCAD: 120, estimatedCostForGuestCAD: 10, whoPays: Payer.PosterPays, interestedUsers: usersInterested, owner: cassandra, chosenPartner: jason, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "nothing to do on valentine's day? let's talk and relax together. i have a gift certificate; you just pay the tip :)", imageKeywords: keywords)
         
         
         return event
@@ -683,8 +684,8 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
     func getBowlingBySpencer() -> Event{
         
         let fakeUsers: FakeUsers = FakeUsers()
-        //let anjali: User = fakeUsers.getAnjali()
-        let spencer: User = fakeUsers.getSpencer()
+        let anjali: User = fakeUsers.getAnjali()
+        //let spencer: User = fakeUsers.getSpencer()
         //let cassandra: User = fakeUsers.getCassandra()
        //
         let usersInterested: [User] = [User]()
@@ -728,7 +729,67 @@ class FakeEvents: NSObject, CLLocationManagerDelegate{
         var keywords: [String] = [String]()
         keywords.append("bowling")
         
-        let event: Event = Event(eventId: 4, title: "bowl", eventRelationshipType: RelationshipType.Friendship, lookingFor: Gender.NotApplicable, estimatedCombinedTotalCostCAD: 40, estimatedCostForGuestCAD: 20, whoPays: Payer.Dutch, interestedUsers: usersInterested, owner: spencer, chosenPartner: nil, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "let's bowl", imageKeywords: keywords)
+        let event: Event = Event(eventId: 4, title: "bowl", eventRelationshipType: RelationshipType.Friendship, lookingFor: Gender.NotApplicable, estimatedCombinedTotalCostCAD: 40, estimatedCostForGuestCAD: 20, whoPays: Payer.Dutch, interestedUsers: usersInterested, owner: anjali, chosenPartner: nil, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "let's bowl", imageKeywords: keywords)
+        
+        
+        return event
+    }
+    
+    
+    
+    
+    
+    func getMidtermPrepByJason() -> Event{
+        
+        let fakeUsers: FakeUsers = FakeUsers()
+        //let anjali: User = fakeUsers.getAnjali()
+        //let spencer: User = fakeUsers.getSpencer()
+        //let cassandra: User = fakeUsers.getCassandra()
+        //
+        let jason: User = fakeUsers.getJason()
+
+        let usersInterested: [User] = [User]()
+        
+        
+        var calendar = Calendar.current
+        var dateComponents = DateComponents()
+        dateComponents.year = 2019
+        dateComponents.month = 2
+        dateComponents.day = 5
+        dateComponents.hour = 18
+        dateComponents.minute = 45
+        dateComponents.timeZone = TimeZone(abbreviation: "PST") // Japan Standard Time
+        let start = calendar.date(from: dateComponents)
+        
+        
+        calendar = Calendar.current
+        dateComponents = DateComponents()
+        dateComponents.year = 2019
+        dateComponents.month = 2
+        dateComponents.day = 5
+        dateComponents.hour = 20
+        dateComponents.minute = 15
+        dateComponents.timeZone = TimeZone(abbreviation: "PST") // Japan Standard Time
+        let end = calendar.date(from: dateComponents)
+        
+        
+        let currentLocation = self.locationManager.location
+        
+        
+        
+        let currentDateTime = Date()
+        
+        
+        var images: [Image] = [Image]()
+        let image1: Image = Image(keyword: "ppt", urlString: "https://amp.businessinsider.com/images/4b609ada0000000000e9147b-480-360.jpg")
+        
+        
+        images.append(image1)
+        
+        var keywords: [String] = [String]()
+        keywords.append("help")
+        
+        let event: Event = Event(eventId: 5, title: "PLEASE HELP! Midterm due...", eventRelationshipType: RelationshipType.Friendship, lookingFor: Gender.NotApplicable, estimatedCombinedTotalCostCAD: 40, estimatedCostForGuestCAD: 5000, whoPays: Payer.Dutch, interestedUsers: usersInterested, owner: jason, chosenPartner: nil, images: images, location: currentLocation, startDateTime: start!, endDateTime: end!, postedDateTime: currentDateTime, description: "HELP ME!!! I have to present an iOS app on Monday and I have NO IDEA what I'm doing!!!", imageKeywords: keywords)
         
         
         return event
