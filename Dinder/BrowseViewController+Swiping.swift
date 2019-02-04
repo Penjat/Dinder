@@ -9,11 +9,14 @@
 import UIKit
 
 extension BrowseViewController {
+    
+    
   func rightSwipe(){
     //don't do anything until the event has stopped moving
     if eventMoving {
       return
     }
+    
     if isOnFirstEvent {
       isOnFirstEvent = false
       eventMoving = true
@@ -47,6 +50,15 @@ extension BrowseViewController {
                                 belowSubview: self.eventView1)
       })
     }
+    
+    
+    /*
+     // swiped right on current event
+     */
+    if let event = self.eventController1.currentEvent, let me = self.mainUser{
+        self.dataManager?.applyFor(applicant: me, event: event)
+    }
+    
     let eventAddedMessage = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
     eventAddedMessage.text = "event added"
     eventAddedMessage.font = eventAddedMessage.font.withSize(30)
@@ -60,6 +72,8 @@ extension BrowseViewController {
       eventAddedMessage.alpha = 0.0
     })
   }
+    
+    
   func leftSipe(){
     //don't do anything until the event has stopped moving
     if eventMoving {
@@ -79,6 +93,16 @@ extension BrowseViewController {
         self.eventView1.scrollToTop()
         self.trailingConstraint1.constant = 0
         self.leadingContraint1.constant = 0
+        
+        
+        
+        /*
+         // swiped left on current event
+         */
+        if let event = self.eventController1.currentEvent, let me = self.mainUser{
+            self.dataManager?.notInterestedIn(user: me, event: event)
+        }
+        
         self.eventController1.populateEvent(self.getNextEvent())
         self.view.insertSubview(self.eventView1,
                                 belowSubview: self.eventView2)
@@ -97,6 +121,14 @@ extension BrowseViewController {
         self.eventView2.scrollToTop()
         self.trailingConstraint2.constant = 0
         self.leadingConstraint2.constant = 0
+        
+        /*
+         // swiped left on current event
+         */
+        if let event = self.eventController2.currentEvent, let me = self.mainUser{
+            self.dataManager?.notInterestedIn(user: me, event: event)
+        }
+        
         self.eventController2.populateEvent(self.getNextEvent())
         self.view.insertSubview(self.eventView2,
                                 belowSubview: self.eventView1)

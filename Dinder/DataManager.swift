@@ -34,13 +34,19 @@ class DataManager{
         return events[1];
     }
     
-    // returns true if it worked
-    func applyFor(applicant: User, event: Event) -> Bool{
-        return true;
+    /* user is interested in this event */
+    func applyFor(applicant: User, event: Event){
+        print("\(applicant.firstName) interested in \(event.title)")
+        
+        // update data model
+        
+        
     }
     
+    
+    
     func notInterestedIn(user: User, event: Event){
-        print("\(user.firstName) not interested in \(event.title)");
+        print("\(user.firstName) not interested in \(event.title)")
     }
     
     func getNextEvent(filters: [String:String]) -> Event{
@@ -58,16 +64,11 @@ class DataManager{
     func getFirstUserFromFirebase(userId: Int) -> User{
         
         let usersRef = Database.database().reference(withPath: "users").child("0")
-        // let firstNameRef = usersRef.child("firstname")
-        // print(usersRef.key!)
-        // print(firstNameRef.key!)
-        // print(usersRef.value(forKey: "firstname")!)
-        
         
         usersRef.observeSingleEvent(of: .value, with: { (snapshot) in
             print("snapshot value is \(String(describing: snapshot.value))")
             if let userDict = snapshot.value as? [String : Any] {
-               // print(userDict.debugDescription)
+                // print(userDict.debugDescription)
             }
         })
         return users[0]
@@ -78,8 +79,8 @@ class DataManager{
     
     func getArrayOfImages(subject: String , receiver: ImageReceiver){
         
-    //    var feeds: [Image] = [Image]()
-      //  var flickrURL: String = "https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=3b801d634be562e16044124f4c11f184&tags="
+        //    var feeds: [Image] = [Image]()
+        //  var flickrURL: String = "https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=3b801d634be562e16044124f4c11f184&tags="
         
         
         flickr.searchFlickr(for: subject) { searchResults in
@@ -94,42 +95,42 @@ class DataManager{
                 receiver.receiveImages(images: results)
             }
         }
+    }
     
-    
-    
-}
-
-
-
-func getUserFromFirebase(userId: Int) -> User{
-    
-    var usersRef = Database.database().reference(withPath: "users")
-    usersRef = Database.database().reference()
-    
-    
-    usersRef.observeSingleEvent(of: .value, with: { (snapshot) in
-      //  print("snapshot value is \(String(describing: snapshot.value))")
+    func getUserFromFirebase(userId: Int) -> User{
         
+        let usersRef = Database.database().reference(withPath: "users")
+        let amyRef = usersRef.child("amy@tang__DOT__com")
+        let amyBdRef = amyRef.child("birthdate")
+        amyBdRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            //   print("snapshot value is \(String(describing: snapshot.value))")
+            
+            
+            print("GOT IT \(snapshot.value ?? "unknown birthdate")!")
+            
+            
         
-        //print("one value is \(snapshot.value)")
+            
+//            var eventKey = "events/alice@leal__DOT__com~2019-02-14 06:56:30"
+//            print("one value is \(snapshot.value)")
+//
+//
+//            if let userDict = snapshot.value as? [String : Any] {
+//                // print(userDict.debugDescription)
+//            }
+        })
+        amyBdRef.setValue("1999-12-31")
         
-        
-        if let userDict = snapshot.value as? [String : Any] {
-           // print(userDict.debugDescription)
-        }
-    })
+        return users[0]
+    }
     
     
-    return users[0]
-}
-
-
-func getOwnerOf(event: Event) -> User{
-    return self.users[0] // check owner field
-}
-
-func getApplicantsFor(event: Event) -> [User]{
-    return [User]() // checking interestedUsers[] field
-}
-
+    func getOwnerOf(event: Event) -> User{
+        return self.users[0] // check owner field
+    }
+    
+    func getApplicantsFor(event: Event) -> [User]{
+        return [User]() // checking interestedUsers[] field
+    }
+    
 }
