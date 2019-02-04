@@ -30,12 +30,38 @@ class EventsMasterViewController: UIViewController,UITableViewDataSource,UITable
   func navigateTo(user: User) {
     //TODO navigate to profile
     print("navigating to user")
-    performSegue(withIdentifier: "toOtherUserProfile", sender: nil)
+    performSegue(withIdentifier: "toOtherUserProfile", sender: user)
   }
   
   func navigateTo(event: Event) {
     //TODO navigate to eventView
     print("navigating to event")
+    
+  }
+  func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+    let event = eventsToShow[indexPath.row]
+    performSegue(withIdentifier: "toInspectEvent", sender: event)
+    return false
+  }
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //send any info we need here
+    print("preparing for segue")
+    if segue.identifier == "toOtherUserProfile"{
+      if let userProfile = segue.destination as? ProfileViewController{
+        if let user = sender as? User{
+          userProfile.userToDisplay = user
+          userProfile.isMyProfile = false
+        }
+        
+      }
+    }else if segue.identifier == "toInspectEvent"{
+      if let eventInspector = segue.destination as? InspectEventController{
+        if let event = sender as? Event{
+          eventInspector.eventToLoad = event
+        }
+        
+      }
+    }
   }
   
   override func viewWillAppear(_ animated: Bool) {

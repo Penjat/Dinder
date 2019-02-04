@@ -24,6 +24,13 @@ class ProfileViewController: UIViewController{
       super.viewDidLoad()
       print("loaded profile view controller")
     
+    
+      
+    }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    print("setting up the profile display")
     if let user = userToDisplay{
       userName.text = user.firstName
       userRatting.text = user.stringOfRating()
@@ -31,13 +38,6 @@ class ProfileViewController: UIViewController{
       //userAboutMe.text = user.aboutMe
       profileImageController.setUpImages(images: user.images)
     }
-      
-    }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    print("setting up the profile display")
-    
     
   }
   
