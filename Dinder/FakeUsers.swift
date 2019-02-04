@@ -103,11 +103,14 @@ struct FakeUsers{
         var ims: [Image] = [Image]()
        
         
-        let image1: Image = Image(keyword: "jj", urlString: "https://static.tvgcdn.net/mediabin/showcards/celebs/j/thumbs/jason-momoa_sc_768x1024.png")
+        let image1: Image = Image(keyword: "jj", urlString: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Jason_Momoa_by_Gage_Skidmore_2.jpg/266px-Jason_Momoa_by_Gage_Skidmore_2.jpg")
         ims.append(image1)
         
+        let image2: Image = Image(keyword: "jjj", urlString: "https://akns-images.eonline.com/eol_images/Entire_Site/2018630/rs_600x600-180730133438-600-jason-momoa-073018.jpg?fit=around|700:700&crop=700:700;center,top&output-quality=90")
+        ims.append(image2)
         
-        
+        let image3: Image = Image(keyword: "jjjj", urlString: "https://m.media-amazon.com/images/M/MV5BMTI5MTU5NjM1MV5BMl5BanBnXkFtZTcwODc4MDk0Mw@@._V1_.jpg")
+        ims.append(image3)
         
         let jason = User(userId: 1, firstName: "jason", birthDate: bDate!, gender: Gender.Male, emailAddress: "jasonharrisonvancouver@gmail.com", mobilePhoneNumber: "6043742456", ratings: ratings, images: ims)
         
@@ -136,8 +139,14 @@ struct FakeUsers{
         var ims: [Image] = [Image]()
         
         
-        let image1: Image = Image(keyword: "jj", urlString: "https://www.flickr.com/photos/anjalisharma/6347682585/in/photolist-aEVwTc-5941Vu-55gc43-WHkHF9-52hYrP-aEVwqi-5vApm6-25PDsYZ-5raocj-55gcam-55bZgg-55gc73-9zKEK7-52hYoH-f1FWSR-ddAdXx-f1FSzt-Gn5k-82xdFn-aEZoDA-5jJUNg-dSbGG1-55bZcZ-aEZnSm-vvGTk-5mJB6J-aEVxFe-5mJBcC-5mEmZz-2HHMTj-8UP84z-5mEmWT-2HHN3Q-85CVoy-29hmns6-82XfW2-f1Wa3N-9Gxt4X-f1FRkv-VTzmuY-8g1ds7-UECGnS-VTzkh7-6Xspda-Rv9Yoo-7xfLi3-8UQKqT-SAjTup-6XwqaE-SxU9ho")
+        let image1: Image = Image(keyword: "jj", urlString: "https://assetsds.cdnedge.bluemix.net/sites/default/files/styles/big_2/public/feature/images/angelina_jolie_6.jpg?itok=oetopfVx")
         ims.append(image1)
+        
+        let image2: Image = Image(keyword: "jj", urlString: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/11/16/09/angelina-jolie.jpg")
+        ims.append(image2)
+        
+        let image3: Image = Image(keyword: "jj", urlString: "https://s1.r29static.com//bin/entry/c98/720x864,80/1951955/image.jpg")
+        ims.append(image3)
         
         
         let anjali = User(userId: 2, firstName: "anjali", birthDate: bDate!, gender: Gender.Female, emailAddress: "new@fie.com", mobilePhoneNumber: "911", ratings: ratings, images: ims)
@@ -166,13 +175,13 @@ struct FakeUsers{
         var ims: [Image] = [Image]()
         
         
-        let image1: Image = Image(keyword: "cass", urlString: "https://www.flickr.com/photos/roland64/15432597975/in/photolist-pvJ6Hr-5aWPsM-6Waap2-dMwbWf-6Wa8AF-5XdxYo-sRNeg-29PPrDf-6Wa6ze-6Wa5qB-6We8f9-586Vig-6We9xU-5v9oEN-5ZvjPM-6Wa7B8-6We8zy-5m42wM-83ncXS-FvdxM-86wPrt-QpQZsP-i3tbJ8-6YUc7E-RrRMwX-9em6vm-d9Y2rc-oGKEQH-daaizA-25SyAs-dEWzvC-5edYRX-7BUpeE-btyaqF-JaYWw4-5LC4Y6-jGE3v-a9GGLg-5BBNUu-6xrH4B-fUti5j-btxHkg-5PTzEF-a8tf76-2a87BKb-Fp1GcR-4DErJZ-a9Kuho-c1xpEh-6xrJbz")
+        let image1: Image = Image(keyword: "cass", urlString: "https://m.media-amazon.com/images/M/MV5BN2QzNTEwZjctMGM2My00OWQ5LWI4OGUtMmFjZWEwNGM1ZGIyXkEyXkFqcGdeQXVyMjAxMjU5MzM@._V1_.jpg")
         ims.append(image1)
     
-        let image2: Image = Image(keyword: "cassandra", urlString: "https://www.flickr.com/photos/roland64/15429406381/in/photolist-pvrJXX-bjnrVK-7f3JZ6-9Ya5Zy-pvJ6Hr-5aWPsM-6Waap2-dMwbWf-6Wa8AF-5XdxYo-sRNeg-29PPrDf-6Wa6ze-6Wa5qB-6We8f9-586Vig-6We9xU-5v9oEN-5ZvjPM-6Wa7B8-6We8zy-5m42wM-83ncXS-FvdxM-86wPrt-QpQZsP-i3tbJ8-6YUc7E-RrRMwX-9em6vm-d9Y2rc-oGKEQH-daaizA-25SyAs-dEWzvC-5edYRX-7BUpeE-btyaqF-JaYWw4-5LC4Y6-jGE3v-a9GGLg-5BBNUu-6xrH4B-fUti5j-btxHkg-5PTzEF-a8tf76-2a87BKb-Fp1GcR")
+        let image2: Image = Image(keyword: "cassandra", urlString: "https://miro.medium.com/max/2400/1*jGuzZCseMpFtkQPadQbmGg@2x.jpeg")
         ims.append(image2)
         
-        let image3: Image = Image(keyword: "cass", urlString: "https://www.flickr.com/photos/himitsuhana/3497152549/in/photolist-6k2PBB-5EekAL-pvrJXX-bjnrVK-7f3JZ6-9Ya5Zy-pvJ6Hr-5aWPsM-6Waap2-dMwbWf-6Wa8AF-5XdxYo-sRNeg-29PPrDf-6Wa6ze-6Wa5qB-6We8f9-586Vig-6We9xU-5v9oEN-5ZvjPM-6Wa7B8-6We8zy-5m42wM-83ncXS-FvdxM-86wPrt-QpQZsP-i3tbJ8-6YUc7E-RrRMwX-9em6vm-d9Y2rc-oGKEQH-daaizA-25SyAs-dEWzvC-5edYRX-7BUpeE-btyaqF-JaYWw4-5LC4Y6-jGE3v-a9GGLg-5BBNUu-6xrH4B-fUti5j-btxHkg-5PTzEF-a8tf76")
+        let image3: Image = Image(keyword: "cass", urlString: "http://tonypratt.com/wp-content/uploads/Maria-Cassandra-8.31.2010_04811.jpg")
         ims.append(image3)
         
         
