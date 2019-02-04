@@ -54,4 +54,5 @@ DerivedData/
 *.project.pbxproj
 **/xcshareddata/WorkspaceSettings.xcsettings
 .DS_Store
+*xcbkptlist
 # End of https://www.gitignore.io/api/xcode,firebase,cocoapods
