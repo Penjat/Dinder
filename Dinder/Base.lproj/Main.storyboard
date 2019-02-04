@@ -304,7 +304,7 @@
                                                 <constraint firstItem="zte-r9-Krd" firstAttribute="trailing" secondItem="iIu-YD-17V" secondAttribute="trailingMargin" id="zjv-5z-9dr"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.91896892969999999" blue="0.61512825429999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.78431372549019607" green="0.78823529411764703" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="activeEventController" destination="zte-r9-Krd" id="Px4-Wj-tdy"/>
                                         </connections>
@@ -328,7 +328,7 @@
                                                 <constraint firstItem="U3v-7r-PD0" firstAttribute="leading" secondItem="K0l-nT-A5j" secondAttribute="leadingMargin" id="tKz-o0-2eq"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.91896892969999999" blue="0.61512825429999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.78431372549019607" green="0.78823529411764703" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="interestedEventController" destination="U3v-7r-PD0" id="bmN-bi-iuh"/>
                                         </connections>

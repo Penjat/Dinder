@@ -29,9 +29,13 @@ extension Image{
     
     
     //TODO swap the place holder url for the real on
-    //var imageURL;// = URL(string: urlString)!
+    var imageURL = URL(string: "https://news.nationalgeographic.com/content/dam/news/2018/05/17/you-can-train-your-cat/02-cat-training-NationalGeographic_1484324.ngsversion.1526587209178.adapt.1900.1.jpg")!
+    if let url = URL(string: urlString){
+      imageURL = url
+    }
     
-     var imageURL = URL(string: "https://news.nationalgeographic.com/content/dam/news/2018/05/17/you-can-train-your-cat/02-cat-training-NationalGeographic_1484324.ngsversion.1526587209178.adapt.1900.1.jpg")!
+    
+     //var imageURL = URL(string: "https://news.nationalgeographic.com/content/dam/news/2018/05/17/you-can-train-your-cat/02-cat-training-NationalGeographic_1484324.ngsversion.1526587209178.adapt.1900.1.jpg")!
     
     
     

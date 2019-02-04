@@ -44,12 +44,14 @@ struct FakeUsers{
         ratings.append(rating2)
         
         var ims: [Image] = [Image]()
-        let image1: Image = Image(keyword: "spencer", urlString: "https://avatars1.githubusercontent.com/u/37875712?s=400&v=4")
+        let image1: Image = Image(keyword: "spencer", urlString: "https://scontent-sea1-1.xx.fbcdn.net/v/t31.0-8/20248318_10159053975695503_7111814435368193392_o.jpg?_nc_cat=111&_nc_ht=scontent-sea1-1.xx&oh=c54ae4d947f35c98498049ae12fbff67&oe=5CEC288F")
         
-        let image2: Image = Image(keyword: "spencer p", urlString: "https://www.purina.co.uk/dogs/dog-breeds/library/dachsund-miniature-wire-haired")
+        let image2: Image = Image(keyword: "spencer p", urlString: "https://scontent-sea1-1.xx.fbcdn.net/v/t31.0-8/11061009_788158704599660_285540594569830680_o.jpg?_nc_cat=111&_nc_ht=scontent-sea1-1.xx&oh=a1c157dff5f82ff7f65521f53afa5306&oe=5CF3E90B")
+      let image3: Image = Image(keyword: "spencer p", urlString: "https://scontent-sea1-1.xx.fbcdn.net/v/t31.0-8/15541018_10157913742995503_8794559269374696503_o.jpg?_nc_cat=108&_nc_ht=scontent-sea1-1.xx&oh=1c694ada42cb73c5b850190abfb4bf7e&oe=5CF7F68F")
         ims.append(image1)
         ims.append(image2)
-        
+        ims.append(image3)
+      
         let spencer = User(userId: 0, firstName: "spencer", birthDate: bDate!, gender: Gender.Male, emailAddress: "pen@jat.com", mobilePhoneNumber: "7787090343", ratings: ratings, images: ims)
         
         return spencer
@@ -101,7 +103,7 @@ struct FakeUsers{
         var ims: [Image] = [Image]()
        
         
-        let image1: Image = Image(keyword: "jj", urlString: "https://www.flickr.com/photos/photobysam123/6815273523/in/photolist-4M5Pbx-bof4nV-9xiifk-7NyHLz-3iNyHw-fZxyZ-8UtAdz-4M9ZzA-4M9Zsq-4M9Zq9-8u6oav-6Xua2q-4MJLCQ-7FAs7f-51X7YX-juTcFr-4M5PcX-4MJM2s-4M9Zr7-4MJLVJ-rRSza-4MJMmN-9dUCSa-eReGGz-8PvURV-6ZLcRu-7NCFZG-4M9ZqA-bkxveK-4M5Pgt-b6hNGv-6a7Q8o-4M9Zyb-2kzfpN-4MEzoR-4MJLkb-4MEzNa-4MEzxB-bgsCcM-9WNcRw-9XpbUW-3LQvw-7YjhGS-bgs4nZ-7TzmNg-7SL6Sv-4DU1tB-hWRsAG-4eYVVS-bgrGPt")
+        let image1: Image = Image(keyword: "jj", urlString: "https://static.tvgcdn.net/mediabin/showcards/celebs/j/thumbs/jason-momoa_sc_768x1024.png")
         ims.append(image1)
         
         
