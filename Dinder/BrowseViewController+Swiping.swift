@@ -53,6 +53,7 @@ extension BrowseViewController {
         self.leadingConstraint2.constant = 0
         self.view.insertSubview(self.eventView2,
                                 belowSubview: self.eventView1)
+        
         if let event = self.eventController2.currentEvent, let me = self.mainUser{
             self.dataManager?.applyFor(applicant: me, event: event)
         }
